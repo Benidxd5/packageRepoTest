@@ -165,10 +165,9 @@ def create_catalog(con):
                         except yaml.YAMLError as exc:
                             print(exc)
 
-                        if data['ManifestType'] == 'merged':
-                            packageData = data
-                            manifestFilename = file
-                            break
+                        packageData = data
+                        manifestFilename = file
+                            
 
             register_manifest(con, cursor, packageData, pathParts, manifest, manifestFilename)
 
