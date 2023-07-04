@@ -6,4 +6,4 @@ $pfxPath = "$PSScriptRoot\Certificate.pfx"
 
 $thumbprint = ($env:PFX_THUMBPRINT).Trim()
 
-& $signToolPath sign /f "$pfxPath" /d "source.msix" /p "$pfxPassphrase" /v /a ./Certificate.pfx /t "http://timestamp.comodoca.com/authenticode" /fd SHA256 "$PSScriptRoot\source.msix"
+& $signToolPath sign /f "$pfxPath" /d "source.msix" /p "$pfxPassphrase" /v /fd SHA256 /a ./Certificate.pfx /t "http://timestamp.comodoca.com/authenticode" "$PSScriptRoot\source.msix"
