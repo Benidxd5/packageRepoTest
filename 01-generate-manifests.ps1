@@ -14,6 +14,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     $_.Directoryname
     ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")
     $item = (Get-Content -Path "$_")
+    $item
     Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item).TrimEnd()
     Remove-Item $_
 }
@@ -35,6 +36,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
 #     Remove-Item $_
 # }
 
-
+"BevRem"
 Remove-Item -Path .\manifests -Recurse -Force -ErrorAction SilentlyContinue
+"AfRem"
 Copy-Item -Path "$tmpPath\" -Recurse -Force -Destination .\manifests
