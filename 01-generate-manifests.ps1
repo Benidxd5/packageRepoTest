@@ -3,13 +3,12 @@ $tmpPath = Join-Path -Path (Resolve-Path .tmp).Path -ChildPath .\manifests
 
 New-Item -Path $tmpPath -Force -ItemType Directory
 
-Get-ChildItem .\packages -Filter '*.jsonnet' | % {
-    jsonnet -m $tmpPath -c ".\packages\$($_.Name)"
-}
+# Get-ChildItem .\packages -Filter '*.jsonnet' | % {
+#     jsonnet -m $tmpPath -c ".\packages\$($_.Name)"
+# }
 
-Get-ChildItem .\packages -Filter '*.yaml' | % {
-    $tmpPath -c ".\packages\$($_.Name)"
-}
+Copy-Item -Path ".\packages" -Recurse -Force -Destination "$tmpPath\"
+
 
 # "TO YAML"
 # Get-ChildItem .\tmp -Recurse -Include '*.yaml' | % {
@@ -20,15 +19,14 @@ Get-ChildItem .\packages -Filter '*.yaml' | % {
 #     Remove-Item $_
 # }
 
-Get-ChildItem .tmp -Recurse
 
-Get-ChildItem .tmp -Recurse -Include '*.json' | % {
-    $item = (Get-Content -Path "$_" | ConvertFrom-Json)
-    "JSON"
-    $_.Directoryname
-    Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item | ConvertTo-Yaml).TrimEnd()
-    Remove-Item $_
-}
+# Get-ChildItem .tmp -Recurse -Include '*.json' | % {
+#     $item = (Get-Content -Path "$_" | ConvertFrom-Json)
+#     "JSON"
+#     $_.Directoryname
+#     Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item | ConvertTo-Yaml).TrimEnd()
+#     Remove-Item $_
+# }
 
 
 Remove-Item -Path .\manifests -Recurse -Force -ErrorAction SilentlyContinue
