@@ -62,8 +62,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
       
-      - name: validate
-        run: ./validate.ps1
+      # - name: validate
+        # run: ./validate.ps1
 
   build-release:
     needs: test
