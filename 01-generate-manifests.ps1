@@ -25,4 +25,4 @@ New-Item -Path $tmpPath -Force -ItemType Directory
 
 
 Remove-Item -Path .\manifests -Recurse -Force -ErrorAction SilentlyContinue
-Copy-Item -Path ./packages -Recurse -Force -Destination .\manifests
+Copy-Item -Path .\packages -Recurse -Force -Destination .\manifests
