@@ -114,7 +114,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: "packagebranch"
+          ref: "main"
           fetch-depth: 0
 
       - name: Set git config
@@ -136,4 +136,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: "packagebranch"
+          branch: "main"
