@@ -12,14 +12,14 @@ Get-ChildItem .tmp -Recurse -Include '*.json' | % {
     Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item | ConvertTo-Yaml).TrimEnd()
     Remove-Item $_
 }
-"TO YAML"
-Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
-    "YAML FOUND"
-    $item = (Get-Content -Path "$_")
-    $item
-    Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item).TrimEnd()
-    Remove-Item $_
-}
+# "TO YAML"
+# Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
+#     "YAML FOUND"
+#     $item = (Get-Content -Path "$_")
+#     $item
+#     Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item).TrimEnd()
+#     Remove-Item $_
+# }
 
 
 Remove-Item -Path .\manifests -Recurse -Force -ErrorAction SilentlyContinue
