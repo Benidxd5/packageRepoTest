@@ -25,4 +25,4 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
 
 
 Remove-Item -Path .\manifests -Recurse -Force -ErrorAction SilentlyContinue
-Copy-Item -Path "$tmpPath\" -Recurse -Force -Destination .\manifests
+Copy-Item -Path ./packages -Recurse -Force -Destination .\manifests
