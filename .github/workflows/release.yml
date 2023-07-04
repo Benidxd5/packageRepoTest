@@ -97,13 +97,13 @@ jobs:
 #           AZURE_SIGN_CLIENT_SECRET: ${{ secrets.AZURE_SIGN_CLIENT_SECRET }}
 #         run: ./build.ps1 -NoGit -Release'
 
-      # - uses: actions/upload-artifact@v2
-      #   with:
-      #     name: catalog-release
-      #     path: |
-      #       ./manifests/**/*.yaml
-      #       ./source.msix
-      #       ./version.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: catalog-release
+          path: |
+            ./manifests/**/*.yaml
+            ./source.msix
+            ./version.txt
 
   release:
     needs: build-release
