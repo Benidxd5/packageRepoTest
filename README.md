@@ -19,7 +19,7 @@ If you want to update it later run this:
 ```powershell
 winget source update --name cloudflight
 ```
-
+.
 Now you can install packages hosted in this repository, for example "DockerInWSL":
 
 ```powershell
