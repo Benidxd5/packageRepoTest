@@ -12,7 +12,7 @@ Get-ChildItem .\packages -Filter '*.jsonnet' | % {
 Get-ChildItem .tmp -Recurse -Include '*.json' | % {
     "Dirname"
     $_.Directoryname
-    [System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")
+    ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")
     $item = (Get-Content -Path "$_" | ConvertFrom-Json)
     Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item | ConvertTo-Yaml).TrimEnd()
     Remove-Item $_
