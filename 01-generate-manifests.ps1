@@ -9,7 +9,7 @@ Get-ChildItem .\packages -Filter '*.jsonnet' | % {
     jsonnet -m $tmpPath -c ".\packages\$($_.Name)"
 }
 
-Get-ChildItem .tmp -Recurse -Include '*.yaml' | % {
+Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     "YamlFOUND"
     $_.Directoryname
     ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")
