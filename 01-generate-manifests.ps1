@@ -4,10 +4,15 @@ $tmpPath = Join-Path -Path (Resolve-Path .tmp).Path -ChildPath .\manifests
 New-Item -Path $tmpPath -Force -ItemType Directory
 
 Get-ChildItem .\packages -Filter '*.jsonnet' | % {
+    "Name"
+    $_.Name
     jsonnet -m $tmpPath -c ".\packages\$($_.Name)"
 }
 
 Get-ChildItem .tmp -Recurse -Include '*.json' | % {
+    "Dirname"
+    $_.Directoryname
+    [System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")
     $item = (Get-Content -Path "$_" | ConvertFrom-Json)
     Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item | ConvertTo-Yaml).TrimEnd()
     Remove-Item $_
