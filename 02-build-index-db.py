@@ -150,6 +150,8 @@ def create_catalog(con):
             packageName = ".".join(pathParts[2:-1])
             manifestFilename = ""
             packageData = {}
+            print("Files:")
+            print(files)
             for file in files:
                 if file.endswith(".yaml"):
 
