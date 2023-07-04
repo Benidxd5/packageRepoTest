@@ -18,7 +18,7 @@ Get-ChildItem .tmp -Recurse -Include '*.json' | % {
 Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     "YAML FOUND"
     $item = (Get-Content -Path "$_")
-    Join-Path -Path $tmpPath -ChildPath ("h\" [System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")
+    Join-Path -Path $tmpPath -ChildPath ("h\" + [System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")
     Set-Content -Path (Join-Path -Path $tmpPath -ChildPath ($_.Directoryname + [System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item).TrimEnd()
     Remove-Item $_
 }
