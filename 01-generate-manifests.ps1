@@ -7,7 +7,7 @@ New-Item -Path $tmpPath -Force -ItemType Directory
 #     jsonnet -m $tmpPath -c ".\packages\$($_.Name)"
 # }
 
-Copy-Item -Path ".\packages" -Recurse -Force -Destination "$tmpPath\"
+Copy-Item -Path ".\packages" -Recurse -Force -Destination $tmpPath\
 
 
 # "TO YAML"
