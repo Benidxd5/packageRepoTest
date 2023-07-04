@@ -13,5 +13,12 @@ Get-ChildItem .tmp -Recurse -Include '*.json' | % {
     Remove-Item $_
 }
 
+Get-ChildItem .tmp -Recurse -Include '*.yaml' | % {
+    $item = (Get-Content -Path "$_")
+    Set-Content -Path (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_") + ".yaml")) -Value ($item).TrimEnd()
+    Remove-Item $_
+}
+
+
 Remove-Item -Path .\manifests -Recurse -Force -ErrorAction SilentlyContinue
 Copy-Item -Path "$tmpPath\" -Recurse -Force -Destination .\manifests
