@@ -13,7 +13,7 @@ Get-ChildItem .tmp -Recurse -Include '*.json' | % {
     Remove-Item $_
 }
 "TO YAML"
-Get-ChildItem .tmp -Recurse -Include '*.yaml' | % {
+Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     "YAML FOUND"
     $item
     $item = (Get-Content -Path "$_")
