@@ -95,7 +95,7 @@ jobs:
       - name: build and sign
 #         env:
 #           AZURE_SIGN_CLIENT_SECRET: ${{ secrets.AZURE_SIGN_CLIENT_SECRET }}
-      - run: ./build.ps1 -NoGit -Release
+        run: ./build.ps1 -NoGit -Release
 
       - uses: actions/upload-artifact@v2
         with:
