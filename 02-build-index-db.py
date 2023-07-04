@@ -144,7 +144,7 @@ def create_catalog(con):
     )
     con.commit()
     print("Current")
-    for (root,_,files) in os.walk('manifests'):
+    for (root,_,files) in os.walk('./packages'):
         if re.match('.*(?:[0-9]+\.?){2,3}\.[0-9]+$', root):
             pathParts = root.split(os.path.sep)
             print(pathParts)
