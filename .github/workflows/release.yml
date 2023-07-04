@@ -122,9 +122,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
-      # - uses: actions/download-artifact@v2
-      #   with:
-      #     name: catalog-release
+      - uses: actions/download-artifact@v2
+        with:
+          name: catalog-release
 
       - name: Commit changes
         run: |
