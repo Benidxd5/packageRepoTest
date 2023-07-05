@@ -169,9 +169,9 @@ def create_catalog(con):
                         manifestFilename = file
                             
 
-            register_manifest(con, cursor, packageData, pathParts, manifest, manifestFilename)
+                        register_manifest(con, cursor, packageData, pathParts, manifest, manifestFilename)
 
-            manifest += 1
+                        manifest += 1
 
 if __name__ == '__main__':
     if os.path.exists(db_path):
