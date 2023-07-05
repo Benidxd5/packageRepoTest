@@ -44,8 +44,8 @@ Check-LastCommand "index-db build failed"
 .\03-build-index-package.ps1
 
 if($Release) {
-    # .\04-sign-index-package-test.ps1
+    .\04-sign-index-package-test.ps1
     # .\04-sign-index-package-release.ps1
 } else {
-    # .\04-sign-index-package-test.ps1
+    .\04-sign-index-package-test.ps1
 }
