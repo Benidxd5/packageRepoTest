@@ -6,7 +6,7 @@
 
   <Identity Name="HS2N.Source"
             ProcessorArchitecture="neutral"
-            Publisher="HS2N"
+            Publisher="CN=HS2N"
             Version="0.0.0.0" />
 
   <Properties>
