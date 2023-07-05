@@ -11,7 +11,7 @@
 
   <Properties>
     <DisplayName>Windows Package Manager Source (winget)</DisplayName>
-    <PublisherDisplayName>HS2N</PublisherDisplayName>
+    <PublisherDisplayName>CN=HS2N</PublisherDisplayName>
     <Logo>Images\logo.jpg</Logo>
   </Properties>
 
