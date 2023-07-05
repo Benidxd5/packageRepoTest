@@ -10,4 +10,4 @@ $pfxPath = "$PSScriptRoot\HS2N.pfx"
 # $thumbprint = ($env:PFX_THUMBPRINT).Trim()
 
 # & msixherocli.exe sign /f "$pfxPath" /d "source.msix" /p "$pfxPassphrase" /v /fd SHA256 /a ./Certificate.pfx /t "http://timestamp.comodoca.com/authenticode" "$PSScriptRoot\source.msix"
-& msixherocli.exe sign --file "$pfxPath" --password "$pfxPassphrase" --noPublisherUpdate --timestamp none "$PSScriptRoot\source.msix"
+& msixherocli.exe sign --file "$pfxPath" --password "$pfxPassphrase" --noPublisherUpdate --timestamp "http://timestamp.digicert.com" "$PSScriptRoot\source.msix"
