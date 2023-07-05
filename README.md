@@ -26,4 +26,4 @@ Now you can install packages hosted in this repository, for example "DockerInWSL
 winget install dockerinwsl
 ```
 
-Just run `winget search -s cloudflight` to get a complete list of packages available from this repo.
+Just run `winget search -s cloudflight` to get a complete list of packages available from this repo
