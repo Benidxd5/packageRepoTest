@@ -26,6 +26,9 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
 
+      - name: install SignTool
+        run: winget install --id MarcinOtorowski.MSIXHero
+
       - name: build
         env:
           PFX_PASSPHRASE: ${{ secrets.PFX_PASSPHRASE }}
