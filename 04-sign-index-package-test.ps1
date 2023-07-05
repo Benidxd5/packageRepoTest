@@ -5,7 +5,7 @@
 ECHO 'Y' | winget install --id MarcinOtorowski.MSIXHero
 
 $pfxPassphrase = ($env:PFX_PASSPHRASE).Trim()
-$pfxPath = "$PSScriptRoot\HS2N.pfx"
+$pfxPath = "$PSScriptRoot\HS2N.cer"
 
 # $thumbprint = ($env:PFX_THUMBPRINT).Trim()
 
