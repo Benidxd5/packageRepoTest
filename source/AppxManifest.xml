@@ -4,7 +4,7 @@
          xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
          IgnorableNamespaces="uap uap3">
 
-  <Identity Name="HS2N.Source"
+  <Identity Name="HS2N"
             ProcessorArchitecture="neutral"
             Publisher="CN=HS2N"
             Version="0.0.0.0" />
