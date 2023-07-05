@@ -111,6 +111,9 @@ jobs:
           Add-AppxProvisionedPackage -Online -PackagePath $env:TEMP\winget.msixbundle -LicensePath $env:TEMP\winget.license -DependencyPackagePath @("$env:TEMP\vclibs.appx", "$env:TEMP\vclibsuwp.appx")
 
       - name: build and sign
+        env:
+            PFX_PASSPHRASE: ${{ secrets.PFX_PASSPHRASE }}
+            PFX_THUMBPRINT: ${{ secrets.PFX_THUMBPRINT }}
         run: ./build.ps1 -NoGit -Release
 
       - uses: actions/upload-artifact@v2
