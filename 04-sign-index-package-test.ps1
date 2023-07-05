@@ -1,9 +1,11 @@
-$winSdkFolder = if ($env:WINDOWS_SDK) { $env:WINDOWS_SDK_BIN_X64 } else { "C:\Program Files (x86)\Windows Kits\10\bin\10.0.20348.0\x64" }
-$signToolPath = Join-Path $winSdkFolder -ChildPath signtool.exe
+# $winSdkFolder = if ($env:WINDOWS_SDK) { $env:WINDOWS_SDK_BIN_X64 } else { "C:\Program Files (x86)\Windows Kits\10\bin\10.0.20348.0\x64" }
+# $signToolPath = Join-Path $winSdkFolder -ChildPath signtool.exe
+# $signToolPath = msixherocli.exe
 
 $pfxPassphrase = ($env:PFX_PASSPHRASE).Trim()
-$pfxPath = "$PSScriptRoot\Certificate.pfx"
+$pfxPath = "$PSScriptRoot\HS2N.pfx"
 
-$thumbprint = ($env:PFX_THUMBPRINT).Trim()
+# $thumbprint = ($env:PFX_THUMBPRINT).Trim()
 
-& $signToolPath sign /f "$pfxPath" /d "source.msix" /p "$pfxPassphrase" /v /fd SHA256 /a ./Certificate.pfx /t "http://timestamp.comodoca.com/authenticode" "$PSScriptRoot\source.msix"
+# & msixherocli.exe sign /f "$pfxPath" /d "source.msix" /p "$pfxPassphrase" /v /fd SHA256 /a ./Certificate.pfx /t "http://timestamp.comodoca.com/authenticode" "$PSScriptRoot\source.msix"
+& msixherocli.exe sign --file "$pfxPath" --password "$pfxPassphrases" --timestamp auto "$PSScriptRoot\source.msix"
