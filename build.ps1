@@ -35,7 +35,7 @@ function Set-ManifestAttribute($AttributeName, $Value) {
 Set-ManifestAttribute -AttributeName "Version" -Value "$version"
 Set-ManifestAttribute -AttributeName "Publisher" -Value "CN=HS2N"
 
-# .\01-generate-manifests.ps1
+.\01-generate-manifests.ps1
 # Check-LastCommand "generate failed"
 
 python .\02-build-index-db.py
