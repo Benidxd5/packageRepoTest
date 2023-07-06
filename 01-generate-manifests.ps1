@@ -54,8 +54,8 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
 
     # Array mit Pfaden zu den YAML-Dateien
     $quelleDateien = @(
-        Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_")+".yaml"),
-        Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_")+".def.yaml")
+        (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_")+".yaml")),
+        (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_")+".def.yaml"))
     )
 
     "afterpaths"
