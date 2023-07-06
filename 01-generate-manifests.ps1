@@ -50,12 +50,15 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     "Processing File"
     $_.Directoryname
 
+    Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_"))+".def.yaml"
+
     # Array mit Pfaden zu den YAML-Dateien
     $quelleDateien = @(
         Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_"))+".yaml",
         Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_"))+".def.yaml"
     )
 
+    "afterpaths"
     # Leeres Hashtable zum Speichern der Attribute
     $attributeHash = @{}
 
