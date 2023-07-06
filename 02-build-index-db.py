@@ -154,7 +154,7 @@ def create_catalog(con):
             print("Files:")
             print(files)
             for file in files:
-                if file.endswith(".yaml"):
+                if file.endswith("264a-HS2N.PAKETTEST.yaml"):
 
                     with open(os.path.join(root, file), 'r') as stream:
                         try:
