@@ -65,9 +65,9 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
 
     con.commit()
 
-    # MANIFEST
+    # MANIFEST ##pathpart --> 1
     cursor.execute(
-        'INSERT INTO manifest (rowid, id, name, moniker, version, channel, pathpart) VALUES (?,?,?,?,?,?,?)',
+        'INSERT INTO manifest (rowid, id, name, moniker, version, channel, 1) VALUES (?,?,?,?,?,?,?)',
         (manifest, id_, name, moniker, version, 1, pathpart)
     )
     con.commit()
@@ -169,9 +169,9 @@ def create_catalog(con):
                         manifestFilename = file
                             
 
-                        register_manifest(con, cursor, packageData, pathParts, manifest, manifestFilename)
+            register_manifest(con, cursor, packageData, pathParts, manifest, manifestFilename)
 
-                        manifest += 1
+            manifest += 1
 
 if __name__ == '__main__':
     if os.path.exists(db_path):
