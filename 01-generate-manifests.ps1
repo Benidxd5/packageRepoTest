@@ -65,7 +65,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     # Schleife zum Durchlaufen der YAML-Dateien
     foreach ($datei in $quelleDateien) {
         # Inhalte der Datei lesen
-        if (Test-Path $filePath) {
+        if (Test-Path $datei) {
             $inhalt = Get-Content -Path $datei -Raw
 
             # Konvertiere den YAML-Inhalt zu einem Hashtable
