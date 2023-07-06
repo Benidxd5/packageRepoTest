@@ -68,7 +68,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
     # MANIFEST ##pathpart --> 1
     cursor.execute(
         'INSERT INTO manifest (rowid, id, name, moniker, version, channel, pathpart) VALUES (?,?,?,?,?,?,?)',
-        (manifest, id_, name, moniker, version, 1, pathpart-1)
+        (manifest, id_, name, moniker, version, 1, pathpart)
     )
     con.commit()
 
@@ -154,7 +154,7 @@ def create_catalog(con):
             print("Files:")
             print(files)
             for file in files:
-                if file.endswith(".yaml"):
+                if file.endswith("def.yaml"):
 
                     with open(os.path.join(root, file), 'r') as stream:
                         try:
