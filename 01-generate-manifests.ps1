@@ -65,15 +65,18 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     # Schleife zum Durchlaufen der YAML-Dateien
     foreach ($datei in $quelleDateien) {
         # Inhalte der Datei lesen
-        $inhalt = Get-Content -Path $datei -Raw
+        if (Test-Path $filePath) {
+            $inhalt = Get-Content -Path $datei -Raw
 
-        # Konvertiere den YAML-Inhalt zu einem Hashtable
-        $yamlInhalt = $inhalt | ConvertFrom-Yaml
+            # Konvertiere den YAML-Inhalt zu einem Hashtable
+            $yamlInhalt = $inhalt | ConvertFrom-Yaml
 
-        # Schleife durch die Attribute und füge sie dem Hashtable hinzu
-        foreach ($attribut in $yamlInhalt.PSObject.Properties) {
-            $attributeHash[$attribut.Name] = $attribut.Value
+            # Schleife durch die Attribute und füge sie dem Hashtable hinzu
+            foreach ($attribut in $yamlInhalt.PSObject.Properties) {
+                $attributeHash[$attribut.Name] = $attribut.Value
+            }
         }
+        
     }
 
     # Konvertiere das Hashtable zurück in ein PowerShell-Objekt
