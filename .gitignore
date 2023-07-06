@@ -1,6 +1,6 @@
 .tmp
 *.db
 *.secret
-*.msix
-manifests/
+# *.msix
+# manifests/
 version.txt
