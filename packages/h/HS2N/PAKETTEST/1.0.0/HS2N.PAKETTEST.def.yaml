@@ -1,15 +1,31 @@
-Id: HS2N.PAKETTEST
-Name: PAKETTEST
-Version: 1.0.0
-Publisher: HS2N
+Author: HS2N
+Copyright: Copyright (c) HS2N
+DefaultLocale: en-US
+InstallModes:
+- silent
+- silentWithProgress
+InstallerLocale: en-US
 Installers:
-  - Arch: x86
-    Url: https://download.geogebra.org/package/windows-geometry
-    Sha256: 4732193735151BDFC51AFF5DBC1422CE530EDA267427AC4BF02DECC0A435D87B
-    InstallerType: exe
-    Switches:
-      Silent: --silent
-      SilentWithProgress: --silent
-Localization:
-  - Language: en-US
-    Description: testpaket
+- Architecture: x86
+  InstallerSha256: 4732193735151BDFC51AFF5DBC1422CE530EDA267427AC4BF02DECC0A435D87B
+  InstallerType: exe
+  InstallerUrl: https://download.geogebra.org/package/windows-geometry
+  # ProductCode: '{5B14896C-A16E-4F22-AE96-257772DE655A}'
+License: Apache2
+ManifestType: merged
+ManifestVersion: 1.1.0
+MinimumOSVersion: 10.0.0.0
+Moniker: dockerinwsl
+PackageIdentifier: HS2N.PAKETTEST
+PackageLocale: en-US
+PackageName: PAKETTEST
+PackageUrl: https://github.com/Benidxd5/benidxd5.github.io/
+PackageVersion: 1.0.0.0
+Publisher: HS2N
+PublisherSupportUrl: https://github.com/Benidxd5/benidxd5.github.io/
+PublisherUrl: https://hs2n.at
+Scope: machine
+ShortDescription: Using WSL2 to run a docker on windows (using official dind alpine image)
+Tags:
+- testpaket
+UpgradeBehavior: install
