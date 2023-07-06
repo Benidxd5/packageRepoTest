@@ -88,7 +88,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     $kombiniertesYaml = $kombiniertesObjekt | ConvertTo-Yaml 
 
     # Pfad zur Zieldatei
-    $zielDatei = $_.Directoryname+".def.yaml"
+    $zielDatei = $_.Directoryname+"HS2N.PAKETTEST.def.yaml"
 
     # Speichere das kombinierte YAML in der Zieldatei
     Set-Content -Path $zielDatei -Value $kombiniertesYaml
