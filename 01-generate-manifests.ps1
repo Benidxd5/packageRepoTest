@@ -46,7 +46,7 @@
 
 
 
-Get-ChildItem .\packages -Recurse -Exclude '*def.yaml' | % {
+Get-ChildItem .\packages -Recurse -Include '*.yaml' -Exclude '*def.yaml' | % {
     "Processing File"
     $_.Directoryname
 
