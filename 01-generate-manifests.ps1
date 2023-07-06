@@ -75,6 +75,8 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
             foreach ($attribut in $yamlInhalt.PSObject.Properties) {
                 $attributeHash[$attribut.Name] = $attribut.Value
             }
+
+            "dateifound"
         }
         
     }
@@ -83,7 +85,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     $kombiniertesObjekt = [PSCustomObject]$attributeHash
 
     # Konvertiere das kombinierte Objekt zu YAML
-    $kombiniertesYaml = ConvertTo-Yaml -InputObject $kombiniertesObjekt
+    $kombiniertesYaml = $kombiniertesObjekt | ConvertTo-Yaml 
 
     # Pfad zur Zieldatei
     $zielDatei = $_.Directoryname+".def.yaml"
