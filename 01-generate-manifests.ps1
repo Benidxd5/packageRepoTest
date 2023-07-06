@@ -37,6 +37,5 @@
 #     Remove-Item $_
 # }
 
-Copy-Item -Path .\packages -Recurse -Force -Destination "$tmpPath\"
 Remove-Item -Path .\manifests -Recurse -Force -ErrorAction SilentlyContinue
-Copy-Item -Path "$tmpPath\" -Recurse -Force -Destination .\manifests
+Copy-Item -Path .\packages -Recurse -Force -Destination .\manifests
