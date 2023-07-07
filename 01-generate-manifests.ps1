@@ -75,13 +75,13 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
                 $datei
                 $inhalt
                 # Konvertiere den YAML-Inhalt zu einem Hashtable
-                $yamlInhalt = $inhalt | ConvertFrom-Yaml
-                "inh"
-                $yamlInhalt
-                # Schleife durch die Attribute und füge sie dem Hashtable hinzu
-                foreach ($attribut in $yamlInhalt) {
-                    $attributeHash[$attribut] = $attribut.Value
-                }
+                # $yamlInhalt = $inhalt | ConvertFrom-Yaml
+                # "inh"
+                # $yamlInhalt
+                # # Schleife durch die Attribute und füge sie dem Hashtable hinzu
+                # foreach ($attribut in $yamlInhalt) {
+                #     $attributeHash[$attribut] = $attribut.Value
+                # }
 
                 "dateifound"
                 $attributeHash 
