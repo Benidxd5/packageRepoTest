@@ -8,6 +8,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     # Array mit Pfaden zu den YAML-Dateien
     $inhalt = Get-Content -Path $_
     $inhalt = $inhalt | ConvertFrom-Yaml
+    $pkgid = $inhalt["PackageIdentifier"]
 
     $quelleDateien = @(
         (Join-Path -Path $_.Directoryname -ChildPath ([System.IO.Path]::GetFileNameWithoutExtension("$_")+".yaml")),
@@ -30,7 +31,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
 
     $combInh["ManifestType"] = "merged"
 
-    $zielDatei = (Join-Path -Path $_.Directoryname -ChildPath ( $inhalt["PackageIdentifier"]+".def.yaml"))
+    $zielDatei = (Join-Path -Path $_.Directoryname -ChildPath $pkgid)
 
     Set-Content -Path $zielDatei -Value ($combInh | ConvertTo-Yaml)
 
