@@ -20,14 +20,10 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
 
         if (Test-Path $datei) {
 
-            if( $datei -notlike "*def.yaml"){
-
-                $inhalt = Get-Content -Path $datei
-                $yamlInhalt = $inhalt | ConvertFrom-Yaml
-                foreach ($key in $yamlInhalt.Keys) {
-                    $combInh[$key] = $yamlInhalt[$key]
-                }
-
+            $inhalt = Get-Content -Path $datei
+            $yamlInhalt = $inhalt | ConvertFrom-Yaml
+            foreach ($key in $yamlInhalt.Keys) {
+                $combInh[$key] = $yamlInhalt[$key]
             }
         }   
     }
