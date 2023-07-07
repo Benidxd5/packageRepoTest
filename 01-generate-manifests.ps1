@@ -31,7 +31,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
 
     $combInh["ManifestType"] = "merged"
 
-    $zielDatei = (Join-Path -Path $_.Directoryname -ChildPath $pkgid)
+    $zielDatei = (Join-Path -Path $_.Directoryname -ChildPath ($pkgid+".def.yaml"))
 
     Set-Content -Path $zielDatei -Value ($combInh | ConvertTo-Yaml)
 
