@@ -93,12 +93,12 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     }
 
     # Konvertiere das Hashtable zurück in ein PowerShell-Objekt
-    $kombiniertesObjekt = [PSCustomObject]$attributeHash
-    "komb"
-    # Konvertiere das kombinierte Objekt zu YAML
-    $kombiniertesYaml = ($attributeHash | ConvertTo-Yaml)
-    # Pfad zur Zieldatei
-    $kombiniertesYaml
+    # $kombiniertesObjekt = [PSCustomObject]$attributeHash
+    # "komb"
+    # # Konvertiere das kombinierte Objekt zu YAML
+    # $kombiniertesYaml = ($attributeHash | ConvertTo-Yaml)
+    # # Pfad zur Zieldatei
+    # $kombiniertesYaml
     $zielDatei = $_.Directoryname+"\HS2N.PAKETTEST.def.yaml"
 
     # Speichere das kombinierte YAML in der Zieldatei
