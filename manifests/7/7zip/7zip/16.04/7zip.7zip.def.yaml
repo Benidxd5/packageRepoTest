@@ -21,10 +21,10 @@ License: Copyright (C) 1999-2020 Igor Pavlov. - GNU LGPL
 Installers:
 - Architecture: x86
   InstallerUrl: https://www.7-zip.org/a/7z1604.exe
-  InstallerType: nullsoft
+  InstallerType: exe
   InstallerSha256: DBB2B11DEA9F4432291E2CBEFE14EBE05E021940E983A37E113600EEE55DAA95
 - Architecture: x64
-  InstallerType: nullsoft
+  InstallerType: exe
   InstallerUrl: https://www.7-zip.org/a/7z1604-x64.exe
   InstallerSha256: 9BB4DC4FAB2A2A45C15723C259DC2F7313C89A5AC55AB7C3F76BBA26EDC8BCAA
 - Architecture: x86
