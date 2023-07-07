@@ -1,0 +1,6 @@
+PackageVersion: "16.04"
+ManifestType: merged
+DefaultLocale: en-US
+ManifestVersion: 1.1.0
+PackageIdentifier: 7zip.7zip
+
