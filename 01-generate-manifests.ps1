@@ -30,7 +30,7 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
 
     $combInh["ManifestType"] = "merged"
 
-    $zielDatei = $_.Directoryname+"\HS2N.PAKETTEST.def.yaml"
+    $zielDatei = (Join-Path -Path $_.Directoryname -ChildPath ( $inhalt["PackageIdentifier"]+".def.yaml"))
 
     Set-Content -Path $zielDatei -Value ($combInh | ConvertTo-Yaml)
 
