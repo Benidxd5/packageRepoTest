@@ -46,17 +46,12 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
 
-  commit-changes:
-    steps:
-    - name: commit changes
+    - name: commit-changes
       run: |
         git add packages/
         git commit -m "new package change"
 
-  push-changes:
-    steps:
     - name: Push changes
-      needs: commit-changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
