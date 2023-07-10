@@ -1,5 +1,5 @@
 
-Get-ChildItem .\packages -Recurse -Include 'HS2N.PAKETTEST.*' | % {
+Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     "Processing File"
     $_
     $_.Directoryname
