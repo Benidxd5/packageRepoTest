@@ -35,7 +35,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Create Directory
-      run: $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ input.pkgUrl }}
+      run: $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgUrl }}
 
     - name: Fetch File
       run: |
