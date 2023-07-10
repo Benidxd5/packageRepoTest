@@ -34,7 +34,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Create Directory
+    - name: create-directory
       run: |
         $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgUrl }}
         echo "::set-output name=pkgPath::$pkgPath"
