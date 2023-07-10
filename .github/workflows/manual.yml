@@ -34,15 +34,11 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Create Directory
+    - name: Create Directory and Fetch File
       id: create-directory
       run: |
         $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgUrl }}
-        echo "::set-output name=pkgPath::$pkgPath"
-
-    - name: Fetch File
-      run: |
-        curl -o ${{ steps.create-directory.outputs.pkgPath }} ${{ inputs.pkgUrl }}
+        curl -o $pkgPath ${{ inputs.pkgUrl }}
 
     - name: Set git config
       run: |
