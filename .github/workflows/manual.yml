@@ -21,7 +21,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
-  greet:
+  createDirs:
     # The type of runner that the job will run on
     runs-on: windows-latest
 
@@ -46,13 +46,15 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
 
-    - name: Commit changes
+  commit-changes:
+    - name: commit changes
       run: |
         git add packages/
         git commit -m "new package change"
 
+  push-changes:
     - name: Push changes
-      needs: Commit changes
+      needs: commit-changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
