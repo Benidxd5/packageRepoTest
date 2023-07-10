@@ -53,5 +53,8 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.MY_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: "main"
+
+    - name: run build workflow
+      run: gh workflow run release.yml
