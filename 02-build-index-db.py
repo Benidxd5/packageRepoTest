@@ -28,6 +28,11 @@ def get_id(con, cursor, table, field, value,occNum=0, force_new=False):
 
         return id_
     
+    print("row info")
+
+    print(value)
+    print(row)
+    print(occNum)
     if(len(row)>1):
         return row[occNum][0]
 
