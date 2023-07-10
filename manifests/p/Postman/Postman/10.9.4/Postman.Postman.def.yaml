@@ -1,42 +1,42 @@
-Description: Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs — faster.
-PackageLocale: en-US
-ManifestVersion: 1.4.0
-Moniker: postman
-Publisher: Postman
-PrivacyUrl: https://www.postman.com/legal/privacy-policy/
-PackageName: Postman
-Author: Postman
-PackageIdentifier: Postman.Postman
+ManifestType: merged
 ShortDescription: The Collaboration Platform for API Development
+PrivacyUrl: https://www.postman.com/legal/privacy-policy/
+ManifestVersion: 1.4.0
+Copyright: Copyright (c) 2023 Postman, Inc. All rights reserved.
+PublisherUrl: https://www.postman.com/
 Tags:
 - api
 - postman
 - development
-LicenseUrl: https://www.postman.com/legal/eula/
-License: Proprietary
-PublisherUrl: https://www.postman.com/
 PackageUrl: https://www.postman.com/
-ManifestType: merged
-PublisherSupportUrl: https://www.postman.com/support/
-PackageVersion: 10.9.4
-MinimumOSVersion: 10.0.0.0
-DefaultLocale: en-US
+Description: Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs — faster.
 CopyrightUrl: https://www.postman.com/legal/eula/
+MinimumOSVersion: 10.0.0.0
+Installers:
+- InstallerSwitches:
+    Silent: -s
+    SilentWithProgress: -s
+  InstallerSha256: F164EED1E7CD289F256A79230A1531321B979DC59385AF7B2A34BA3C6904F5EB
+  ProductCode: Postman
+  InstallerUrl: https://dl.pstmn.io/download/version/10.9.4/win64
+  UpgradeBehavior: install
+  Architecture: x64
+  InstallerLocale: en-US
+  Scope: user
+  InstallerType: exe
+Publisher: Postman
+PackageLocale: en-US
+PackageName: Postman
+PublisherSupportUrl: https://www.postman.com/support/
+Moniker: postman
 InstallModes:
 - interactive
 - silent
 - silentWithProgress
-Installers:
-- UpgradeBehavior: install
-  Scope: user
-  InstallerType: exe
-  InstallerUrl: https://dl.pstmn.io/download/version/10.9.4/win64
-  InstallerLocale: en-US
-  ProductCode: Postman
-  InstallerSwitches:
-    Silent: -s
-    SilentWithProgress: -s
-  Architecture: x64
-  InstallerSha256: F164EED1E7CD289F256A79230A1531321B979DC59385AF7B2A34BA3C6904F5EB
-Copyright: Copyright (c) 2023 Postman, Inc. All rights reserved.
+PackageVersion: 10.9.4
+Author: Postman
+PackageIdentifier: Postman.Postman
+LicenseUrl: https://www.postman.com/legal/eula/
+License: Proprietary
+DefaultLocale: en-US
 
