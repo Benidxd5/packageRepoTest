@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ packagebranch ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 

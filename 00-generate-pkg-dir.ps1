@@ -12,4 +12,8 @@ $dirpath = "packages/" + $dirpath
 
 New-Item -Path $dirpath -Force -ItemType Directory
 
-New-Item -Path (Join-Path -Path $dirpath -ChildPath $fileName) -Force -ItemType File
+$filePath = (Join-Path -Path $dirpath -ChildPath $fileName)
+
+New-Item -Path $filePath -Force -ItemType File
+
+return $filePath
