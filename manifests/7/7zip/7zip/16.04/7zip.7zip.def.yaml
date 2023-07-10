@@ -1,43 +1,31 @@
-PackageLocale: en-US
-LicenseUrl: https://7-zip.org/license.txt
-PackageIdentifier: 7zip.7zip
-PackageName: 7-Zip
-Moniker: 7zip
 Installers:
-- Architecture: x86
+- InstallerUrl: https://www.7-zip.org/a/7z1604.exe
+  Architecture: x86
   InstallerSha256: DBB2B11DEA9F4432291E2CBEFE14EBE05E021940E983A37E113600EEE55DAA95
   InstallerType: nullsoft
-  InstallerUrl: https://www.7-zip.org/a/7z1604.exe
-- Architecture: x64
+- InstallerUrl: https://www.7-zip.org/a/7z1604-x64.exe
+  Architecture: x64
   InstallerSha256: 9BB4DC4FAB2A2A45C15723C259DC2F7313C89A5AC55AB7C3F76BBA26EDC8BCAA
   InstallerType: nullsoft
-  InstallerUrl: https://www.7-zip.org/a/7z1604-x64.exe
-- InstallerSha256: D9B62C0ED0EB48D2DF86D8B83394048414A2A4E1D64A50ADB9ABCFF643471D20
-  ProductCode: '{23170F69-40C1-2701-1604-000001000000}'
-  Architecture: x86
-  AppsAndFeaturesEntries:
+- AppsAndFeaturesEntries:
   - DisplayName: 7-Zip 16.04
-    Publisher: Igor Pavlov
     DisplayVersion: 16.04.00.0
+    Publisher: Igor Pavlov
+  InstallerSha256: D9B62C0ED0EB48D2DF86D8B83394048414A2A4E1D64A50ADB9ABCFF643471D20
+  Architecture: x86
+  InstallerType: wix
+  ProductCode: '{23170F69-40C1-2701-1604-000001000000}'
   InstallerUrl: https://www.7-zip.org/a/7z1604.msi
-  InstallerType: wix
-- InstallerSha256: B3885B2F090F1E9B5CF2B9F802B07FE88E472D70D60732DB9F830209AC296067
-  ProductCode: '{23170F69-40C1-2702-1604-000001000000}'
-  Architecture: x64
-  AppsAndFeaturesEntries:
+- AppsAndFeaturesEntries:
   - DisplayName: 7-Zip 16.04 (x64 edition)
-    Publisher: Igor Pavlov
     DisplayVersion: 16.04.00.0
-  InstallerUrl: https://www.7-zip.org/a/7z1604-x64.msi
+    Publisher: Igor Pavlov
+  InstallerSha256: B3885B2F090F1E9B5CF2B9F802B07FE88E472D70D60732DB9F830209AC296067
+  Architecture: x64
   InstallerType: wix
-ManifestVersion: 1.1.0
-DefaultLocale: en-US
-PackageUrl: https://www.7-zip.org/
-MinimumOSVersion: 10.0.0.0
-ManifestType: merged
-License: Copyright (C) 1999-2020 Igor Pavlov. - GNU LGPL
-Publisher: Igor Pavlov
-Author: Igor Pavlov
+  ProductCode: '{23170F69-40C1-2702-1604-000001000000}'
+  InstallerUrl: https://www.7-zip.org/a/7z1604-x64.msi
+Moniker: 7zip
 Tags:
 - 7zip
 - compression
@@ -46,5 +34,17 @@ Tags:
 - utility
 - zip
 ShortDescription: Free and open source file archiver with a high compression ratio.
+License: Copyright (C) 1999-2020 Igor Pavlov. - GNU LGPL
+PackageName: 7-Zip
+Publisher: Igor Pavlov
+LicenseUrl: https://7-zip.org/license.txt
+PackageIdentifier: 7zip.7zip
+Author: Igor Pavlov
+MinimumOSVersion: 10.0.0.0
+PackageUrl: https://www.7-zip.org/
+ManifestType: merged
 PackageVersion: "16.04"
+PackageLocale: en-US
+DefaultLocale: en-US
+ManifestVersion: 1.1.0
 
