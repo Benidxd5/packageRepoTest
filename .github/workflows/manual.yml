@@ -58,6 +58,6 @@ jobs:
 
     - name: run build workflow
       run: gh workflow run release.yml
-      with:
+      env:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: "main"
