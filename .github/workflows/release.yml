@@ -101,6 +101,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Install winget
+        id: install-winget
         run: |
           $ErrorActionPreference = 'Stop'
           $github_headers = @{ Authorization = "Bearer "+ $env:GITHUB_TOKEN }
@@ -109,6 +110,10 @@ jobs:
           iwr 'https://github.com/microsoft/winget-cli/releases/download/v1.1.12653/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle' -Headers $github_headers -OutFile $env:TEMP\winget.msixbundle
           iwr 'https://github.com/microsoft/winget-cli/releases/download/v1.1.12653/9c0fe2ce7f8e410eb4a8f417de74517e_License1.xml' -Headers $github_headers -Outfile $env:TEMP\winget.license
           Add-AppxProvisionedPackage -Online -PackagePath $env:TEMP\winget.msixbundle -LicensePath $env:TEMP\winget.license -DependencyPackagePath @("$env:TEMP\vclibs.appx", "$env:TEMP\vclibsuwp.appx")
+
+      - name: Retry install winget on failure
+        if: ${{ steps.install-winget.outcome }} != 'success'
+        run: ${{ steps.install-winget.run }}
 
       - name: build and sign
         env:
