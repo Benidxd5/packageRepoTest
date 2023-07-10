@@ -1,20 +1,20 @@
 PackageLocale: en-US
-License: none
-PackageVersion: 1.0.0
-ManifestType: merged
-Copyright: Copyright © 2023 International GeoGebra Institute
-PackageIdentifier: HS2N.PAKETTEST
 PackageName: PAKETTEST
-ManifestVersion: 1.4.0
-DefaultLocale: en-US
-Publisher: CN=HS2N
-ShortDescription: testpaket
+License: none
 Installers:
-- InstallerType: exe
-  InstallerSwitches:
-    SilentWithProgress: --silent
-    Silent: --silent
+- InstallerSha256: 4732193735151BDFC51AFF5DBC1422CE530EDA267427AC4BF02DECC0A435D87B
   Architecture: x86
-  InstallerSha256: 4732193735151BDFC51AFF5DBC1422CE530EDA267427AC4BF02DECC0A435D87B
+  InstallerType: exe
+  InstallerSwitches:
+    Silent: --silent
+    SilentWithProgress: --silent
   InstallerUrl: https://download.geogebra.org/package/windows-geometry
+PackageVersion: 1.0.0
+ManifestVersion: 1.4.0
+PackageIdentifier: HS2N.PAKETTEST
+ShortDescription: testpaket
+ManifestType: merged
+DefaultLocale: en-US
+Copyright: Copyright © 2023 International GeoGebra Institute
+Publisher: CN=HS2N
 
