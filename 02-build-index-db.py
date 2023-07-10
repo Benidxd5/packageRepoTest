@@ -10,7 +10,7 @@ from subprocess import check_output
 
 db_path = ".tmp/source/Public/index.db"
 
-def get_id(con, cursor, table, field, value,occNum=0, force_new=False):
+def get_id(con, cursor, table, field, value, force_new=False):
     print("getid")
     cursor.execute('SELECT rowid FROM {} WHERE {} = "{}";'.format(table, field, value))
     row = cursor.fetchall()
@@ -29,13 +29,13 @@ def get_id(con, cursor, table, field, value,occNum=0, force_new=False):
 
         return id_
     
-    print("row info")
+    # print("row info")
 
-    print(value)
-    print(row)
-    print(occNum)
-    if(len(row)>1):
-        return row[occNum][0]
+    # print(value)
+    # print(row)
+    # print(occNum)
+    # if(len(row)>1):
+    #     return row[occNum][0]
 
     return row[0][0]
 
@@ -65,14 +65,11 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
     # PATHPARTS
     parent_pathpart = 1
 
-    occurences = {key: 0 for key in pathParts}
 
     for part in pathParts[1:]:
-        print("part: " + part)
-        pathpart = get_id(con, cursor, 'pathparts', 'pathpart', part, occurences[part])
+        pathpart = get_id(con, cursor, 'pathparts', 'pathpart', part, True)
         cursor.execute('UPDATE pathparts SET parent={} WHERE rowid={};'.format(parent_pathpart, pathpart))
         parent_pathpart = pathpart
-        occurences[part]+=1
     
     pathpart = get_id(con, cursor, 'pathparts', 'pathpart', manifestFilename, True)
     cursor.execute('UPDATE pathparts SET parent={} WHERE rowid={};'.format(parent_pathpart, pathpart))
