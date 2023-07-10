@@ -1,6 +1,8 @@
-# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.0.0.schema.json
+# Created using wingetcreate 1.2.5.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.4.0.schema.json
+
 PackageIdentifier: Postman.Postman
-PackageVersion: 9.9.3
+PackageVersion: 10.9.4
 MinimumOSVersion: 10.0.0.0
 InstallModes:
 - interactive
@@ -11,12 +13,12 @@ Installers:
   Architecture: x64
   InstallerType: exe
   Scope: user
-  InstallerUrl: https://dl.pstmn.io/download/version/9.9.3/win64
-  InstallerSha256: 42f2c013259e032b47ab4f048de321d412184f5832cd89e610aea49762f951fc
+  InstallerUrl: https://dl.pstmn.io/download/version/10.9.4/win64
+  InstallerSha256: F164EED1E7CD289F256A79230A1531321B979DC59385AF7B2A34BA3C6904F5EB
   InstallerSwitches:
     Silent: -s
     SilentWithProgress: -s
   UpgradeBehavior: install
   ProductCode: Postman
 ManifestType: installer
-ManifestVersion: 1.0.0
+ManifestVersion: 1.4.0
