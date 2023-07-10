@@ -1,42 +1,42 @@
-PackageUrl: https://www.postman.com/
-Author: Postman
-PrivacyUrl: https://www.postman.com/legal/privacy-policy/
-ShortDescription: The Collaboration Platform for API Development
-Copyright: Copyright (c) 2021 Postman, Inc. All rights reserved.
-Tags:
-- api
-- postman
-- development
-PackageVersion: 9.9.3
-ManifestType: merged
-PackageLocale: en-US
 PublisherUrl: https://www.postman.com/
-ManifestVersion: 1.0.0
-Description: Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs — faster.
-PublisherSupportUrl: https://www.postman.com/support/
+Installers:
+- UpgradeBehavior: install
+  InstallerType: exe
+  InstallerSha256: 42f2c013259e032b47ab4f048de321d412184f5832cd89e610aea49762f951fc
+  InstallerSwitches:
+    Silent: -s
+    SilentWithProgress: -s
+  ProductCode: Postman
+  Scope: user
+  InstallerLocale: en-US
+  InstallerUrl: https://dl.pstmn.io/download/version/9.9.3/win64
+  Architecture: x64
+PackageUrl: https://www.postman.com/
+Publisher: Postman
 PackageName: Postman
+Copyright: Copyright (c) 2021 Postman, Inc. All rights reserved.
+PublisherSupportUrl: https://www.postman.com/support/
+PackageVersion: 9.9.3
+Description: Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs — faster.
+DefaultLocale: en-US
+ManifestType: merged
+ShortDescription: The Collaboration Platform for API Development
+PackageLocale: en-US
+Moniker: postman
+ManifestVersion: 1.0.0
+MinimumOSVersion: 10.0.0.0
+PackageIdentifier: Postman.Postman
+PrivacyUrl: https://www.postman.com/legal/privacy-policy/
+License: Copyright (c) 2021 Postman, Inc. All rights reserved.
+LicenseUrl: https://www.postman.com/legal/eula/
 InstallModes:
 - interactive
 - silent
 - silentWithProgress
-License: Copyright (c) 2021 Postman, Inc. All rights reserved.
-MinimumOSVersion: 10.0.0.0
-DefaultLocale: en-US
-PackageIdentifier: Postman.Postman
-Moniker: postman
-LicenseUrl: https://www.postman.com/legal/eula/
+Author: Postman
+Tags:
+- api
+- postman
+- development
 CopyrightUrl: https://www.postman.com/legal/eula/
-Publisher: Postman
-Installers:
-- UpgradeBehavior: install
-  ProductCode: Postman
-  InstallerUrl: https://dl.pstmn.io/download/version/9.9.3/win64
-  InstallerLocale: en-US
-  InstallerType: exe
-  InstallerSwitches:
-    Silent: -s
-    SilentWithProgress: -s
-  Scope: user
-  InstallerSha256: 42f2c013259e032b47ab4f048de321d412184f5832cd89e610aea49762f951fc
-  Architecture: x64
 
