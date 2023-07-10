@@ -31,7 +31,6 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ inputs.pkgUrl }}"
 
-    steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
