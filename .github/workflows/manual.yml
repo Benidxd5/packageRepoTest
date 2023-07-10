@@ -42,17 +42,17 @@ jobs:
         curl -o $pkgPath ${{ inputs.pkgUrl }}
 
     - name: Set git config
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
 
     - name: Commit changes
-        run: |
-          git add packages/
-          git commit -m "new package change"
+      run: |
+        git add packages/
+        git commit -m "new package change"
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: "main"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: "main"
