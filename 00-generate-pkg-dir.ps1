@@ -10,10 +10,10 @@ $dirpath = $parts -join "/"
 
 $dirpath = "packages/" + $dirpath
 
-New-Item -Path $dirpath -Force -ItemType Directory
+#New-Item -Path $dirpath -Force -ItemType Directory
 
 $filePath = (Join-Path -Path $dirpath -ChildPath $fileName)
 
-New-Item -Path $filePath -Force -ItemType File
+#New-Item -Path $filePath -Force -ItemType File
 
 return [string]$filePath
