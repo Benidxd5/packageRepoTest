@@ -39,7 +39,7 @@ jobs:
 
     - name: Fetch File
       run: |
-        curl -o $pkgPath ${{ inputs.pkgUrl }}
+        curl -o ${{ pkgPath }} ${{ inputs.pkgUrl }}
 
     - name: Set git config
       run: |
