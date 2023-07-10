@@ -16,4 +16,4 @@ $filePath = (Join-Path -Path $dirpath -ChildPath $fileName)
 
 New-Item -Path $filePath -Force -ItemType File
 
-return $filePath
+return [string]$filePath

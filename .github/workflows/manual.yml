@@ -38,7 +38,6 @@ jobs:
       id: create-directory
       run: |
         $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgUrl }}
-        echo $pkgPath
         curl -o $pkgPath "${{ inputs.pkgUrl }}"
 
     - name: Set git config
