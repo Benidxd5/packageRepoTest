@@ -20,17 +20,6 @@ on:
 
   repository_dispatch:
     types: pkgadd
-    # Inputs the workflow accepts.
-    inputs:
-      pkgUrl:
-        # Friendly description to be shown in the UI instead of 'name'
-        description: 'Url of the package'
-        # Default value if no value is explicitly provided
-        default: 'https://'
-        # Input has to be provided for the workflow to run
-        required: true
-        # The data type of the input
-        type: string
 
     
 
@@ -42,6 +31,7 @@ jobs:
     runs-on: windows-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+    if: ${{ github.event_name == 'workflow_dispatch' }}
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
@@ -77,3 +67,9 @@ jobs:
     #   env:
     #     github_token: ${{ secrets.GITHUB_TOKEN }}
     #     branch: "main"
+
+    if: ${{ github.event_name == 'repository_dispatch' }}
+    steps:
+    # Runs a single command using the runners shell
+    - name: Send greeting
+      run: echo "Hello ${{ github.event.client_payload.pkgUrl }}"
