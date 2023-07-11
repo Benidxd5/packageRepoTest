@@ -31,9 +31,9 @@ jobs:
     runs-on: windows-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    if: ${{ github.event_name == 'workflow_dispatch' }}
     steps:
     # Runs a single command using the runners shell
+    if: ${{ github.event_name == 'workflow_dispatch' }}
     - name: Send greeting
       run: echo "Hello ${{ inputs.pkgUrl }}"
 
@@ -68,8 +68,6 @@ jobs:
     #     github_token: ${{ secrets.GITHUB_TOKEN }}
     #     branch: "main"
 
-    if: ${{ github.event_name == 'repository_dispatch' }}
-    steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.client_payload.pkgUrl }}"
+      if: ${{ github.event_name == 'repository_dispatch' }}
+      - name: Send greeting
+        run: echo "Hello ${{ github.event.client_payload.pkgUrl }}"
