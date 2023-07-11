@@ -52,7 +52,7 @@ jobs:
         $url="${{ github.event.client_payload.pkgUrl }}"
         $response=$(curl -s -o /dev/null -w "%{http_code}" "$url")
 
-        if "$response" -eq 200 (
+        if ("$response" -eq 200) then (
           pkgPath="./00-generate-pkg-dir.ps1"
           curl -o "$pkgPath" "$url"
           echo "File fetched successfully.")
