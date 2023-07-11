@@ -127,7 +127,7 @@ jobs:
         with:
           name: catalog-release
           path: |
-            ./manifests/**/*.yaml
+            ./manifests
             ./source.msix
             ./version.txt
 
