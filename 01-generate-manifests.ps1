@@ -39,5 +39,8 @@ Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
 }
 
 
+
 Remove-Item -Path .\manifests -Recurse -Force -ErrorAction SilentlyContinue
 Copy-Item -Path .\packages -Recurse -Force -Destination .\manifests
+
+Get-Content .\manifests
