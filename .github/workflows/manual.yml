@@ -49,7 +49,7 @@ jobs:
     - name: Create Directory and Fetch File request
       if: ${{ github.event_name == 'repository_dispatch' }}
       run: |
-        foreach ($pkgUrl in (${{ github.event.client_payload.pkgUrls }} | ConvertFrom-Json)) {
+        foreach ($pkgUrl in ${{ github.event.client_payload.pkgUrls }}) {
           $url="$pkgUrl"
           $response=$(curl -s -o /dev/null -w "%{http_code}" "$url")
 
