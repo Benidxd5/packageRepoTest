@@ -167,7 +167,7 @@ def create_catalog(con):
             for file in files:
                 if file.endswith("def.yaml"):
 
-                    with open(os.path.join(root, file), 'r') as stream:
+                    with open(os.path.join(root, file), 'r', encoding='utf-8') as stream:
                         try:
                             data = yaml.load(stream, Loader=yaml.Loader)
                             #data = yaml.safe_load(stream)
