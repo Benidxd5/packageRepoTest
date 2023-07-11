@@ -19,7 +19,7 @@ on:
         type: string
 
   repository_dispatch:
-    types: pkgadd
+    types: [pkgadd, pkgrem]
 
     
 
@@ -47,7 +47,7 @@ jobs:
         curl -o $pkgPath "${{ inputs.pkgUrl }}"
       
     - name: Create Directory and Fetch File request
-      if: ${{ github.event_name == 'repository_dispatch' }}
+      if: ${{ github.event_name == 'repository_dispatch' && github.event.action == 'pkgadd' }}
       run: |
         $urlArray = "${{ github.event.client_payload.pkgUrls }}".Split(",")
         foreach ($pkgUrl in $urlArray) {
@@ -61,6 +61,16 @@ jobs:
           else {
             echo "URL does not exist or could not be accessed. Skipping file fetch."
           }
+        }
+
+    - name: Create Directory and Fetch File request
+      if: ${{ github.event_name == 'repository_dispatch' && github.event.action == 'pkgrem' }}
+      run: |
+        $urlArray = "${{ github.event.client_payload.pkgUrls }}".Split(",")
+        foreach ($pkgUrl in $urlArray) {
+          $url="$pkgUrl"
+          ./00-remove-pkg.ps1 -url "$url"
+          echo "File removed successfully."
         }
 
     - name: Set git config
