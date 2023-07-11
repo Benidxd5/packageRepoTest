@@ -37,37 +37,39 @@ jobs:
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: echo "Hello ${{ inputs.pkgUrl }}"
 
-    # - name: Checkout Repository
-    #   uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-    # - name: Create Directory and Fetch File
-    #   id: create-directory
-    #   run: |
-    #     $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgUrl }}
-    #     curl -o $pkgPath "${{ inputs.pkgUrl }}"
-
-    # - name: Set git config
-    #   run: |
-    #     git config --local user.email "action@github.com"
-    #     git config --local user.name "GitHub Action"
-
-    # - name: commit-changes
-    #   run: |
-    #     git add packages/
-    #     git commit -m "new package change"
-
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: "main"
-
-    # - name: run build workflow
-    #   run: gh workflow run release.yml
-    #   env:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: "main"
-
-    - name: Send greeting curl
+    - name: Create Directory and Fetch File
+      id: create-directory
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      run: |
+        $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgUrl }}
+        curl -o $pkgPath "${{ inputs.pkgUrl }}"
+      
       if: ${{ github.event_name == 'repository_dispatch' }}
-      run: echo "Hello ${{ github.event.client_payload.pkgUrl }}"
+      run: |
+        $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ github.event.client_payload.pkgUrl }}
+        curl -o $pkgPath "${{ github.event.client_payload.pkgUrl }}"
+
+    - name: Set git config
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+
+    - name: commit-changes
+      run: |
+        git add packages/
+        git commit -m "new package change"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: "main"
+
+    - name: run build workflow
+      run: gh workflow run release.yml
+      env:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: "main"
