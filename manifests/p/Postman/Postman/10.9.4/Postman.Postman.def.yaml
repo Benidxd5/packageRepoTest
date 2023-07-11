@@ -1,42 +1,42 @@
+Tags:
+- api
+- postman
+- development
+Copyright: Copyright (c) 2023 Postman, Inc. All rights reserved.
+PackageLocale: en-US
+License: Proprietary
+Publisher: Postman
+MinimumOSVersion: 10.0.0.0
+DefaultLocale: en-US
+PublisherSupportUrl: https://www.postman.com/support/
+Moniker: postman
+LicenseUrl: https://www.postman.com/legal/eula/
 PackageUrl: https://www.postman.com/
+Author: Postman
+Description: Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs — faster.
+PublisherUrl: https://www.postman.com/
+ShortDescription: The Collaboration Platform for API Development
+PrivacyUrl: https://www.postman.com/legal/privacy-policy/
+PackageVersion: 10.9.4
 PackageIdentifier: Postman.Postman
 InstallModes:
 - interactive
 - silent
 - silentWithProgress
-PackageVersion: 10.9.4
-CopyrightUrl: https://www.postman.com/legal/eula/
-Tags:
-- api
-- postman
-- development
-PackageName: Postman
 ManifestType: merged
-Copyright: Copyright (c) 2023 Postman, Inc. All rights reserved.
-DefaultLocale: en-US
-Moniker: postman
-Publisher: Postman
-PrivacyUrl: https://www.postman.com/legal/privacy-policy/
+ManifestVersion: 1.4.0
+CopyrightUrl: https://www.postman.com/legal/eula/
 Installers:
 - InstallerType: exe
   UpgradeBehavior: install
-  ProductCode: Postman
   InstallerLocale: en-US
-  Architecture: x64
-  InstallerSha256: F164EED1E7CD289F256A79230A1531321B979DC59385AF7B2A34BA3C6904F5EB
-  Scope: user
-  InstallerUrl: https://dl.pstmn.io/download/version/10.9.4/win64
   InstallerSwitches:
     SilentWithProgress: -s
     Silent: -s
-Description: Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs — faster.
-License: Proprietary
-PackageLocale: en-US
-Author: Postman
-LicenseUrl: https://www.postman.com/legal/eula/
-MinimumOSVersion: 10.0.0.0
-ManifestVersion: 1.4.0
-PublisherSupportUrl: https://www.postman.com/support/
-ShortDescription: The Collaboration Platform for API Development
-PublisherUrl: https://www.postman.com/
+  InstallerUrl: https://dl.pstmn.io/download/version/10.9.4/win64
+  InstallerSha256: F164EED1E7CD289F256A79230A1531321B979DC59385AF7B2A34BA3C6904F5EB
+  Scope: user
+  Architecture: x64
+  ProductCode: Postman
+PackageName: Postman
 
