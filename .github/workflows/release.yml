@@ -148,13 +148,17 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
+      - name: remove manifests
+        run: |
+          git rm -r -f manifests/
+          git commit -m "manifests removed"
+
       - uses: actions/download-artifact@v2
         with:
           name: catalog-release
 
       - name: Commit changes
         run: |
-          git rm -r -f manifests/
           git add source.msix
           git add manifests/
           git commit -m "new index published"
