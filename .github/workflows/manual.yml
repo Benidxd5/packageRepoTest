@@ -40,13 +40,13 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Create Directory and Fetch File
-      id: create-directory
+    - name: Create Directory and Fetch File manual
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
         $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgUrl }}
         curl -o $pkgPath "${{ inputs.pkgUrl }}"
       
+    - name: Create Directory and Fetch File request
       if: ${{ github.event_name == 'repository_dispatch' }}
       run: |
         $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ github.event.client_payload.pkgUrl }}
