@@ -49,8 +49,16 @@ jobs:
     - name: Create Directory and Fetch File request
       if: ${{ github.event_name == 'repository_dispatch' }}
       run: |
-        $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ github.event.client_payload.pkgUrl }}
-        curl -o $pkgPath "${{ github.event.client_payload.pkgUrl }}"
+        $url="${{ github.event.client_payload.pkgUrl }}"
+        $response=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+
+        if [[ "$response" -eq 200 ]]; then
+          pkgPath="./00-generate-pkg-dir.ps1"
+          curl -o "$pkgPath" "$url"
+          echo "File fetched successfully."
+        else
+          echo "URL does not exist or could not be accessed. Skipping file fetch."
+        fi
 
     - name: Set git config
       run: |
