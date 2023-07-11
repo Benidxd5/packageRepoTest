@@ -169,7 +169,9 @@ def create_catalog(con):
 
                     with open(os.path.join(root, file), 'r') as stream:
                         try:
-                            data = yaml.safe_load(stream)
+                            with open('your_file.yaml', 'r', encoding='utf-8') as stream:
+                                data = yaml.load(stream, Loader=yaml.Loader)
+                            #data = yaml.safe_load(stream)
                             print('processing', data['PackageIdentifier'], data['PackageVersion'])
                         except yaml.YAMLError as exc:
                             print(exc)
