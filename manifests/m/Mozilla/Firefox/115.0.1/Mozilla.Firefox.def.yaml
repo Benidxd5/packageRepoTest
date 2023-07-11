@@ -1,785 +1,97 @@
-ShortDescription: Mozilla Firefox is free and open source software, built by a community of thousands from all over the world.
-InstallModes:
-- silentWithProgress
-ManifestType: merged
-ReleaseNotes: |
-  - Fixed a startup crash for Windows users with Kingsoft Antivirus software installed (bug 1837242)
-Author: Mozilla Foundation
-PackageVersion: 115.0.1
-Commands:
-- firefox
-Installers:
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-US/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 en-US)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 en-US)
-  InstallerLocale: en-US
-  Scope: machine
-  InstallerSha256: BB8E0AD79C06F42BF8200695DD951386935ECAA10CE8972813D41C94C2AF98CD
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-US/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 en-US)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 en-US)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-US
-  Scope: machine
-  InstallerSha256: F49799B5DBEADABEDD06252CE834E959D42565D8A4DA20D6DD651DAF70D9E6F3
-  Architecture: x64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-US/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 en-US)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 en-US)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-US
-  Scope: user
-  InstallerSha256: F49799B5DBEADABEDD06252CE834E959D42565D8A4DA20D6DD651DAF70D9E6F3
-  Architecture: x64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-US/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 en-US)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 en-US)
-  InstallerLocale: en-US
-  Scope: machine
-  InstallerSha256: 77996CE7FD9442FF9BB1B5813C6FB93F9875FB448798CF186C42F8E9B5AECA48
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-US/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 en-US)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 en-US)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-US
-  Scope: machine
-  InstallerSha256: A9932A02A478B36600C5085D76677F430F809B43DF386DF2949EC76FFAB51C6C
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-US/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 en-US)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 en-US)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-US
-  Scope: user
-  InstallerSha256: A9932A02A478B36600C5085D76677F430F809B43DF386DF2949EC76FFAB51C6C
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/en-US/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-US
-  InstallerSha256: F4CDA7DC7FCBE943396CE7335D8E8AAED9FBEB4DB8F9C8F17B29265E687D37C8
-  Architecture: arm64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/en-US/Firefox%20Setup%20115.0.1.exe
-  Scope: user
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-US
-  InstallerSha256: F4CDA7DC7FCBE943396CE7335D8E8AAED9FBEB4DB8F9C8F17B29265E687D37C8
-  Architecture: arm64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/zh-CN/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 zh-CN)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 zh-CN)
-  InstallerLocale: zh-CN
-  Scope: machine
-  InstallerSha256: F6ED9A3DAE58D68D48C47C5B5181936D573882DA7DB79FAB339C80EC7313F763
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/zh-CN/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 zh-CN)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 zh-CN)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: zh-CN
-  Scope: machine
-  InstallerSha256: 8D6781FC590C25FDB170043B804350DAA2F3B604A49F6F9A93DBE9D9A19013F9
-  Architecture: x64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/zh-CN/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 zh-CN)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 zh-CN)
-  InstallerLocale: zh-CN
-  Scope: machine
-  InstallerSha256: 3E6AC8F35F89E3094C392D1B0DD7E1982AEFDD9EDEB5D1F03F6067D108CB3700
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/zh-CN/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 zh-CN)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 zh-CN)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: zh-CN
-  Scope: machine
-  InstallerSha256: 2DF7909D010895AFE3C21C77E319365BC4FD373B7791E0A6A7469126656871C7
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/zh-CN/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: zh-CN
-  InstallerSha256: 7D7B90C3664A20338759F7C19C5EE6F78F5A13E26CE1B1D8D47D1CE4E117E878
-  Architecture: arm64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-GB/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 en-GB)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 en-GB)
-  InstallerLocale: en-GB
-  Scope: machine
-  InstallerSha256: 587FAE74B52D6082380DDD92010160C20960F1ACEFEEEFFB46BF3B2D50065FF7
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-GB/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 en-GB)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 en-GB)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-GB
-  Scope: machine
-  InstallerSha256: 9B01F48E1094A07C5B7C1E0BC3FC6C4AE9CE391DC4A939D647D0827F776CBF69
-  Architecture: x64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-GB/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 en-GB)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 en-GB)
-  InstallerLocale: en-GB
-  Scope: machine
-  InstallerSha256: 64DE0B30EFAD3233052AE8658FC399DFB440C97EFE4460907FC822C0C71FE5FF
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-GB/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 en-GB)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 en-GB)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-GB
-  Scope: machine
-  InstallerSha256: 39FC679894B304DAD3A0C745962D698F0735FF2451F2BEC32E9876BB4875C3FF
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/en-GB/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: en-GB
-  InstallerSha256: 61F4C056C0F9495C05C949B5F0092AB8018BCABE90CAC5A720A304AEB787DC93
-  Architecture: arm64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ru/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 ru)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 ru)
-  InstallerLocale: ru-RU
-  Scope: machine
-  InstallerSha256: 9E97EF033689AB44FA55B6E5E3950C0C1E1C8BC312DBCA2C7EB48A3752227F75
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ru/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 ru)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 ru)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ru-RU
-  Scope: machine
-  InstallerSha256: D40C9BAF486C6F281D52A36EAC33AF2EDC1FFFB0B68AA95F90D3652AF880DF12
-  Architecture: x64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ru/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 ru)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 ru)
-  InstallerLocale: ru-RU
-  Scope: machine
-  InstallerSha256: E2C058046673750030EA540F100399E4B34A9D1BB7E6E42F0A4D20F4B86C346C
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ru/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 ru)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 ru)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ru-RU
-  Scope: machine
-  InstallerSha256: 0E30958365906DC791CD6F0DE86D630E276F4E0A6D6B89CB2E46D297C2ED3939
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/ru/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ru-RU
-  InstallerSha256: 142075EE1C883C406A89204606DCBAB085E939F68D80D30C3E6E2A200FC2CEC3
-  Architecture: arm64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/de/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 de)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 de)
-  InstallerLocale: de-DE
-  Scope: machine
-  InstallerSha256: 8AEC53A9B9DE822FA8132EF275B054760E002A7CEF0A8D2AB62D5E98609DB420
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/de/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 de)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 de)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: de-DE
-  Scope: machine
-  InstallerSha256: 7BF156A20A24A9DD55499948F2E1C3694525AB8621DD7EA8FF560D644A2F8C62
-  Architecture: x64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/de/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 de)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 de)
-  InstallerLocale: de-DE
-  Scope: machine
-  InstallerSha256: 39491DF30A5026BF0C85DF0EA978058FCE0797E3BEF8B998294B4ADA35207FA2
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/de/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 de)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 de)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: de-DE
-  Scope: machine
-  InstallerSha256: 223DF332EDC065E325CEA84E1760EF35CA917A6E58FBF118686F49B948BF076D
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/de/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: de-DE
-  InstallerSha256: 66E641A22B26009AED26466EA9C7F9414E22C79F63985E1B4BD235FA5598262B
-  Architecture: arm64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/el/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 el)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 el)
-  InstallerLocale: el-GR
-  Scope: machine
-  InstallerSha256: EBD3846B53A263B5553DA6BABCEB42AD44A4EA3ECFE3F778E9C092C4558C91CF
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/el/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 el)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 el)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: el-GR
-  Scope: machine
-  InstallerSha256: 49C4FABD99AC8F71AF53D83A6414ECF16AB62B5D2233393B5DEE02B854F6CB7F
-  Architecture: x64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/el/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 el)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 el)
-  InstallerLocale: el-GR
-  Scope: machine
-  InstallerSha256: 5C87BA0EA7B644A8E37226FABFE4E9A65177F03B29D8CB7C87ECA3F7D0B6CBB7
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/el/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 el)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 el)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: el-GR
-  Scope: machine
-  InstallerSha256: 2C5D2D9B1122096275B1AE519C87786F04CFD9DFB410920EEE51A739CFAA4E86
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/el/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: el-GR
-  InstallerSha256: BC2512F08E484AE910BFC2ACA3E6D3121C53278332F2086F4F2A9519B85B8F1D
-  Architecture: arm64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ja/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 ja)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 ja)
-  InstallerLocale: ja-JP
-  Scope: machine
-  InstallerSha256: 512C92E52776632745839012E25B471B609736E52141931C441DAA9CA91B625C
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ja/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 ja)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 ja)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ja-JP
-  Scope: machine
-  InstallerSha256: 1BED73C017EAA872B508E74E214DB29F8CF9766291D9FE7D9F07426D8FB4F378
-  Architecture: x64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ja/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 ja)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 ja)
-  InstallerLocale: ja-JP
-  Scope: machine
-  InstallerSha256: 4DCFB6184F8E0760BB75A0ADAD2401DF4F68E0420CB36F48C697595AA4F02B0C
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ja/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 ja)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 ja)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ja-JP
-  Scope: machine
-  InstallerSha256: 6084F461B922F5F851D5122FB3085917FD1C0D326F9E5BF14778AF15D99EB2DD
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/ja/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ja-JP
-  InstallerSha256: FAC621FE81680359269D374A1199FD5EC822941226BA145E86EDEF911B9054A6
-  Architecture: arm64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/es-ES/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 es-ES)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 es-ES)
-  InstallerLocale: es-ES
-  Scope: machine
-  InstallerSha256: A50A51558E963520E9FAFF7BBE70634E11CEEE82542D14FA6FAA592EFC997FC3
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/es-ES/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 es-ES)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 es-ES)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: es-ES
-  Scope: machine
-  InstallerSha256: 7AF1B6406F7D2A9D056E8A99214AC5E03F06585918BE966D088B85AB21C74673
-  Architecture: x64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/es-ES/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 es-ES)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 es-ES)
-  InstallerLocale: es-ES
-  Scope: machine
-  InstallerSha256: 19BCC3858B779C2859749055B366F8DF53D9FC46B0DE4110713F3442384A2D26
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/es-ES/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 es-ES)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 es-ES)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: es-ES
-  Scope: machine
-  InstallerSha256: 19D0B4BA6E6158FA94BE3B021E283648927D586A3AE5EB3751DC9A17A17BA90E
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/es-ES/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: es-ES
-  InstallerSha256: EE469426BCBE6DF44B022352DF538473842635C9BD154F4A8FE0D3E3C6836647
-  Architecture: arm64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/es-MX/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 es-MX)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 es-MX)
-  InstallerLocale: es-MX
-  Scope: machine
-  InstallerSha256: F9F2CAF70ED47343DC34EC7FF395D97AA4EA4FC4CE5FFF06FC1041C1A5F43A80
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/es-MX/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 es-MX)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 es-MX)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: es-MX
-  Scope: machine
-  InstallerSha256: A0B378468CBD15C6A0765992592D560AC52B21446919C1F64F32C93276D2CB29
-  Architecture: x64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/es-MX/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 es-MX)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 es-MX)
-  InstallerLocale: es-MX
-  Scope: machine
-  InstallerSha256: 0F240ADCCF97D1F507377C7A035AB34BF57827ABD102DEB5AC4DEA67BCDE0526
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/es-MX/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 es-MX)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 es-MX)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: es-MX
-  Scope: machine
-  InstallerSha256: 90754244A5D20E9CE457B2573E13EE235153E4C4649B221BDA78C68F3E2517D2
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/es-MX/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: es-MX
-  InstallerSha256: DF1AD1DECE5C7C2BDEA2D3A33390B28F7935E83BC74F391F99BC5977A522ACA8
-  Architecture: arm64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/nb-NO/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 nb-NO)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 nb-NO)
-  InstallerLocale: nb-NO
-  Scope: machine
-  InstallerSha256: E066582D6DDBBA06D46CACB63E2F61316BF71C35DCF352116C6950E5E6C58D62
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/nb-NO/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 nb-NO)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 nb-NO)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: nb-NO
-  Scope: machine
-  InstallerSha256: 68216149CF14F3AA2C4CF4A41556B255C4CCA29A15BFCF95ABD12BF085385406
-  Architecture: x64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/nb-NO/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 nb-NO)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 nb-NO)
-  InstallerLocale: nb-NO
-  Scope: machine
-  InstallerSha256: 99F9F39D27F65A6C0756A094857E25F27CB2C8F0B87157AAE440799D44AD599B
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/nb-NO/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 nb-NO)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 nb-NO)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: nb-NO
-  Scope: machine
-  InstallerSha256: 1209425BB69712877A088BFC0A42FF5F01DB844ABDA9767F2BA94A846F004E26
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/nb-NO/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: nb-NO
-  InstallerSha256: 470A40C6BC5D6727D8E540756F213263A599B63A6EDDEE7AC22A565A70C11DB0
-  Architecture: arm64
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/multi/Firefox%20Setup%20115.0.1.msix
-  PackageFamilyName: Mozilla.MozillaFirefox_gmpnhwe7bv608
-  InstallerSha256: E9C13DC51741EA00590B9655CB62D372F5AB1ECE3B4126CE75231F03A4BC7013
-  SignatureSha256: de3ac25d0747fe8f8dc60a2be344ac9b1458ef791a42835ea8356c498a8b0b2f
-  Architecture: x64
-  InstallerType: msix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/multi/Firefox%20Setup%20115.0.1.msix
-  PackageFamilyName: Mozilla.MozillaFirefox_gmpnhwe7bv608
-  InstallerSha256: 885CEE79282764BB098599207CC5AB1AB2E46E9517D8D8ED275241510098A8A0
-  SignatureSha256: a0347a2d997d9ce534bd8e6db93448a3b021d2d3ed82ffcf04c543781b1f051d
-  Architecture: x86
-  InstallerType: msix
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/fr/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 fr)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 fr)
-  InstallerLocale: fr-FR
-  Scope: machine
-  InstallerSha256: 992FC8597988B82C716366E4DFB587C5A0D0339075BCDC55C97BA9AC69201374
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/fr/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 fr)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 fr)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: fr-FR
-  Scope: machine
-  InstallerSha256: 3EB35333C96FA52DFBCCB359F3B617CE15E5531D01BDD9D1A56B514B2B3BC00F
-  Architecture: x64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/fr/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 fr)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 fr)
-  InstallerLocale: fr-FR
-  Scope: machine
-  InstallerSha256: 1415EF1ECAA318A5F2CBD8F735796C281F1A9A545240E06AEA03C5A0ACED26D3
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/fr/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 fr)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 fr)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: fr-FR
-  Scope: machine
-  InstallerSha256: 3B15EFB8D24935334AE088FA57822DBD55B77ABA6B719A3528FFFDAC45424D65
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/fr/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: fr-FR
-  InstallerSha256: 85D2F695881F1C41C79417D5463A2691BE809AE46D2EAE05A04B4E9048A2DDAC
-  Architecture: arm64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ta/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 ta)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 ta)
-  InstallerLocale: ta-IN
-  Scope: machine
-  InstallerSha256: BE59827304861589713EC8CE48A025B26AB38696D732E407F1ED63E10994647B
-  Architecture: x64
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ta/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x64 ta)
-    ProductCode: Mozilla Firefox 115.0.1 (x64 ta)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ta-IN
-  Scope: machine
-  InstallerSha256: 4282765C640C0951A1993AF3F57F11912627BD8109041687A822494F99CBBD33
-  Architecture: x64
-  InstallerType: exe
-- ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
-  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ta/Firefox%20Setup%20115.0.1.msi
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 ta)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 ta)
-  InstallerLocale: ta-IN
-  Scope: machine
-  InstallerSha256: D375BE68DE44AF335C2EA1BB1ED285111299C988AFBAB9BA0275222D1C10F952
-  Architecture: x86
-  InstallerType: wix
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ta/Firefox%20Setup%20115.0.1.exe
-  AppsAndFeaturesEntries:
-  - DisplayName: Mozilla Firefox (x86 ta)
-    ProductCode: Mozilla Firefox 115.0.1 (x86 ta)
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ta-IN
-  Scope: machine
-  InstallerSha256: 9CEE538138A1D5A048ED73B7D86C1905578D6E5ACD5DC0536AE25AAFEEA4E618
-  Architecture: x86
-  InstallerType: exe
-- InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/ta/Firefox%20Setup%20115.0.1.exe
-  Scope: machine
-  InstallerSwitches:
-    SilentWithProgress: /S
-    Silent: /S
-  InstallerLocale: ta-IN
-  InstallerSha256: 1B59733722CDE8B8863D945B6C4E5F0F01864A7AFFE3CA9BC28625043D2D28A2
-  Architecture: arm64
-  InstallerType: exe
 PackageIdentifier: Mozilla.Firefox
-PackageName: Mozilla Firefox
-PackageUrl: https://www.mozilla.org/en-US/firefox/
-License: Mozilla Public License Version 2.0
-Publisher: Mozilla
-PrivacyUrl: https://www.mozilla.org/en-US/privacy/websites
-CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
 ReleaseNotesUrl: https://www.mozilla.org/en-US/firefox/115.0.1/releasenotes/
-Moniker: firefox
-ManifestVersion: 1.4.0
-Protocols:
-- http
-- https
-Tags:
-- browser
-- cross-platform
-- foss
-- gecko
-- quantum
-- spidermonkey
-- web
-- web-browser
-Description: |-
-  Firefox Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation.
-  Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.
-  In 2017, Firefox began incorporating new technology under the code name Quantum to promote parallelism and a more intuitive user interface.
-  Firefox is officially available for Windows 7 or newer, macOS, and Linux.
-  Its unofficial ports are available for various Unix and Unix-like operating systems including FreeBSD, OpenBSD, NetBSD, illumos, and Solaris Unix.
+LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0
+PublisherSupportUrl: https://support.mozilla.org/en-US/
+ManifestType: merged
+PrivacyUrl: https://www.mozilla.org/en-US/privacy/websites
+Publisher: Mozilla
 ReleaseDate: 2023-07-08
+UpgradeBehavior: install
 FileExtensions:
 - htm
 - html
 - url
+Protocols:
+- http
+- https
 MinimumOSVersion: 10.0.17763.0
+Author: Mozilla Foundation
+PackageVersion: 115.0.1
 PublisherUrl: https://www.mozilla.org/en-US/
+Commands:
+- firefox
 Localization:
-- Tags:
-  - webbrowser
-  License: Mozilla Public License Version 2.0
-  Publisher: Mozilla
-  LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0
-  ShortDescription: Mozilla Firefox ist ein freier und quelloffener Webbrowser.
-  Author: Mozilla Foundation
-  PublisherUrl: https://www.mozilla.org/de/
-  PackageLocale: de-DE
-  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
-  Description: Mozilla Firefox, kurz Firefox genannt, ist ein freier Webbrowser des Mozilla-Projektes. Er wurde im September 2002 veröffentlicht. Firefox verwendet die Gecko-Layout-Engine zum Rendern von Webseiten, die aktuelle und erwartete Webstandards implementiert. Im Jahr 2017 begann Firefox mit der Einführung neuer Technologien unter dem Codenamen Quantum, um Parallelität und eine intuitivere Benutzeroberfläche zu fördern. Seine inoffiziellen Ports sind für verschiedene Unix- und Unix-ähnliche Betriebssysteme verfügbar, darunter FreeBSD, OpenBSD, NetBSD, illumos und Solaris Unix.
-  PrivacyUrl: https://www.mozilla.org/de/privacy/websites
+- Author: Mozilla Foundation
   PackageName: Mozilla Firefox
   PackageUrl: https://www.mozilla.org/de/firefox/
   PublisherSupportUrl: https://support.mozilla.org/de/
-- License: Mozilla Public License Version 2.0
+  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
+  License: Mozilla Public License Version 2.0
+  Description: Mozilla Firefox, kurz Firefox genannt, ist ein freier Webbrowser des Mozilla-Projektes. Er wurde im September 2002 veröffentlicht. Firefox verwendet die Gecko-Layout-Engine zum Rendern von Webseiten, die aktuelle und erwartete Webstandards implementiert. Im Jahr 2017 begann Firefox mit der Einführung neuer Technologien unter dem Codenamen Quantum, um Parallelität und eine intuitivere Benutzeroberfläche zu fördern. Seine inoffiziellen Ports sind für verschiedene Unix- und Unix-ähnliche Betriebssysteme verfügbar, darunter FreeBSD, OpenBSD, NetBSD, illumos und Solaris Unix.
+  PublisherUrl: https://www.mozilla.org/de/
+  ShortDescription: Mozilla Firefox ist ein freier und quelloffener Webbrowser.
+  PrivacyUrl: https://www.mozilla.org/de/privacy/websites
+  Tags:
+  - webbrowser
+  PackageLocale: de-DE
   Publisher: Mozilla
-  LicenseUrl: https://www.mozilla.org/MPL/2.0/
-  ShortDescription: Firefox, ένα δωρεάν πρόγραμμα περιήγησης από τη Mozilla, μια μη κερδοσκοπική οργάνωση αφιερωμένη στην υγεία και το απόρρητο του διαδικτύου.
-  Author: Mozilla Foundation
-  PublisherUrl: https://www.mozilla.org/el/
-  PackageLocale: el-GR
-  CopyrightUrl: https://www.mozilla.org/foundation/trademarks/policy
-  PrivacyUrl: https://www.mozilla.org/el/privacy/websites/
+  LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0
+- Author: Mozilla Foundation
   PackageName: Mozilla Firefox
   PackageUrl: https://www.mozilla.org/el/firefox/
   PublisherSupportUrl: https://support.mozilla.org/el/
-- Tags:
-  - navegador
-  - navegador-web
-  - web
+  CopyrightUrl: https://www.mozilla.org/foundation/trademarks/policy
   License: Mozilla Public License Version 2.0
+  ShortDescription: Firefox, ένα δωρεάν πρόγραμμα περιήγησης από τη Mozilla, μια μη κερδοσκοπική οργάνωση αφιερωμένη στην υγεία και το απόρρητο του διαδικτύου.
+  PublisherUrl: https://www.mozilla.org/el/
+  PrivacyUrl: https://www.mozilla.org/el/privacy/websites/
+  PackageLocale: el-GR
   Publisher: Mozilla
-  LicenseUrl: https://www.mozilla.org/es-MX/MPL/2.0/
-  ShortDescription: Mozilla Firefox es un software gratuito y de código abierto, creado por una comunidad de miles de personas de todo el mundo.
-  Author: Mozilla Foundation
-  PublisherUrl: https://www.mozilla.org/es-MX/
-  PackageLocale: es-MX
-  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
-  Description: Firefox Browser, también conocido como Mozilla Firefox o simplemente Firefox, es un navegador web gratuito y de código abierto desarrollado por Mozilla Foundation y su subsidiaria, Mozilla Corporation. Firefox utiliza el motor de diseño Gecko para representar páginas web, que implementa estándares web actuales y anticipados. En 2017, Firefox comenzó a incorporar nueva tecnología con el nombre en código Quantum para promover el paralelismo y una interfaz de usuario más intuitiva. Firefox está disponible oficialmente para Windows 7 o más reciente, macOS y Linux. Sus puertos no oficiales están disponibles para varios sistemas operativos Unix y similares a Unix, incluidos FreeBSD, OpenBSD, NetBSD, illumos y Solaris Unix.
-  PrivacyUrl: https://www.mozilla.org/es-MX/privacy/websites/
+  LicenseUrl: https://www.mozilla.org/MPL/2.0/
+- Author: Mozilla Foundation
   PackageName: Mozilla Firefox
   PackageUrl: https://www.mozilla.org/es-MX/firefox/
   PublisherSupportUrl: https://support.mozilla.org/es/
-- Tags:
-  - navigateur
-  - navigateur-web
-  - web
-  License: Mozilla Public License Version 2.0
-  Publisher: Mozilla
-  LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0/
-  ShortDescription: Mozilla Firefox est un logiciel libre et ouvert, réalisé par une communauté de milliers de contributeurs dans le monde.
-  Author: Mozilla Foundation
-  PublisherUrl: https://www.mozilla.org/fr/
-  PackageLocale: fr-FR
   CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
-  PrivacyUrl: https://www.mozilla.org/fr/privacy/websites/
+  License: Mozilla Public License Version 2.0
+  Description: Firefox Browser, también conocido como Mozilla Firefox o simplemente Firefox, es un navegador web gratuito y de código abierto desarrollado por Mozilla Foundation y su subsidiaria, Mozilla Corporation. Firefox utiliza el motor de diseño Gecko para representar páginas web, que implementa estándares web actuales y anticipados. En 2017, Firefox comenzó a incorporar nueva tecnología con el nombre en código Quantum para promover el paralelismo y una interfaz de usuario más intuitiva. Firefox está disponible oficialmente para Windows 7 o más reciente, macOS y Linux. Sus puertos no oficiales están disponibles para varios sistemas operativos Unix y similares a Unix, incluidos FreeBSD, OpenBSD, NetBSD, illumos y Solaris Unix.
+  PublisherUrl: https://www.mozilla.org/es-MX/
+  ShortDescription: Mozilla Firefox es un software gratuito y de código abierto, creado por una comunidad de miles de personas de todo el mundo.
+  PrivacyUrl: https://www.mozilla.org/es-MX/privacy/websites/
+  Tags:
+  - navegador
+  - navegador-web
+  - web
+  PackageLocale: es-MX
+  Publisher: Mozilla
+  LicenseUrl: https://www.mozilla.org/es-MX/MPL/2.0/
+- Author: Mozilla Foundation
   PackageName: Mozilla Firefox
   PackageUrl: https://www.mozilla.org/fr/firefox/
   PublisherSupportUrl: https://support.mozilla.org/fr/
-- Tags:
+  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
+  License: Mozilla Public License Version 2.0
+  ShortDescription: Mozilla Firefox est un logiciel libre et ouvert, réalisé par une communauté de milliers de contributeurs dans le monde.
+  PublisherUrl: https://www.mozilla.org/fr/
+  PrivacyUrl: https://www.mozilla.org/fr/privacy/websites/
+  Tags:
+  - navigateur
+  - navigateur-web
+  - web
+  PackageLocale: fr-FR
+  Publisher: Mozilla
+  LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0/
+- Author: Mozilla Foundation
+  PackageName: Mozilla Firefox
+  PackageUrl: https://www.mozilla.org/ja/firefox/
+  PublisherSupportUrl: https://support.mozilla.org/ja/
+  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy/
+  License: Mozilla Public License Version 2.0
+  Description: Mozilla Firefox は無料のオープンソースソフトウェアであり、世界中の多数のコミュニティによって開発されています。
+  PublisherUrl: https://www.mozilla.org/ja/
+  ShortDescription: 高速で軽量、プライバシー重視のブラウザー
+  PrivacyUrl: https://www.mozilla.org/ja/privacy/websites/
+  Tags:
   - browser
   - cross-platform
   - foss
@@ -788,51 +100,57 @@ Localization:
   - spidermonkey
   - web
   - web-browser
-  License: Mozilla Public License Version 2.0
+  PackageLocale: ja-JP
   Publisher: Mozilla
   LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0/
-  ShortDescription: 高速で軽量、プライバシー重視のブラウザー
-  Author: Mozilla Foundation
-  PublisherUrl: https://www.mozilla.org/ja/
-  PackageLocale: ja-JP
-  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy/
-  Description: Mozilla Firefox は無料のオープンソースソフトウェアであり、世界中の多数のコミュニティによって開発されています。
-  PrivacyUrl: https://www.mozilla.org/ja/privacy/websites/
-  PackageName: Mozilla Firefox
-  PackageUrl: https://www.mozilla.org/ja/firefox/
-  PublisherSupportUrl: https://support.mozilla.org/ja/
-- Tags:
-  - nettleser
-  License: Mozilla Public License Version 2.0
-  Publisher: Mozilla
-  LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0
-  ShortDescription: Mozilla Firefox er gratis programvare med åpen kildekode, bygget av et samfunn på tusenvis fra hele verden.
-  Author: Mozilla Foundation
-  PublisherUrl: https://www.mozilla.org/nb-NO/
-  PackageLocale: nb-NO
-  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
-  Description: Firefox Browser, også kjent som Mozilla Firefox eller bare Firefox, er en gratis nettleser med åpen kildekode utviklet av Mozilla Foundation og dets datterselskap, Mozilla Corporation. Firefox bruker Gecko-layoutmotoren til å gjengi nettsider, som implementerer gjeldende og forventede webstandarder. I 2017 begynte Firefox å innlemme ny teknologi under kodenavnet Quantum for å fremme parallellitet og et mer intuitivt brukergrensesnitt. Firefox er offisielt tilgjengelig for Windows 7 eller nyere, macOS og Linux. Dens uoffisielle porter er tilgjengelige for forskjellige Unix og Unix-lignende operativsystemer, inkludert FreeBSD, OpenBSD, NetBSD, illumos og Solaris Unix.
-  PrivacyUrl: https://www.mozilla.org/nb-NO/privacy/websites
+- Author: Mozilla Foundation
   PackageName: Mozilla Firefox
   PackageUrl: https://www.mozilla.org/nb-NO/firefox/
   PublisherSupportUrl: https://support.mozilla.org/nb-NO/
-- Tags:
-  - браузер
-  - веб-браузер
+  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
   License: Mozilla Public License Version 2.0
+  Description: Firefox Browser, også kjent som Mozilla Firefox eller bare Firefox, er en gratis nettleser med åpen kildekode utviklet av Mozilla Foundation og dets datterselskap, Mozilla Corporation. Firefox bruker Gecko-layoutmotoren til å gjengi nettsider, som implementerer gjeldende og forventede webstandarder. I 2017 begynte Firefox å innlemme ny teknologi under kodenavnet Quantum for å fremme parallellitet og et mer intuitivt brukergrensesnitt. Firefox er offisielt tilgjengelig for Windows 7 eller nyere, macOS og Linux. Dens uoffisielle porter er tilgjengelige for forskjellige Unix og Unix-lignende operativsystemer, inkludert FreeBSD, OpenBSD, NetBSD, illumos og Solaris Unix.
+  PublisherUrl: https://www.mozilla.org/nb-NO/
+  ShortDescription: Mozilla Firefox er gratis programvare med åpen kildekode, bygget av et samfunn på tusenvis fra hele verden.
+  PrivacyUrl: https://www.mozilla.org/nb-NO/privacy/websites
+  Tags:
+  - nettleser
+  PackageLocale: nb-NO
   Publisher: Mozilla
   LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0
-  ShortDescription: Mozilla Firefox это бесплатное программное обеспечение с открытым исходным кодом, созданное сообществом тысяч людей со всего мира.
-  Author: Mozilla Foundation
-  PublisherUrl: https://www.mozilla.org/ru/
-  PackageLocale: ru-RU
-  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
-  Description: Браузер Firefox, также известный как Mozilla Firefox или просто Firefox, - это бесплатный веб-браузер с открытым исходным кодом, разработанный Mozilla Foundation и его дочерней компанией Mozilla Corporation. Firefox использует механизм компоновки Gecko для отображения веб-страниц, который реализует текущие и ожидаемые веб-стандарты. В 2017 году Firefox начал включать новую технологию под кодовым названием Quantum, чтобы способствовать параллелизму и более интуитивному пользовательскому интерфейсу. Firefox официально доступен для Windows 7 или новее, macOS и Linux. Его неофициальные порты доступны для различных Unix и Unix-подобных операционных систем, включая FreeBSD, OpenBSD, NetBSD, illumos и Solaris Unix.
-  PrivacyUrl: https://www.mozilla.org/ru/privacy/websites
+- Author: Mozilla Foundation
   PackageName: Mozilla Firefox
   PackageUrl: https://www.mozilla.org/ru/firefox/
   PublisherSupportUrl: https://support.mozilla.org/ru/
-- Tags:
+  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
+  License: Mozilla Public License Version 2.0
+  Description: Браузер Firefox, также известный как Mozilla Firefox или просто Firefox, - это бесплатный веб-браузер с открытым исходным кодом, разработанный Mozilla Foundation и его дочерней компанией Mozilla Corporation. Firefox использует механизм компоновки Gecko для отображения веб-страниц, который реализует текущие и ожидаемые веб-стандарты. В 2017 году Firefox начал включать новую технологию под кодовым названием Quantum, чтобы способствовать параллелизму и более интуитивному пользовательскому интерфейсу. Firefox официально доступен для Windows 7 или новее, macOS и Linux. Его неофициальные порты доступны для различных Unix и Unix-подобных операционных систем, включая FreeBSD, OpenBSD, NetBSD, illumos и Solaris Unix.
+  PublisherUrl: https://www.mozilla.org/ru/
+  ShortDescription: Mozilla Firefox это бесплатное программное обеспечение с открытым исходным кодом, созданное сообществом тысяч людей со всего мира.
+  PrivacyUrl: https://www.mozilla.org/ru/privacy/websites
+  Tags:
+  - браузер
+  - веб-браузер
+  PackageLocale: ru-RU
+  Publisher: Mozilla
+  LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0
+- Author: மொஸில்லா அறக்கட்டளை
+  ShortDescription: மொஸில்லா பயர்பாக்ஸ் என்பது இலவச மற்றும் திறந்த மூல மென்பொருளாகும், இது உலகம் முழுவதிலுமிருந்து ஆயிரக்கணக்கான சமூகத்தால் உருவாக்கப்பட்டது.
+  PackageName: Mozilla Firefox
+  PackageUrl: https://www.mozilla.org/en-US/firefox/
+  PublisherSupportUrl: https://support.mozilla.org/en-US/
+  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
+  License: Mozilla Public License Version 2.0
+  Description: |-
+    பயர்பாக்ஸ் உலாவி, மொஸில்லா பயர்பாக்ஸ் அல்லது வெறுமனே பயர்பாக்ஸ் என்றும் அழைக்கப்படுகிறது, இது மொஸில்லா அறக்கட்டளை மற்றும் அதன் துணை நிறுவனமான மொஸில்லா கார்ப்பரேஷனால் உருவாக்கப்பட்ட ஒரு இலவச மற்றும் திறந்த மூல இணைய உலாவியாகும்.
+    பயர்பாக்ஸ் இணையப் பக்கங்களை வழங்குவதற்கு கெக்கோ தளவமைப்பு இயந்திரத்தைப் பயன்படுத்துகிறது, இது தற்போதைய மற்றும் எதிர்பார்க்கப்பட்ட இணையத் தரங்களைச் செயல்படுத்துகிறது.
+    2017 ஆம் ஆண்டில், இணையான மற்றும் மிகவும் உள்ளுணர்வு பயனர் இடைமுகத்தை மேம்படுத்துவதற்காக குவாண்டம் என்ற குறியீட்டு பெயரில் புதிய தொழில்நுட்பத்தை பயர்பாக்ஸ் இணைக்கத் தொடங்கியது.
+    Firefox Windows 7 அல்லது புதிய, macOS மற்றும் Linux க்கு அதிகாரப்பூர்வமாக கிடைக்கிறது.
+    அதன் அதிகாரப்பூர்வமற்ற போர்ட்கள் FreeBSD, OpenBSD, NetBSD, illumos மற்றும் Solaris Unix உள்ளிட்ட பல்வேறு Unix மற்றும் Unix போன்ற இயங்குதளங்களுக்கு கிடைக்கின்றன.
+  PublisherUrl: https://www.mozilla.org/en-US/
+  ReleaseNotesUrl: https://www.mozilla.org/en-US/firefox/114.0.1/releasenotes/
+  PrivacyUrl: https://www.mozilla.org/en-US/privacy/websites
+  Tags:
   - mozilla
   - browser
   - web
@@ -844,26 +162,20 @@ Localization:
   - கெக்கோ
   - குவாண்டம்
   - சிலந்தி-குரங்கு
-  License: Mozilla Public License Version 2.0
-  ReleaseNotesUrl: https://www.mozilla.org/en-US/firefox/114.0.1/releasenotes/
+  PackageLocale: ta-IN
   Publisher: Mozilla
   LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0
-  ShortDescription: மொஸில்லா பயர்பாக்ஸ் என்பது இலவச மற்றும் திறந்த மூல மென்பொருளாகும், இது உலகம் முழுவதிலுமிருந்து ஆயிரக்கணக்கான சமூகத்தால் உருவாக்கப்பட்டது.
-  Author: மொஸில்லா அறக்கட்டளை
-  PublisherUrl: https://www.mozilla.org/en-US/
-  PackageLocale: ta-IN
-  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
-  Description: |-
-    பயர்பாக்ஸ் உலாவி, மொஸில்லா பயர்பாக்ஸ் அல்லது வெறுமனே பயர்பாக்ஸ் என்றும் அழைக்கப்படுகிறது, இது மொஸில்லா அறக்கட்டளை மற்றும் அதன் துணை நிறுவனமான மொஸில்லா கார்ப்பரேஷனால் உருவாக்கப்பட்ட ஒரு இலவச மற்றும் திறந்த மூல இணைய உலாவியாகும்.
-    பயர்பாக்ஸ் இணையப் பக்கங்களை வழங்குவதற்கு கெக்கோ தளவமைப்பு இயந்திரத்தைப் பயன்படுத்துகிறது, இது தற்போதைய மற்றும் எதிர்பார்க்கப்பட்ட இணையத் தரங்களைச் செயல்படுத்துகிறது.
-    2017 ஆம் ஆண்டில், இணையான மற்றும் மிகவும் உள்ளுணர்வு பயனர் இடைமுகத்தை மேம்படுத்துவதற்காக குவாண்டம் என்ற குறியீட்டு பெயரில் புதிய தொழில்நுட்பத்தை பயர்பாக்ஸ் இணைக்கத் தொடங்கியது.
-    Firefox Windows 7 அல்லது புதிய, macOS மற்றும் Linux க்கு அதிகாரப்பூர்வமாக கிடைக்கிறது.
-    அதன் அதிகாரப்பூர்வமற்ற போர்ட்கள் FreeBSD, OpenBSD, NetBSD, illumos மற்றும் Solaris Unix உள்ளிட்ட பல்வேறு Unix மற்றும் Unix போன்ற இயங்குதளங்களுக்கு கிடைக்கின்றன.
-  PrivacyUrl: https://www.mozilla.org/en-US/privacy/websites
+- Author: Mozilla 基金会
   PackageName: Mozilla Firefox
-  PackageUrl: https://www.mozilla.org/en-US/firefox/
-  PublisherSupportUrl: https://support.mozilla.org/en-US/
-- Tags:
+  PackageUrl: https://www.mozilla.org/zh-CN/firefox/
+  PublisherSupportUrl: https://support.mozilla.org/zh-CN/
+  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
+  License: MPL-2.0
+  Description: Firefox 浏览器是唯一一款由非营利组织支持，不会将您的个人数据买给广告商，还能保护您个人信息的主流浏览器。
+  PublisherUrl: https://www.mozilla.org/zh-CN/
+  ShortDescription: 开放安全的开源浏览器
+  PrivacyUrl: https://www.mozilla.org/zh-CN/privacy/
+  Tags:
   - mozilla
   - 浏览器
   - 火狐
@@ -871,23 +183,711 @@ Localization:
   - 网页浏览器
   - 谋智
   - 跨平台
-  License: MPL-2.0
+  PackageLocale: zh-CN
   Publisher: Mozilla
   LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0/
-  ShortDescription: 开放安全的开源浏览器
-  Author: Mozilla 基金会
-  PublisherUrl: https://www.mozilla.org/zh-CN/
-  PackageLocale: zh-CN
-  CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
-  Description: Firefox 浏览器是唯一一款由非营利组织支持，不会将您的个人数据买给广告商，还能保护您个人信息的主流浏览器。
-  PrivacyUrl: https://www.mozilla.org/zh-CN/privacy/
-  PackageName: Mozilla Firefox
-  PackageUrl: https://www.mozilla.org/zh-CN/firefox/
-  PublisherSupportUrl: https://support.mozilla.org/zh-CN/
-PublisherSupportUrl: https://support.mozilla.org/en-US/
+ShortDescription: Mozilla Firefox is free and open source software, built by a community of thousands from all over the world.
+PackageName: Mozilla Firefox
+PackageLocale: en-US
+ManifestVersion: 1.4.0
+Moniker: firefox
+ReleaseNotes: |
+  - Fixed a startup crash for Windows users with Kingsoft Antivirus software installed (bug 1837242)
+License: Mozilla Public License Version 2.0
+InstallModes:
+- silentWithProgress
+Description: |-
+  Firefox Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation.
+  Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.
+  In 2017, Firefox began incorporating new technology under the code name Quantum to promote parallelism and a more intuitive user interface.
+  Firefox is officially available for Windows 7 or newer, macOS, and Linux.
+  Its unofficial ports are available for various Unix and Unix-like operating systems including FreeBSD, OpenBSD, NetBSD, illumos, and Solaris Unix.
+PackageUrl: https://www.mozilla.org/en-US/firefox/
+CopyrightUrl: https://www.mozilla.org/en-US/foundation/trademarks/policy
 Platform:
 - Windows.Desktop
-LicenseUrl: https://www.mozilla.org/en-US/MPL/2.0
-PackageLocale: en-US
-UpgradeBehavior: install
+Installers:
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-US/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: BB8E0AD79C06F42BF8200695DD951386935ECAA10CE8972813D41C94C2AF98CD
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 en-US)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 en-US)
+  InstallerType: wix
+  InstallerLocale: en-US
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-US/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: F49799B5DBEADABEDD06252CE834E959D42565D8A4DA20D6DD651DAF70D9E6F3
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 en-US)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 en-US)
+  InstallerType: exe
+  InstallerLocale: en-US
+- Scope: user
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-US/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: F49799B5DBEADABEDD06252CE834E959D42565D8A4DA20D6DD651DAF70D9E6F3
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 en-US)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 en-US)
+  InstallerType: exe
+  InstallerLocale: en-US
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-US/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 77996CE7FD9442FF9BB1B5813C6FB93F9875FB448798CF186C42F8E9B5AECA48
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 en-US)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 en-US)
+  InstallerType: wix
+  InstallerLocale: en-US
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-US/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: A9932A02A478B36600C5085D76677F430F809B43DF386DF2949EC76FFAB51C6C
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 en-US)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 en-US)
+  InstallerType: exe
+  InstallerLocale: en-US
+- Scope: user
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-US/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: A9932A02A478B36600C5085D76677F430F809B43DF386DF2949EC76FFAB51C6C
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 en-US)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 en-US)
+  InstallerType: exe
+  InstallerLocale: en-US
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/en-US/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: F4CDA7DC7FCBE943396CE7335D8E8AAED9FBEB4DB8F9C8F17B29265E687D37C8
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: en-US
+- Scope: user
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/en-US/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: F4CDA7DC7FCBE943396CE7335D8E8AAED9FBEB4DB8F9C8F17B29265E687D37C8
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: en-US
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/zh-CN/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: F6ED9A3DAE58D68D48C47C5B5181936D573882DA7DB79FAB339C80EC7313F763
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 zh-CN)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 zh-CN)
+  InstallerType: wix
+  InstallerLocale: zh-CN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/zh-CN/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 8D6781FC590C25FDB170043B804350DAA2F3B604A49F6F9A93DBE9D9A19013F9
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 zh-CN)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 zh-CN)
+  InstallerType: exe
+  InstallerLocale: zh-CN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/zh-CN/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 3E6AC8F35F89E3094C392D1B0DD7E1982AEFDD9EDEB5D1F03F6067D108CB3700
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 zh-CN)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 zh-CN)
+  InstallerType: wix
+  InstallerLocale: zh-CN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/zh-CN/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 2DF7909D010895AFE3C21C77E319365BC4FD373B7791E0A6A7469126656871C7
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 zh-CN)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 zh-CN)
+  InstallerType: exe
+  InstallerLocale: zh-CN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/zh-CN/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: 7D7B90C3664A20338759F7C19C5EE6F78F5A13E26CE1B1D8D47D1CE4E117E878
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: zh-CN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-GB/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: 587FAE74B52D6082380DDD92010160C20960F1ACEFEEEFFB46BF3B2D50065FF7
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 en-GB)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 en-GB)
+  InstallerType: wix
+  InstallerLocale: en-GB
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/en-GB/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 9B01F48E1094A07C5B7C1E0BC3FC6C4AE9CE391DC4A939D647D0827F776CBF69
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 en-GB)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 en-GB)
+  InstallerType: exe
+  InstallerLocale: en-GB
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-GB/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 64DE0B30EFAD3233052AE8658FC399DFB440C97EFE4460907FC822C0C71FE5FF
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 en-GB)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 en-GB)
+  InstallerType: wix
+  InstallerLocale: en-GB
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/en-GB/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 39FC679894B304DAD3A0C745962D698F0735FF2451F2BEC32E9876BB4875C3FF
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 en-GB)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 en-GB)
+  InstallerType: exe
+  InstallerLocale: en-GB
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/en-GB/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: 61F4C056C0F9495C05C949B5F0092AB8018BCABE90CAC5A720A304AEB787DC93
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: en-GB
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ru/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: 9E97EF033689AB44FA55B6E5E3950C0C1E1C8BC312DBCA2C7EB48A3752227F75
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 ru)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 ru)
+  InstallerType: wix
+  InstallerLocale: ru-RU
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ru/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: D40C9BAF486C6F281D52A36EAC33AF2EDC1FFFB0B68AA95F90D3652AF880DF12
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 ru)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 ru)
+  InstallerType: exe
+  InstallerLocale: ru-RU
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ru/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: E2C058046673750030EA540F100399E4B34A9D1BB7E6E42F0A4D20F4B86C346C
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 ru)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 ru)
+  InstallerType: wix
+  InstallerLocale: ru-RU
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ru/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 0E30958365906DC791CD6F0DE86D630E276F4E0A6D6B89CB2E46D297C2ED3939
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 ru)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 ru)
+  InstallerType: exe
+  InstallerLocale: ru-RU
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/ru/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: 142075EE1C883C406A89204606DCBAB085E939F68D80D30C3E6E2A200FC2CEC3
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: ru-RU
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/de/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: 8AEC53A9B9DE822FA8132EF275B054760E002A7CEF0A8D2AB62D5E98609DB420
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 de)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 de)
+  InstallerType: wix
+  InstallerLocale: de-DE
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/de/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 7BF156A20A24A9DD55499948F2E1C3694525AB8621DD7EA8FF560D644A2F8C62
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 de)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 de)
+  InstallerType: exe
+  InstallerLocale: de-DE
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/de/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 39491DF30A5026BF0C85DF0EA978058FCE0797E3BEF8B998294B4ADA35207FA2
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 de)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 de)
+  InstallerType: wix
+  InstallerLocale: de-DE
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/de/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 223DF332EDC065E325CEA84E1760EF35CA917A6E58FBF118686F49B948BF076D
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 de)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 de)
+  InstallerType: exe
+  InstallerLocale: de-DE
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/de/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: 66E641A22B26009AED26466EA9C7F9414E22C79F63985E1B4BD235FA5598262B
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: de-DE
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/el/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: EBD3846B53A263B5553DA6BABCEB42AD44A4EA3ECFE3F778E9C092C4558C91CF
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 el)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 el)
+  InstallerType: wix
+  InstallerLocale: el-GR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/el/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 49C4FABD99AC8F71AF53D83A6414ECF16AB62B5D2233393B5DEE02B854F6CB7F
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 el)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 el)
+  InstallerType: exe
+  InstallerLocale: el-GR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/el/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 5C87BA0EA7B644A8E37226FABFE4E9A65177F03B29D8CB7C87ECA3F7D0B6CBB7
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 el)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 el)
+  InstallerType: wix
+  InstallerLocale: el-GR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/el/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 2C5D2D9B1122096275B1AE519C87786F04CFD9DFB410920EEE51A739CFAA4E86
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 el)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 el)
+  InstallerType: exe
+  InstallerLocale: el-GR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/el/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: BC2512F08E484AE910BFC2ACA3E6D3121C53278332F2086F4F2A9519B85B8F1D
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: el-GR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ja/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: 512C92E52776632745839012E25B471B609736E52141931C441DAA9CA91B625C
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 ja)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 ja)
+  InstallerType: wix
+  InstallerLocale: ja-JP
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ja/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 1BED73C017EAA872B508E74E214DB29F8CF9766291D9FE7D9F07426D8FB4F378
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 ja)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 ja)
+  InstallerType: exe
+  InstallerLocale: ja-JP
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ja/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 4DCFB6184F8E0760BB75A0ADAD2401DF4F68E0420CB36F48C697595AA4F02B0C
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 ja)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 ja)
+  InstallerType: wix
+  InstallerLocale: ja-JP
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ja/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 6084F461B922F5F851D5122FB3085917FD1C0D326F9E5BF14778AF15D99EB2DD
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 ja)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 ja)
+  InstallerType: exe
+  InstallerLocale: ja-JP
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/ja/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: FAC621FE81680359269D374A1199FD5EC822941226BA145E86EDEF911B9054A6
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: ja-JP
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/es-ES/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: A50A51558E963520E9FAFF7BBE70634E11CEEE82542D14FA6FAA592EFC997FC3
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 es-ES)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 es-ES)
+  InstallerType: wix
+  InstallerLocale: es-ES
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/es-ES/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 7AF1B6406F7D2A9D056E8A99214AC5E03F06585918BE966D088B85AB21C74673
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 es-ES)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 es-ES)
+  InstallerType: exe
+  InstallerLocale: es-ES
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/es-ES/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 19BCC3858B779C2859749055B366F8DF53D9FC46B0DE4110713F3442384A2D26
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 es-ES)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 es-ES)
+  InstallerType: wix
+  InstallerLocale: es-ES
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/es-ES/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 19D0B4BA6E6158FA94BE3B021E283648927D586A3AE5EB3751DC9A17A17BA90E
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 es-ES)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 es-ES)
+  InstallerType: exe
+  InstallerLocale: es-ES
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/es-ES/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: EE469426BCBE6DF44B022352DF538473842635C9BD154F4A8FE0D3E3C6836647
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: es-ES
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/es-MX/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: F9F2CAF70ED47343DC34EC7FF395D97AA4EA4FC4CE5FFF06FC1041C1A5F43A80
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 es-MX)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 es-MX)
+  InstallerType: wix
+  InstallerLocale: es-MX
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/es-MX/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: A0B378468CBD15C6A0765992592D560AC52B21446919C1F64F32C93276D2CB29
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 es-MX)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 es-MX)
+  InstallerType: exe
+  InstallerLocale: es-MX
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/es-MX/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 0F240ADCCF97D1F507377C7A035AB34BF57827ABD102DEB5AC4DEA67BCDE0526
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 es-MX)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 es-MX)
+  InstallerType: wix
+  InstallerLocale: es-MX
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/es-MX/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 90754244A5D20E9CE457B2573E13EE235153E4C4649B221BDA78C68F3E2517D2
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 es-MX)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 es-MX)
+  InstallerType: exe
+  InstallerLocale: es-MX
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/es-MX/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: DF1AD1DECE5C7C2BDEA2D3A33390B28F7935E83BC74F391F99BC5977A522ACA8
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: es-MX
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/nb-NO/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: E066582D6DDBBA06D46CACB63E2F61316BF71C35DCF352116C6950E5E6C58D62
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 nb-NO)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 nb-NO)
+  InstallerType: wix
+  InstallerLocale: nb-NO
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/nb-NO/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 68216149CF14F3AA2C4CF4A41556B255C4CCA29A15BFCF95ABD12BF085385406
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 nb-NO)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 nb-NO)
+  InstallerType: exe
+  InstallerLocale: nb-NO
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/nb-NO/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 99F9F39D27F65A6C0756A094857E25F27CB2C8F0B87157AAE440799D44AD599B
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 nb-NO)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 nb-NO)
+  InstallerType: wix
+  InstallerLocale: nb-NO
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/nb-NO/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 1209425BB69712877A088BFC0A42FF5F01DB844ABDA9767F2BA94A846F004E26
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 nb-NO)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 nb-NO)
+  InstallerType: exe
+  InstallerLocale: nb-NO
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/nb-NO/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: 470A40C6BC5D6727D8E540756F213263A599B63A6EDDEE7AC22A565A70C11DB0
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: nb-NO
+- Architecture: x64
+  InstallerSha256: E9C13DC51741EA00590B9655CB62D372F5AB1ECE3B4126CE75231F03A4BC7013
+  SignatureSha256: de3ac25d0747fe8f8dc60a2be344ac9b1458ef791a42835ea8356c498a8b0b2f
+  PackageFamilyName: Mozilla.MozillaFirefox_gmpnhwe7bv608
+  InstallerType: msix
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/multi/Firefox%20Setup%20115.0.1.msix
+- Architecture: x86
+  InstallerSha256: 885CEE79282764BB098599207CC5AB1AB2E46E9517D8D8ED275241510098A8A0
+  SignatureSha256: a0347a2d997d9ce534bd8e6db93448a3b021d2d3ed82ffcf04c543781b1f051d
+  PackageFamilyName: Mozilla.MozillaFirefox_gmpnhwe7bv608
+  InstallerType: msix
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/multi/Firefox%20Setup%20115.0.1.msix
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/fr/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: 992FC8597988B82C716366E4DFB587C5A0D0339075BCDC55C97BA9AC69201374
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 fr)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 fr)
+  InstallerType: wix
+  InstallerLocale: fr-FR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/fr/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 3EB35333C96FA52DFBCCB359F3B617CE15E5531D01BDD9D1A56B514B2B3BC00F
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 fr)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 fr)
+  InstallerType: exe
+  InstallerLocale: fr-FR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/fr/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: 1415EF1ECAA318A5F2CBD8F735796C281F1A9A545240E06AEA03C5A0ACED26D3
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 fr)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 fr)
+  InstallerType: wix
+  InstallerLocale: fr-FR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/fr/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 3B15EFB8D24935334AE088FA57822DBD55B77ABA6B719A3528FFFDAC45424D65
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 fr)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 fr)
+  InstallerType: exe
+  InstallerLocale: fr-FR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/fr/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: 85D2F695881F1C41C79417D5463A2691BE809AE46D2EAE05A04B4E9048A2DDAC
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: fr-FR
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ta/Firefox%20Setup%20115.0.1.msi
+  Architecture: x64
+  InstallerSha256: BE59827304861589713EC8CE48A025B26AB38696D732E407F1ED63E10994647B
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 ta)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 ta)
+  InstallerType: wix
+  InstallerLocale: ta-IN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64/ta/Firefox%20Setup%20115.0.1.exe
+  Architecture: x64
+  InstallerSha256: 4282765C640C0951A1993AF3F57F11912627BD8109041687A822494F99CBBD33
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x64 ta)
+    ProductCode: Mozilla Firefox 115.0.1 (x64 ta)
+  InstallerType: exe
+  InstallerLocale: ta-IN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ta/Firefox%20Setup%20115.0.1.msi
+  Architecture: x86
+  InstallerSha256: D375BE68DE44AF335C2EA1BB1ED285111299C988AFBAB9BA0275222D1C10F952
+  ProductCode: '{1294A4C5-9977-480F-9497-C0EA1E630130}'
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 ta)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 ta)
+  InstallerType: wix
+  InstallerLocale: ta-IN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win32/ta/Firefox%20Setup%20115.0.1.exe
+  Architecture: x86
+  InstallerSha256: 9CEE538138A1D5A048ED73B7D86C1905578D6E5ACD5DC0536AE25AAFEEA4E618
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  AppsAndFeaturesEntries:
+  - DisplayName: Mozilla Firefox (x86 ta)
+    ProductCode: Mozilla Firefox 115.0.1 (x86 ta)
+  InstallerType: exe
+  InstallerLocale: ta-IN
+- Scope: machine
+  InstallerUrl: https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0.1/win64-aarch64/ta/Firefox%20Setup%20115.0.1.exe
+  Architecture: arm64
+  InstallerSha256: 1B59733722CDE8B8863D945B6C4E5F0F01864A7AFFE3CA9BC28625043D2D28A2
+  InstallerSwitches:
+    SilentWithProgress: /S
+    Silent: /S
+  InstallerType: exe
+  InstallerLocale: ta-IN
+Tags:
+- browser
+- cross-platform
+- foss
+- gecko
+- quantum
+- spidermonkey
+- web
+- web-browser
 
