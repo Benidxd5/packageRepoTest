@@ -52,12 +52,12 @@ jobs:
         $url="${{ github.event.client_payload.pkgUrl }}"
         $response=$(curl -s -o /dev/null -w "%{http_code}" "$url")
 
-        if ("$response" -eq 200) then (
+        if ("$response" -eq 200){
           pkgPath="./00-generate-pkg-dir.ps1"
           curl -o "$pkgPath" "$url"
-          echo "File fetched successfully.")
-        else (
-          echo "URL does not exist or could not be accessed. Skipping file fetch.")
+          echo "File fetched successfully."}
+        else {
+          echo "URL does not exist or could not be accessed. Skipping file fetch."}
 
     - name: Set git config
       run: |
