@@ -154,7 +154,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git rm -r manifests/
+          git rm -r --cached manifests/
           git add source.msix
           git add manifests/
           git commit -m "new index published"
