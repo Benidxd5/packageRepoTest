@@ -68,6 +68,6 @@ jobs:
     #     github_token: ${{ secrets.GITHUB_TOKEN }}
     #     branch: "main"
 
-      if: ${{ github.event_name == 'repository_dispatch' }}
-      - name: Send greeting
-        run: echo "Hello ${{ github.event.client_payload.pkgUrl }}"
+    if: ${{ github.event_name == 'repository_dispatch' }}
+    - name: Send greeting
+      run: echo "Hello ${{ github.event.client_payload.pkgUrl }}"
