@@ -3,7 +3,7 @@ import time
 import re
 import yaml
 
-
+import requests
 import sqlite3
 from sqlite3 import Error
 from subprocess import check_output
@@ -43,6 +43,8 @@ def get_id(con, cursor, table, field, value, force_new=False):
 def normalize(name):
     return name.replace(' ', '').lower()
 
+packageVersions = {}
+
 def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
     # IDS
     id_ = get_id(con, cursor, 'ids', 'id', data['PackageIdentifier'])
@@ -65,11 +67,12 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
     # PATHPARTS
     parent_pathpart = 1
 
-
+    path = ""
     for part in pathParts[1:]:
         pathpart = get_id(con, cursor, 'pathparts', 'pathpart', part, True)
         cursor.execute('UPDATE pathparts SET parent={} WHERE rowid={};'.format(parent_pathpart, pathpart))
         parent_pathpart = pathpart
+        path+=part
     
     pathpart = get_id(con, cursor, 'pathparts', 'pathpart', manifestFilename, True)
     cursor.execute('UPDATE pathparts SET parent={} WHERE rowid={};'.format(parent_pathpart, pathpart))
@@ -82,6 +85,39 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
         (manifest, id_, name, moniker, version, 1, pathpart)
     )
     con.commit()
+
+    ##push to strapi
+
+    # The API endpoint to communicate with
+    url_post = "http://10.10.10.138:1337/api/approved-packages"
+
+    if(data['PackageIdentifier'] in packageVersions):
+        packageVersions[data['PackageIdentifier']].append(data['PackageVersion'])
+        updated_package = {
+            "name": data['PackageName'],
+            "identifier": data["PackageIdentifier"],
+            "description": data["Description"] or "",
+            "versions": packageVersions[data['PackageIdentifier']],
+            "path": path
+        }
+        post_response = requests.patch(url=url_post, json=updated_package, auth="bearer 08b4b74c980cc15b71f9aaefe0de2c215bb3fd10b935e8728263938f48cf4b388a5b7dc0651c29a1e5f9842c7bea04e240ed04f82dc2b001292ab66ec9699743401d28d90759cea620d8313d3b0a4fb0047e5c10dd53bbdf8a643347335ce8bc80322bbb3cd8530f74ecb5c6ca22ea57754f3f58bd687bf9f0b3eb3592701782")
+        # Print the response
+        post_response_json = post_response.json()
+        print(post_response_json)
+
+    else:
+        packageVersions[data['PackageIdentifier']] = [data['PackageVersion']]
+        new_package = {
+            "name": data['PackageName'],
+            "identifier": data["PackageIdentifier"],
+            "description": data["Description"] or "",
+            "versions": packageVersions[data['PackageIdentifier']],
+            "path": path
+        }
+        post_response = requests.patch(url=url_post, json=new_package, auth="bearer 08b4b74c980cc15b71f9aaefe0de2c215bb3fd10b935e8728263938f48cf4b388a5b7dc0651c29a1e5f9842c7bea04e240ed04f82dc2b001292ab66ec9699743401d28d90759cea620d8313d3b0a4fb0047e5c10dd53bbdf8a643347335ce8bc80322bbb3cd8530f74ecb5c6ca22ea57754f3f58bd687bf9f0b3eb3592701782")
+        post_response_json = post_response.json()
+        print(post_response_json)
+
 
     # NORM_NAMES
     norm_name = get_id(con, cursor, 'norm_names', 'norm_name', normalize(data['PackageName']))
