@@ -104,9 +104,9 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
             "path": path
         }
         payload = {
-            "data": new_package
+            "data": updated_package
         }
-        post_response = requests.patch(url=url_post, json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
+        post_response = requests.post(url=url_post, json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
         # Print the response
         post_response_json = post_response.json()
         print(post_response_json)
