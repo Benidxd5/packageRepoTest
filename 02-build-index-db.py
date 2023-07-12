@@ -92,7 +92,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
     # The API endpoint to communicate with
     url_post = "http://10.10.10.138:1337/api/approved-packages"
 
-    token = "bearer 08b4b74c980cc15b71f9aaefe0de2c215bb3fd10b935e8728263938f48cf4b388a5b7dc0651c29a1e5f9842c7bea04e240ed04f82dc2b001292ab66ec9699743401d28d90759cea620d8313d3b0a4fb0047e5c10dd53bbdf8a643347335ce8bc80322bbb3cd8530f74ecb5c6ca22ea57754f3f58bd687bf9f0b3eb3592701782"
+    token = "bearer ee3d6da7cf68479d1392d3a9fd45282ec14499a8832556465dd236504582a834842a1025626441d9c84a49265a1c75fdde2936c5f6b03f1c2339b39351a26ecea7c07735f522374b4a36a7169e4691bc586777f0800db321a8ba3abe018e6d80de0810001f5805630dc3494d6bb77cf96e6668f46830b3787a4cf0687eaede64"
 
     if(data['PackageIdentifier'] in packageVersions):
         packageVersions[data['PackageIdentifier']].append(data['PackageVersion'])
@@ -103,7 +103,10 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
             "versions": packageVersions[data['PackageIdentifier']],
             "path": path
         }
-        post_response = requests.patch(url=url_post, json=updated_package, auth=HTTPBasicAuth("benidxd5", token))
+        payload = {
+            "data": new_package
+        }
+        post_response = requests.patch(url=url_post, json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
         # Print the response
         post_response_json = post_response.json()
         print(post_response_json)
@@ -117,7 +120,10 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
             "versions": packageVersions[data['PackageIdentifier']],
             "path": path
         }
-        post_response = requests.patch(url=url_post, json=new_package, auth=HTTPBasicAuth("benidxd5", token))
+        payload = {
+            "data": new_package
+        }
+        post_response = requests.post(url=url_post, json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
         post_response_json = post_response.json()
         print(post_response_json)
 
