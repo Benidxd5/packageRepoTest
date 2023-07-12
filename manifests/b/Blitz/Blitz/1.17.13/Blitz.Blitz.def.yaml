@@ -1,0 +1,38 @@
+ManifestVersion: 1.1.0
+PackageIdentifier: Blitz.Blitz
+Installers:
+- Architecture: x86
+  InstallerSha256: 870DBC8DCB532C25F445E3989114500D48EA1A7A1A01984C48E1EBA40BDDADD2
+  InstallerUrl: https://blitz-stable.blitz.gg/Blitz-1.17.13.exe
+ManifestType: merged
+PackageUrl: https://blitz.gg
+PublisherUrl: https://blitz.gg
+InstallModes:
+- silent
+PackageVersion: 1.17.13
+Platform:
+- Windows.Desktop
+Tags:
+- gaming
+- league-of-legends
+- legends-of-runeterra
+- lol
+- teamfight-tactics
+- valorant
+PrivacyUrl: https://blitz.gg/privacy-policy
+PackageName: Blitz
+Publisher: Blitz, Inc.
+InstallerType: nullsoft
+PackageLocale: en-US
+MinimumOSVersion: 10.0.0.0
+License: Custom use license
+LicenseUrl: https://www.blitz.gg/terms-of-service
+UpgradeBehavior: install
+ShortDescription: Blitz App - Your personal gaming coach
+Scope: user
+PublisherSupportUrl: https://support.blitz.gg
+Author: Blitz, Inc.
+Copyright: Copyright (c) 2022 Blitz, Inc.
+Moniker: blitz.gg
+CopyrightUrl: https://www.blitz.gg/terms-of-service
+
