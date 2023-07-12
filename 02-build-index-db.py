@@ -110,7 +110,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
         new_package = {
             "name": data['PackageName'],
             "identifier": data["PackageIdentifier"],
-            "description": data["Description"] or "",
+            "description": data["Description"] if "Description" in data else " ",
             "versions": packageVersions[data['PackageIdentifier']],
             "path": path
         }
