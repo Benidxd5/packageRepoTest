@@ -95,7 +95,7 @@ sql_as_string = sql_file.read()
 
 cursor = con.cursor()
 
-cursor.execute('SELECT id, name, version, pathpart FROM manifest where rowid<100;')
+cursor.execute('SELECT id, name, version, pathpart FROM manifest;')
 row = cursor.fetchall()
 cnt=0
 
