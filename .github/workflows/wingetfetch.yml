@@ -23,19 +23,19 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
+            
+      - uses: actions/setup-python@v2
         with:
-          fetch-depth: 0
-          
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-        cache: 'pip'
-    - run: pip install -r requirements.txt
+          python-version: '3.9'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
 
-    - name: Create Directory and Fetch File
-      run: |
-        $pkgPath = "test/testpath/source.msix"
-        curl -o $pkgPath https://winget.azureedge.net/cache/source.msix
-        .\wingetFetch.ps1
-      
+      - name: Create Directory and Fetch File
+        run: |
+          $pkgPath = "test/testpath/source.msix"
+          curl -o $pkgPath https://winget.azureedge.net/cache/source.msix
+          .\wingetFetch.ps1
+        
