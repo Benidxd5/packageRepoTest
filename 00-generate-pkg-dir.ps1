@@ -2,13 +2,13 @@ param (
     $url
 )
 
-$parts = $url.Split("/")[-5..-2]
+# $parts = $url.Split("/")[-5..-2]
 
-$fileName = $url.Split("/")[-1]
+# $fileName = $url.Split("/")[-1]
 
-$dirpath = $parts -join "/"
+# $dirpath = $parts -join "/"
 
-$dirpath = "packages/" + $dirpath
+$dirpath = "packages/" + $url
 
 $null = New-Item -Path $dirpath -Force -ItemType Directory
 

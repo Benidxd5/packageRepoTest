@@ -3,11 +3,11 @@ param (
 )
 
 
-$parts = $url.Split("/")[-5..-1]
+# $parts = $url.Split("/")[-5..-1]
 
-$filePath = $parts -join "/"
+# $filePath = $parts -join "/"
 
-$filePath = "packages/" + $filePath
+$filePath = "packages/" + $url
 
 if (Test-Path $filePath) {
     Remove-Item -Path $filePath

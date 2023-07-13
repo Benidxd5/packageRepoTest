@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
-      pkgUrl:
+      pkgPath:
         # Friendly description to be shown in the UI instead of 'name'
         description: 'Url of the package'
         # Default value if no value is explicitly provided
@@ -35,7 +35,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: echo "Hello ${{ inputs.pkgUrl }}"
+      run: echo "Hello ${{ inputs.pkgPath }}"
 
     - name: Checkout Repository
       uses: actions/checkout@v2
@@ -43,15 +43,15 @@ jobs:
     - name: Create Directory and Fetch File manual
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
-        $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgUrl }}
-        curl -o $pkgPath "${{ inputs.pkgUrl }}"
+        $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgPath }}
+        curl -o $pkgPath "${{ inputs.pkgPath }}"
       
     - name: Create Directory and Fetch File request
       if: ${{ github.event_name == 'repository_dispatch' && github.event.action == 'pkgadd' }}
       run: |
-        $urlArray = "${{ github.event.client_payload.pkgUrls }}".Split(",")
-        foreach ($pkgUrl in $urlArray) {
-          $url="$pkgUrl"
+        $urlArray = "${{ github.event.client_payload.pkgPaths }}".Split(",")
+        foreach ($pkgPath in $urlArray) {
+          $url=("https://winget.azureedge.net/cache/manifests/"+"$pkgPath")
           $response=$(curl -s -o /dev/null -w "%{http_code}" "$url")
 
           if ("$response" -eq 200){
@@ -66,9 +66,9 @@ jobs:
     - name: Create Directory and Fetch File request
       if: ${{ github.event_name == 'repository_dispatch' && github.event.action == 'pkgrem' }}
       run: |
-        $urlArray = "${{ github.event.client_payload.pkgUrls }}".Split(",")
-        foreach ($pkgUrl in $urlArray) {
-          $url="$pkgUrl"
+        $urlArray = "${{ github.event.client_payload.pkgPaths }}".Split(",")
+        foreach ($pkgPath in $urlArray) {
+          $url="$pkgPath"
           ./00-remove-pkg.ps1 -url "$url"
           echo "File removed successfully."
         }
