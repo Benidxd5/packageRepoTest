@@ -35,8 +35,10 @@ jobs:
 
       - name: Create Directory and Fetch File
         run: |
-          $pkgPath = "test/testpath/source.msix"
+          $pkgPath = "test/testpath/source.zip"
           New-Item -Path $pkgPath -Force -ItemType File
           curl -o $pkgPath https://winget.azureedge.net/cache/source.msix
+          Expand-Archive -Path $pkgPath -DestinationPath ($pkgPath+"/source")
+          echo dir
           .\wingetFetch.ps1
         
