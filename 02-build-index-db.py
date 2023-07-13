@@ -11,8 +11,6 @@ from subprocess import check_output
 
 db_path = ".tmp/source/Public/index.db"
 
-print("ENVIRONMENT:")
-print(os.environ.get("API_TOKEN"))
 
 def get_id(con, cursor, table, field, value, force_new=False):
     print("getid")
@@ -93,9 +91,11 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
     ##push to strapi
 
     # The API endpoint to communicate with
-    url_post = "http://10.10.10.138:1337/api/approved-packages"
+    url_post = os.environ.get("API_URl")+"approved-packages"
 
-    token = "bearer ee3d6da7cf68479d1392d3a9fd45282ec14499a8832556465dd236504582a834842a1025626441d9c84a49265a1c75fdde2936c5f6b03f1c2339b39351a26ecea7c07735f522374b4a36a7169e4691bc586777f0800db321a8ba3abe018e6d80de0810001f5805630dc3494d6bb77cf96e6668f46830b3787a4cf0687eaede64"
+    print(url_post)
+
+    token = os.environ.get("API_TOKEN")
 
     if(data['PackageIdentifier'] in packageVersions):
         packageVersions[data['PackageIdentifier']].append(data['PackageVersion'])

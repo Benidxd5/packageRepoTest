@@ -9,6 +9,7 @@ if(-not $Release) {
     if (-not (Test-Path env:PFX_THUMBPRINT)) { $ValidationErrors += @("PFX_THUMBPRINT envvar not set") }
     if (-not (Test-Path env:PFX_PASSPHRASE)) { $ValidationErrors += @("PFX_PASSPHRASE envvar not set") }
     if (-not (Test-Path env:API_TOKEN)) { $ValidationErrors += @("API_TOKEN envvar not set") }
+    if (-not (Test-Path env:API_URL)) { $ValidationErrors += @("API_URL envvar not set") }
 }
 if ($ValidationErrors.Count -gt 0) { throw "Validation Failed!`n" + ($ValidationErrors -join "`n") }
 
