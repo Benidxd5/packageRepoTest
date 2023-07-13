@@ -24,8 +24,8 @@ jobs:
     steps:
     # Runs a single command using the runners shell
       - uses: actions/checkout@v2
-          with:
-            fetch-depth: 0
+        with:
+          fetch-depth: 0
             
       - uses: actions/setup-python@v2
         with:
