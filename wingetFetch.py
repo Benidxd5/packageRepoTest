@@ -115,7 +115,7 @@ for idx in row:
 
 
 
-print("Fetched " +numPkgs+ " packages!")
+print("Fetched " +str(numPkgs)+ " packages/versions!")
 
 
 
