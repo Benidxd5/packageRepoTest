@@ -76,7 +76,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
         parent_pathpart = pathpart
         path+=part+"/"
     
-    part+=manifestFilename
+    path+=manifestFilename
     pathpart = get_id(con, cursor, 'pathparts', 'pathpart', manifestFilename, True)
     cursor.execute('UPDATE pathparts SET parent={} WHERE rowid={};'.format(parent_pathpart, pathpart))
 
@@ -102,7 +102,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
     token = os.environ.get("API_TOKEN")
 
     if(data['PackageIdentifier'] in packageVersions):
-        packageVersions[data['PackageIdentifier']].append(data['PackageVersion'])
+        packageVersions[data['PackageIdentifier']][str(data['PackageVersion'])] = path
         
         #fetch package to get id
         fetchResponse = requests.get(url=(url_post+'?filters[identifier][$eq]='+data["PackageIdentifier"]), headers={"Authorization": token, "Content-Type": "application/json"})
@@ -123,7 +123,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
             requests.put(url=(url_post+"/"+str(pkgID)), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
 
     else:
-        packageVersions[data['PackageIdentifier']] = [data['PackageVersion']]
+        packageVersions[data['PackageIdentifier']] = {str(data['PackageVersion']):path}
         new_package = {
             "name": data['PackageName'],
             "identifier": data["PackageIdentifier"],
