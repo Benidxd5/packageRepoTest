@@ -116,7 +116,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
             payload = {
                 "data": updated_package
             }
-            post_response = requests.patch(url=(url_post+"/"+pkgID), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
+            post_response = requests.patch(url=(url_post+"/"+str(pkgID)), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
 
     else:
         packageVersions[data['PackageIdentifier']] = [data['PackageVersion']]
