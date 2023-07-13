@@ -1,0 +1,38 @@
+name: winget fetch
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+
+# on:
+#   schedule:
+#     - cron: '30 5 * * 1,3'
+#     - cron: '30 5 * * 2,4'
+
+    
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  # This workflow contains a single job called "greet"
+  fetchandpost:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Runs a single command using the runners shell
+
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+    - run: pip install -r requirements.txt
+
+    - name: Create Directory and Fetch File
+      run: |
+        $pkgPath = "test/testpath/source.msix"
+        curl -o $pkgPath https://winget.azureedge.net/cache/source.msix
+        .\wingetFetch.ps1
+      
