@@ -1,0 +1,42 @@
+Moniker: postman
+PublisherUrl: https://www.postman.com/
+PackageUrl: https://www.postman.com/
+Author: Postman
+PrivacyUrl: https://www.postman.com/legal/privacy-policy/
+License: Proprietary
+PackageName: Postman
+Installers:
+- InstallerUrl: https://dl.pstmn.io/download/version/10.9.4/win64
+  InstallerType: exe
+  ProductCode: Postman
+  InstallerSha256: F164EED1E7CD289F256A79230A1531321B979DC59385AF7B2A34BA3C6904F5EB
+  Architecture: x64
+  Scope: user
+  UpgradeBehavior: install
+  InstallerLocale: en-US
+  InstallerSwitches:
+    Silent: -s
+    SilentWithProgress: -s
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+PackageIdentifier: Postman.Postman
+PackageVersion: 10.9.4
+PackageLocale: en-US
+ManifestType: merged
+ManifestVersion: 1.4.0
+PublisherSupportUrl: https://www.postman.com/support/
+Copyright: Copyright (c) 2023 Postman, Inc. All rights reserved.
+DefaultLocale: en-US
+Tags:
+- api
+- postman
+- development
+Description: Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs — faster.
+CopyrightUrl: https://www.postman.com/legal/eula/
+MinimumOSVersion: 10.0.0.0
+Publisher: Postman
+LicenseUrl: https://www.postman.com/legal/eula/
+ShortDescription: The Collaboration Platform for API Development
+
