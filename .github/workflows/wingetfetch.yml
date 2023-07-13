@@ -38,7 +38,7 @@ jobs:
           $pkgPath = "test/testpath/source.zip"
           New-Item -Path $pkgPath -Force -ItemType File
           curl -o $pkgPath https://winget.azureedge.net/cache/source.msix
-          Expand-Archive -Path $pkgPath -DestinationPath ($pkgPath+"/source")
+          Expand-Archive -Path $pkgPath -DestinationPath "test/testpath/source"
           echo dir
           .\wingetFetch.ps1
         
