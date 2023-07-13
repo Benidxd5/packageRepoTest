@@ -2,7 +2,7 @@ import requests
 import sqlite3
 from sqlite3 import Error
 import os
-
+import math
 
 db_path = ".tmp/source/Public/index.db"
 
@@ -98,12 +98,24 @@ cursor = con.cursor()
 cursor.execute('SELECT id, name, version, pathpart FROM manifest where rowid<100;')
 row = cursor.fetchall()
 cnt=0
+
+progress = ["."] * 100
+
+numPkgs = len(row)
+pkgNum = 1
+
+progress[:math.floor(1/numPkgs*100)] = ["|"]*(math.floor(1/numPkgs*100))
+
 for idx in row:
     pkgData = createPackageDataObj(idx,cursor)
     pushPackage(pkgData)
+    progress[math.floor(pkgNum/numPkgs*100)] = "|"
+    print("".join(progress))
+    pkgNum+=1
 
 
-print("Fetched " +len(row)+ " packages!")
+
+print("Fetched " +numPkgs+ " packages!")
 
 
 

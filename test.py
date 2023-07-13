@@ -1,7 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
-
+import math
 
 # url_post = "http://10.10.10.138:1337/api/approved-packages"
 # token = "bearer ee3d6da7cf68479d1392d3a9fd45282ec14499a8832556465dd236504582a834842a1025626441d9c84a49265a1c75fdde2936c5f6b03f1c2339b39351a26ecea7c07735f522374b4a36a7169e4691bc586777f0800db321a8ba3abe018e6d80de0810001f5805630dc3494d6bb77cf96e6668f46830b3787a4cf0687eaede64"
@@ -50,10 +50,24 @@ import json
 # print(post_response_json)
 
 
-packageVersions = {}
+# packageVersions = {}
 
-packageVersions["pid"] = {"1.0.0":"/pfad"}
+# packageVersions["pid"] = {"1.0.0":"/pfad"}
 
-packageVersions["pid"]["2.0.0"] = "/pfad2"
+# packageVersions["pid"]["2.0.0"] = "/pfad2"
 
-print(packageVersions)
+# print(packageVersions)
+
+progress = ["."] * 100
+
+# progress[:4] = ["j"]*4
+
+# print("".join(progress))
+# print(len(progress))
+
+progress[:math.floor(1/3500*100)] = ["|"]*(math.floor(1/3500*100))
+
+for idx in range(3500):
+    progress[math.floor(idx/3500*100)] = "|"
+    print("".join(progress))
+
