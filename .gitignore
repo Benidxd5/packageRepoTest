@@ -4,3 +4,4 @@
 *.msix
 manifests/
 version.txt
+test.py

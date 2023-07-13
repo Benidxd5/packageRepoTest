@@ -11,6 +11,9 @@ from subprocess import check_output
 
 db_path = ".tmp/source/Public/index.db"
 
+print("ENVIRONMENT")
+print(os.environ.get("API_TOKEN"))
+
 def get_id(con, cursor, table, field, value, force_new=False):
     print("getid")
     cursor.execute('SELECT rowid FROM {} WHERE {} = "{}";'.format(table, field, value))

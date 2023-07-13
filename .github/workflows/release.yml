@@ -121,6 +121,7 @@ jobs:
         env:
             PFX_PASSPHRASE: ${{ secrets.PFX_PASSPHRASE }}
             PFX_THUMBPRINT: ${{ secrets.PFX_THUMBPRINT }}
+            API_TOKEN: ${{ secrets.API_TOKEN }}
         run: ./build.ps1 -NoGit -Release
 
       - uses: actions/upload-artifact@v2
