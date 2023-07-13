@@ -39,4 +39,4 @@ jobs:
           New-Item -Path $pkgPath -Force -ItemType File
           curl -o $pkgPath https://winget.azureedge.net/cache/source.msix
           Expand-Archive -Path $pkgPath -DestinationPath "./tmp/source"
-          echo python .\wingetFetch.py        
+          python .\wingetFetch.py        
