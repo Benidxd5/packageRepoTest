@@ -122,7 +122,7 @@ jobs:
             PFX_PASSPHRASE: ${{ secrets.PFX_PASSPHRASE }}
             PFX_THUMBPRINT: ${{ secrets.PFX_THUMBPRINT }}
             API_TOKEN: ${{ secrets.API_TOKEN }}
-            API_TOKEN: ${{ secrets.API_URL }}
+            API_URL: ${{ secrets.API_URL }}
         run: |
           echo ${{ secrets.API_TOKEN }}
           ./build.ps1 -NoGit -Release
