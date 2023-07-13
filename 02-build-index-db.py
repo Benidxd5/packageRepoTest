@@ -104,21 +104,19 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
         #fetch package to get id
         fetchResponse = requests.get(url=(url_post+'?filters[identifier][$eq]='+data["PackageIdentifier"]), headers={"Authorization": token, "Content-Type": "application/json"})
         fetchResponseJson = fetchResponse.json()
-        pkgID = fetchResponseJson["id"]
-        updated_package = {
-            "name": data['PackageName'],
-            "identifier": data["PackageIdentifier"],
-            "description": data["Description"] if "Description" in data else " ",
-            "versions": packageVersions[data['PackageIdentifier']],
-            "path": path
-        }
-        payload = {
-            "data": updated_package
-        }
-        post_response = requests.patch(url=(url_post+"/"+pkgID), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
-        # Print the response
-        post_response_json = post_response.json()
-        print(post_response_json)
+        if(len(fetchResponseJson["data"])>0):
+            pkgID = fetchResponseJson["data"][0]["id"]
+            updated_package = {
+                "name": data['PackageName'],
+                "identifier": data["PackageIdentifier"],
+                "description": data["Description"] if "Description" in data else " ",
+                "versions": packageVersions[data['PackageIdentifier']],
+                "path": path
+            }
+            payload = {
+                "data": updated_package
+            }
+            post_response = requests.patch(url=(url_post+"/"+pkgID), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
 
     else:
         packageVersions[data['PackageIdentifier']] = [data['PackageVersion']]
