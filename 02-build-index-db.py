@@ -107,7 +107,8 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
         #fetch package to get id
         fetchResponse = requests.get(url=(url_post+'?filters[identifier][$eq]='+data["PackageIdentifier"]), headers={"Authorization": token, "Content-Type": "application/json"})
         fetchResponseJson = fetchResponse.json()
-        if(len(fetchResponseJson["data"])>0):
+        print(fetchResponseJson)
+        if(fetchResponse["data"] and len(fetchResponseJson["data"])>0):
             pkgID = fetchResponseJson["data"][0]["id"]
             updated_package = {
                 "name": data['PackageName'],
