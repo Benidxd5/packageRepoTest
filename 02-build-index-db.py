@@ -74,8 +74,9 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
         pathpart = get_id(con, cursor, 'pathparts', 'pathpart', part, True)
         cursor.execute('UPDATE pathparts SET parent={} WHERE rowid={};'.format(parent_pathpart, pathpart))
         parent_pathpart = pathpart
-        path+=part
+        path+=part+"/"
     
+    part+=manifestFilename
     pathpart = get_id(con, cursor, 'pathparts', 'pathpart', manifestFilename, True)
     cursor.execute('UPDATE pathparts SET parent={} WHERE rowid={};'.format(parent_pathpart, pathpart))
 
@@ -99,17 +100,22 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
 
     if(data['PackageIdentifier'] in packageVersions):
         packageVersions[data['PackageIdentifier']].append(data['PackageVersion'])
+        
+        #fetch package to get id
+        fetchResponse = requests.get(url=(url_post+'?filters[identifier][$eq]='+data["PackageIdentifier"]), headers={"Authorization": token, "Content-Type": "application/json"})
+        fetchResponseJson = fetchResponse.json()
+        pkgID = fetchResponseJson["id"]
         updated_package = {
             "name": data['PackageName'],
             "identifier": data["PackageIdentifier"],
-            "description": data["Description"] or "",
+            "description": data["Description"] if "Description" in data else " ",
             "versions": packageVersions[data['PackageIdentifier']],
             "path": path
         }
         payload = {
             "data": updated_package
         }
-        post_response = requests.post(url=url_post, json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
+        post_response = requests.patch(url=(url_post+"/"+pkgID), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
         # Print the response
         post_response_json = post_response.json()
         print(post_response_json)
