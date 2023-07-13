@@ -96,6 +96,9 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
 
     print(url_post)
 
+    print("VERSIONS")
+    print(packageVersions)
+
     token = os.environ.get("API_TOKEN")
 
     if(data['PackageIdentifier'] in packageVersions):
