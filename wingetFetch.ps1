@@ -1,1 +1,0 @@
-Get-Content -Path "test/testpath/source.msix"
