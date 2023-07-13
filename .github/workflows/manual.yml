@@ -44,7 +44,7 @@ jobs:
       if: ${{ github.event_name == 'workflow_dispatch' }}
       run: |
         $pkgPath = ./00-generate-pkg-dir.ps1 -url ${{ inputs.pkgPath }}
-        curl -o $pkgPath "${{ inputs.pkgPath }}"
+        curl -o $pkgPath ("https://winget.azureedge.net/cache/manifests/"+"${{ inputs.pkgPath }}")
       
     - name: Create Directory and Fetch File request
       if: ${{ github.event_name == 'repository_dispatch' && github.event.action == 'pkgadd' }}
