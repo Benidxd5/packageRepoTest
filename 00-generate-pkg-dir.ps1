@@ -2,7 +2,9 @@ param (
     $url
 )
 
-$parts = $url.Split("/")[0..-2]
+$parts = $url.Split("/")
+
+$parts = $parts[0..($parts.Length-2)]
 
 $fileName = $url.Split("/")[-1]
 
