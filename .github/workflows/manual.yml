@@ -65,16 +65,18 @@ jobs:
 
     - name: Create Directory and Fetch File request
       env:
-          PKG_IDENTIFIER: ${{github.event.client_payload.identifier}}
           API_TOKEN: ${{ secrets.API_TOKEN }}
           API_URL: ${{ secrets.API_URL }}
       if: ${{ github.event_name == 'repository_dispatch' && github.event.action == 'pkgrem' }}
       run: |
         $urlArray = "${{ github.event.client_payload.pkgPaths }}".Split(",")
+        $identifierArray = "${{ github.event.client_payload.pkgIdentifiers }}".Split(",")
         foreach ($pkgPath in $urlArray) {
           $url="$pkgPath"
           ./00-remove-pkg.ps1 -url "$url"
-          ./01-delete-from-api.py
+        }
+        foreach ($pkgId in $identifierArray){
+          python ./01-delete-from-api.py "$pkgId"
           echo "File removed successfully."
         }
 
