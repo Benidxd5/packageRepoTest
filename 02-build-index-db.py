@@ -211,8 +211,6 @@ def clearDB(con, cursor):
         if table_name != 'sqlite_sequence':  # Skip the sqlite_sequence table itself
             cursor.execute(f'DELETE FROM {table_name};')
 
-    # Reset the auto-increment counters
-    cursor.execute('DELETE FROM sqlite_sequence')
 
     # Commit the changes
     con.commit()
