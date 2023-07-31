@@ -277,12 +277,12 @@ if __name__ == '__main__':
     try:
         con = sqlite3.connect(db_path)
 
-        # sql_file = open("index.db.sql")
-        # sql_as_string = sql_file.read()
+        sql_file = open("index.db.sql")
+        sql_as_string = sql_file.read()
 
-        # cur = con.cursor()
-        # cur.executescript(sql_as_string)
-        # con.commit()
+        cur = con.cursor()
+        cur.executescript(sql_as_string)
+        con.commit()
 
         create_catalog(con)
     except Error as e:
