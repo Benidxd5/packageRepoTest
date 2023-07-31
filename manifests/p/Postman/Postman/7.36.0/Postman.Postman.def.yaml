@@ -1,0 +1,26 @@
+PackageUrl: https://www.postman.com/
+Moniker: postman
+Installers:
+- InstallerSha256: 3EA68953F59F25675107338A1DB5EF91CFE6DC928E8E9FD06CE3FF25B3AC9620
+  Architecture: x64
+  InstallerUrl: https://dl.pstmn.io/download/version/7.36.0/win64
+Tags:
+- api
+- development
+- postman
+PackageLocale: en-US
+PackageIdentifier: Postman.Postman
+InstallerSwitches:
+  SilentWithProgress: /S
+  Silent: /S
+ManifestType: merged
+Publisher: Postman
+MinimumOSVersion: 10.0.0.0
+LicenseUrl: https://www.postman.com/legal/eula/
+ShortDescription: The Collaboration Platform for API Development
+InstallerType: exe
+ManifestVersion: 1.1.0
+PackageName: Postman
+License: © 2020 Postman, Inc. All rights reserved.
+PackageVersion: 7.36.0
+
