@@ -1,0 +1,27 @@
+Author: zhaopengme
+Copyright: Copyright (c) zhaopengme
+InstallerType: nullsoft
+Installers:
+- Architecture: x64
+  InstallerSha256: 8DEAE769C10F19419FE528B95CB9EE3D962C3CBFCAE9A4ACE17E84F15D36E31F
+  InstallerUrl: https://github.com/zhaopengme/gitnote/releases/download/3.1.0/GitNote_setup_3.1.0.exe
+License: Proprietary
+ManifestType: merged
+ManifestVersion: 1.1.0
+MinimumOSVersion: 10.0.0.0
+PackageIdentifier: zhaopengme.gitnote
+PackageLocale: en-US
+PackageName: GitNote
+PackageUrl: https://github.com/zhaopengme/gitnote
+PackageVersion: 3.1.0
+Publisher: mikey.zhaopeng
+Scope: machine
+ShortDescription: A modern note taking app based on GIT that does not require a local
+  GIT environment.
+Tags:
+- electron
+- git
+- github
+- markdown
+- note
+- vue
