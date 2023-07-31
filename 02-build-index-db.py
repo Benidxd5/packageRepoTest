@@ -197,37 +197,12 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
             )
             con.commit()
 
-def clearDB(con, cursor):
-    # Get a list of all table names in the database
-    cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-    tables = cursor.fetchall()
-
-    # Disable foreign key constraints to speed up the deletion
-    cursor.execute('PRAGMA foreign_keys = OFF')
-
-    # Clear all tables
-    for table in tables:
-        table_name = table[0]
-        if table_name != 'sqlite_sequence':  # Skip the sqlite_sequence table itself
-            cursor.execute(f'DELETE FROM {table_name};')
-
-
-    # Commit the changes
-    con.commit()
-
-    # Re-enable foreign key constraints
-    cursor.execute('PRAGMA foreign_keys = ON')
-
 
 def create_catalog(con):
     cursor = con.cursor()
 
     # CREATE SQLITE DATABASE
     manifest = 1
-
-    #clear db
-
-    clearDB(con,cursor)
 
     cursor.execute(
         'INSERT INTO pathparts (rowid,pathpart) VALUES (?,?)',
