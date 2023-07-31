@@ -1,12 +1,12 @@
 param (
-    $url
+    $path
 )
 
-$parts = $url.Split("/")
+$parts = $path.Split("/")
 
 $parts = $parts[0..($parts.Length-2)]
 
-$fileName = $url.Split("/")[-1]
+$fileName = $path.Split("/")[-1]
 
 $dirpath = $parts -join "/"
 

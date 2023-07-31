@@ -55,7 +55,7 @@ jobs:
           $response=$(curl -s -o /dev/null -w "%{http_code}" "$url")
 
           if ("$response" -eq 200){
-            $pkgPath = ./00-generate-pkg-dir.ps1 -url "$url"
+            $pkgPath = ./00-generate-pkg-dir.ps1 -path "$pkgPath"
             curl -o "$pkgPath" "$url"
             echo "File fetched successfully."}
           else {
