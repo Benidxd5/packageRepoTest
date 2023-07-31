@@ -1,0 +1,48 @@
+Author: Valve Corporation
+Copyright: Copyright (c) Valve Corporation
+CopyrightUrl: https://store.steampowered.com/legal
+Description: Steam is a digital distribution platform developed by Valve Corporation
+  for purchasing and playing video games. Steam offers digital rights management,
+  matchmaking servers, video streaming, and social networking services.
+Documentations:
+- DocumentLabel: Subscriber Agreement
+  DocumentUrl: https://store.steampowered.com/subscriber_agreement/
+- DocumentLabel: Online Conduct
+  DocumentUrl: https://store.steampowered.com/online_conduct/
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+InstallerType: nullsoft
+Installers:
+- Architecture: x86
+  InstallerSha256: 3B616CB0BEAACFFB53884B5BA0453312D2577DB598D2A877A3B251125FB281A1
+  InstallerUrl: https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe
+License: Proprietary
+LicenseUrl: https://store.steampowered.com/legal
+ManifestType: merged
+ManifestVersion: 1.4.0
+MinimumOSVersion: 10.0.0.0
+Moniker: steam
+PackageIdentifier: Valve.Steam
+PackageLocale: en-US
+PackageName: Steam
+PackageUrl: https://store.steampowered.com
+PackageVersion: 2.10.91.91
+PrivacyUrl: https://store.steampowered.com/privacy_agreement
+Protocols:
+- steam
+Publisher: Valve Corporation
+PublisherSupportUrl: https://help.steampowered.com
+PublisherUrl: https://www.valvesoftware.com
+Scope: machine
+ShortDescription: Steam is the ultimate destination for playing, discussing, and creating
+  games.
+Tags:
+- games
+- gaming
+- purchase
+- gamestore
+- store
+- platform
+UpgradeBehavior: install
