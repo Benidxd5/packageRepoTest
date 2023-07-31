@@ -227,7 +227,7 @@ def create_catalog(con):
 
     #clear db
 
-    # clearDB(con,cursor)
+    clearDB(con,cursor)
 
     cursor.execute(
         'INSERT INTO pathparts (rowid,pathpart) VALUES (?,?)',
