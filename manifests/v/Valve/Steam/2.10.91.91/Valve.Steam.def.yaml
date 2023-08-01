@@ -1,0 +1,46 @@
+Moniker: steam
+PackageVersion: 2.10.91.91
+Tags:
+- games
+- gaming
+- purchase
+- gamestore
+- store
+- platform
+PackageLocale: en-US
+ShortDescription: Steam is the ultimate destination for playing, discussing, and creating games.
+MinimumOSVersion: 10.0.0.0
+Author: Valve Corporation
+License: Proprietary
+PackageIdentifier: Valve.Steam
+PackageUrl: https://store.steampowered.com
+PublisherSupportUrl: https://help.steampowered.com
+LicenseUrl: https://store.steampowered.com/legal
+Copyright: Copyright (c) Valve Corporation
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+Description: Steam is a digital distribution platform developed by Valve Corporation for purchasing and playing video games. Steam offers digital rights management, matchmaking servers, video streaming, and social networking services.
+Documentations:
+- DocumentUrl: https://store.steampowered.com/subscriber_agreement/
+  DocumentLabel: Subscriber Agreement
+- DocumentUrl: https://store.steampowered.com/online_conduct/
+  DocumentLabel: Online Conduct
+PrivacyUrl: https://store.steampowered.com/privacy_agreement
+InstallerType: nullsoft
+Scope: machine
+UpgradeBehavior: install
+ManifestVersion: 1.4.0
+PackageName: Steam
+Installers:
+- InstallerSha256: 3B616CB0BEAACFFB53884B5BA0453312D2577DB598D2A877A3B251125FB281A1
+  InstallerUrl: https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe
+  Architecture: x86
+CopyrightUrl: https://store.steampowered.com/legal
+PublisherUrl: https://www.valvesoftware.com
+ManifestType: merged
+Protocols:
+- steam
+Publisher: Valve Corporation
+
