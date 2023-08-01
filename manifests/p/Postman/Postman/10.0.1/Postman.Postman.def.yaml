@@ -1,0 +1,41 @@
+ManifestType: merged
+Publisher: Postman
+PrivacyUrl: https://www.postman.com/legal/privacy-policy/
+CopyrightUrl: https://www.postman.com/legal/eula/
+ShortDescription: The Collaboration Platform for API Development
+Tags:
+- api
+- postman
+- development
+PackageIdentifier: Postman.Postman
+License: Copyright (c) 2022 Postman, Inc. All rights reserved.
+Copyright: Copyright (c) 2022 Postman, Inc. All rights reserved.
+PublisherUrl: https://www.postman.com/
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+PackageVersion: 10.0.1
+MinimumOSVersion: 10.0.0.0
+ManifestVersion: 1.2.0
+Author: Postman
+PublisherSupportUrl: https://www.postman.com/support/
+Description: Postman is a collaboration platform for API development. Postman's features simplify each step of building an API and streamline collaboration so you can create better APIs — faster.
+PackageUrl: https://www.postman.com/
+PackageName: Postman
+Moniker: postman
+LicenseUrl: https://www.postman.com/legal/eula/
+Installers:
+- InstallerUrl: https://dl.pstmn.io/download/version/10.0.1/win64
+  Architecture: x64
+  UpgradeBehavior: install
+  InstallerSha256: 569397bc1568018703c41541ca3dcda173be92df7e9fdb05477b3e43e6efbae3
+  InstallerType: exe
+  Scope: user
+  ProductCode: Postman
+  InstallerSwitches:
+    Silent: -s
+    SilentWithProgress: -s
+  InstallerLocale: en-US
+PackageLocale: en-US
+

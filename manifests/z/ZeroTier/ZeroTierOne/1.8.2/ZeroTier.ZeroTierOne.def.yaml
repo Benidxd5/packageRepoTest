@@ -1,0 +1,41 @@
+PackageVersion: 1.8.2
+LicenseUrl: https://github.com/zerotier/ZeroTierOne/blob/master/LICENSE.txt
+PackageIdentifier: ZeroTier.ZeroTierOne
+PackageUrl: https://www.zerotier.com/download/
+ManifestType: merged
+PublisherUrl: https://www.zerotier.com/
+InstallModes:
+- interactive
+- silent
+Description: ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all networked devices, VMs, containers, and applications to communicate as if they all reside in the same physical data center or cloud region.
+Publisher: ZeroTier, Inc.
+UpgradeBehavior: install
+ShortDescription: A Smart Ethernet Switch for Earth
+MinimumOSVersion: 10.0.0.0
+License: BUSL-1.1
+PackageLocale: en-US
+PublisherSupportUrl: https://docs.zerotier.com/
+Moniker: zerotierone
+ManifestVersion: 1.1.0
+PackageName: ZeroTier One
+Scope: machine
+Platform:
+- Windows.Desktop
+Copyright: Copyright (c) 2021 ZeroTier, Inc.
+InstallerSwitches:
+  Silent: /quiet
+  SilentWithProgress: /quiet
+PrivacyUrl: https://www.zerotier.com/privacy/
+InstallerType: wix
+Tags:
+- ethernet
+- network
+- network-switch
+- switch
+- vm
+Installers:
+- Architecture: neutral
+  ProductCode: '{2B153F53-2BD3-42C7-9972-D57F94E3CB8D}'
+  InstallerUrl: https://download.zerotier.com/RELEASES/1.8.2/dist/ZeroTierOne.msi
+  InstallerSha256: 1426B9313C21D530B51871156DD9DFF2EA8BA062FB8E030E907CF04AC16F05DF
+
