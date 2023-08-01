@@ -8,6 +8,8 @@ from requests.auth import HTTPBasicAuth
 import sqlite3
 from sqlite3 import Error
 from subprocess import check_output
+from urllib.parse import quote
+
 
 db_path = ".tmp/source/Public/index.db"
 
@@ -108,7 +110,8 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
         packageVersions[data['PackageIdentifier']] = {str(data['PackageVersion']):path}
         
     #fetch package to get id
-    fetchResponse = requests.get(url=(url_post+'?filters[identifier][$eq]='+data["PackageIdentifier"]), headers={"Authorization": token, "Content-Type": "application/json"})
+    parsedIdentifier = quote(data["PackageIdentifier"])
+    fetchResponse = requests.get(url=(url_post+'?filters[identifier][$eq]='+parsedIdentifier), headers={"Authorization": token, "Content-Type": "application/json"})
     if(not fetchResponse):
         return
     
