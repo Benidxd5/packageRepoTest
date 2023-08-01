@@ -1,0 +1,90 @@
+Moniker: teamviewer
+UpgradeBehavior: install
+InstallModes:
+- interactive
+- silent
+PackageLocale: en-US
+Localization:
+- Tags:
+  - fernsteuerung
+  - fernzugriff
+  - konferenzen
+  - remote-control
+  - remote-desktop
+  - webkonferenz
+  PrivacyUrl: https://www.teamviewer.com/de/datenschutzerklaerung/
+  PublisherUrl: https://www.teamviewer.com/de/
+  CopyrightUrl: https://www.teamviewer.com/de/eula/
+  PackageLocale: de-DE
+  Publisher: TeamViewer
+  License: Kostenlos für private, nicht-kommerzielle Nutzung.
+  PublisherSupportUrl: https://www.teamviewer.com/de/kundenservice/
+  Description: |-
+    TeamViewer ist eine umfassende Lösung für Fernzugriff, Fernsteuerung und Fernsupport, die mit fast jeder Desktop- und Mobilplattform funktioniert, einschließlich Windows, macOS, Android und iOS.
+
+    Mit TeamViewer können Sie sich per Fernzugriff auf Computer oder mobile Geräte an jedem Ort der Welt einwählen und sie so nutzen, als wären Sie vor Ort.
+  PackageName: TeamViewer
+  ShortDescription: TeamViewer verbindet Menschen, Orte und Dinge auf der ganzen Welt über verschiedenste Plattformen und Technologien.
+  Copyright: Copyright (c) Teamviewer
+  PackageUrl: https://www.teamviewer.com/de/
+  LicenseUrl: https://www.teamviewer.com/de/eula/
+  Author: TeamViewer AG
+- Tags:
+  - 视频会议
+  - 远程控制
+  - 远程桌面
+  - 远程连接
+  PrivacyUrl: https://www.teamviewer.com/en/privacy-policy/
+  PublisherUrl: https://www.teamviewer.com
+  PackageLocale: zh-CN
+  Publisher: TeamViewer
+  License: 个人使用免费，只能用于非商业用途
+  PublisherSupportUrl: https://www.teamviewer.cn/cn/support/
+  Description: TeamViewer远程连接控制软件是一款随时随地连接到远程桌面电脑、移动设备及Iot，让远程连接过程更加的快速和安全，轻松实现对文件、网络及程序的实时支持或访问。
+  PackageName: TeamViewer
+  ShortDescription: 远程连接控制软件
+  Copyright: Copyrighter @ 2022 TeamViewer Germany GmbH
+  PackageUrl: https://www.teamviewer.cn/cn/
+  LicenseUrl: https://www.teamviewer.com/en/eula/
+  Author: TeamViewer AG
+ManifestType: merged
+License: Free For Private, Non-Commercial Use.
+MinimumOSVersion: 10.0.0.0
+Description: |-
+  TeamViewer is a comprehensive, remote access, remote control and remote support solution that works with almost every desktop and mobile platform, including Windows, macOS, Android, and iOS.
+
+  TeamViewer lets you remote in to computers or mobile devices located anywhere in the world and use them as though you were there.
+ManifestVersion: 1.4.0
+Platform:
+- Windows.Desktop
+CopyrightUrl: https://www.teamviewer.com/en/eula/
+PackageIdentifier: TeamViewer.TeamViewer
+PackageVersion: 15.43.7
+LicenseUrl: https://www.teamviewer.com/en/eula/
+PublisherSupportUrl: https://www.teamviewer.com/en/customer-support/
+PrivacyUrl: https://www.teamviewer.com/en/privacy-policy/
+Scope: machine
+Installers:
+- InstallerUrl: https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe
+  Architecture: x64
+  InstallerSha256: 1ED6386EBA72CC619075DBE8402ED67A77761240105054122A6E2712CB6CD011
+- InstallerUrl: https://download.teamviewer.com/download/TeamViewer_Setup.exe
+  Architecture: x86
+  InstallerSha256: CBDD86CCEAB8A0818EF5FBF26D4A682D54DC9129CFB44BE390FF205042AF0861
+ShortDescription: TeamViewer connects people, places and things around the world on the widest array of platforms and technologies.
+PackageUrl: https://www.teamviewer.com
+Publisher: TeamViewer
+PackageName: TeamViewer
+Copyright: Copyright Teamviewer
+InstallerType: nullsoft
+PublisherUrl: https://www.teamviewer.com
+Author: TeamViewer AG
+Tags:
+- conferencing
+- control
+- remote
+- remote-access
+- remote-control
+- remote-desktop
+- web-conferencing
+
