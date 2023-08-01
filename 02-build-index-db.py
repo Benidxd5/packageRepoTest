@@ -130,7 +130,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
         requests.put(url=(url_post+"/"+str(pkgID)), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
     
     else:
-
+        print("POST: " +data["PackageName"])
         new_package = {
             "name": data['PackageName'],
             "identifier": data["PackageIdentifier"],
