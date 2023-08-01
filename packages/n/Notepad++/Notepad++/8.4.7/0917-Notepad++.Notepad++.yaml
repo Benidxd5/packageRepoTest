@@ -1,0 +1,54 @@
+Author: Don Ho
+Copyright: Copyright (C)2021 Don HO <don.h@free.fr>.
+CopyrightUrl: https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/LICENSE
+Description: "Notepad++ is a free (as in \u201Cfree speech\u201D and also as in \u201Cfree
+  beer\u201D) source code editor and Notepad replacement that supports several languages.
+  Running in the MS Windows environment, its use is governed by GNU General Public
+  License."
+InstallModes:
+- interactive
+- silent
+InstallerType: nullsoft
+Installers:
+- AppsAndFeaturesEntries:
+  - DisplayName: Notepad++ (64-bit x64)
+  Architecture: x64
+  InstallerSha256: 515D2C71ECE7C4C7432794B9E1BB6FCF60FDAA2E499744C09AF113C65D6DBB68
+  InstallerUrl: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.4.7/npp.8.4.7.Installer.x64.exe
+- AppsAndFeaturesEntries:
+  - DisplayName: Notepad++ (32-bit x86)
+  Architecture: x86
+  InstallerSha256: FF623F0A7683124AAB9628270A5B093A5F89735C9BC5E82EC218AF1B288CEF5A
+  InstallerUrl: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.4.7/npp.8.4.7.Installer.exe
+- AppsAndFeaturesEntries:
+  - DisplayName: Notepad++ (ARM 64-bit)
+  Architecture: arm64
+  InstallerSha256: 14D0470DF92EDDB7EFDE7CE182D20E8A8BEDA1339280FF306D9A1E67842D0DA0
+  InstallerUrl: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.4.7/npp.8.4.7.Installer.arm64.exe
+License: GPL-3.0-or-later
+LicenseUrl: https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/LICENSE
+ManifestType: merged
+ManifestVersion: 1.2.0
+MinimumOSVersion: 10.0.0.0
+Moniker: notepad++
+PackageIdentifier: Notepad++.Notepad++
+PackageLocale: en-US
+PackageName: Notepad++
+PackageUrl: https://notepad-plus-plus.org
+PackageVersion: 8.4.7
+Publisher: Notepad++ Team
+PublisherSupportUrl: https://notepad-plus-plus.org/online-help
+PublisherUrl: https://notepad-plus-plus.org
+ReleaseDate: 2022-11-08
+ReleaseNotesUrl: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/tag/v8.4.7
+Scope: machine
+ShortDescription: Notepad++ is a free source code editor that supports several languages.
+Tags:
+- development
+- editor
+- foss
+- notepad
+- open-source
+- text
+- text-editor
+UpgradeBehavior: install
