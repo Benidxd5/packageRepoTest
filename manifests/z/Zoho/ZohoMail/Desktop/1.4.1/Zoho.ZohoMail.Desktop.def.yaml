@@ -1,0 +1,27 @@
+InstallerType: nullsoft
+PackageIdentifier: Zoho.ZohoMail.Desktop
+Copyright: Copyright © 2022 Zoho Mail
+Tags:
+- email
+Publisher: Zoho Mail
+ManifestVersion: 1.1.0
+PackageLocale: en-US
+UpgradeBehavior: install
+PrivacyUrl: https://www.zoho.com/privacy.html
+PublisherUrl: https://www.zoho.com/
+ManifestType: merged
+ShortDescription: The comfort of your webmail now in your desktop with Zoho Mail Desktop
+PublisherSupportUrl: https://help.zoho.com/portal/en/home
+Installers:
+- InstallerSha256: 02E170DB3061AA6769100A51F1B2A251306F715130E2F4D157D6378F75F50341
+  Architecture: x64
+  InstallerUrl: https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-installer-x64-v1.4.1.exe
+- InstallerSha256: 8F70144D5ADEF788E420A110CD0B529330319A09CD8134F9902EB1D29B24077E
+  Architecture: x86
+  InstallerUrl: https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-installer-x86-v1.4.1.exe
+PackageVersion: 1.4.1
+License: Proprietary
+MinimumOSVersion: 10.0.0.0
+PackageName: Zoho Mail - Desktop
+PackageUrl: https://www.zoho.com/mail/
+

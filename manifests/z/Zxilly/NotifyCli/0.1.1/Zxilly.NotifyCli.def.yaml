@@ -1,0 +1,32 @@
+Moniker: znotify
+InstallerType: portable
+PackageIdentifier: Zxilly.NotifyCli
+ReleaseNotesUrl: https://github.com/ZNotify/cli/releases/tag/0.1.1
+Tags:
+- cli
+- notification
+- push
+- rust
+Publisher: ZNotify
+Commands:
+- znotify
+ManifestVersion: 1.2.0
+InstallModes:
+- silent
+PackageLocale: en-US
+InstallerLocale: en-US
+PublisherUrl: https://github.com/ZNotify
+Author: Zxilly
+ShortDescription: Send notification to ZNotify server
+PublisherSupportUrl: https://github.com/ZNotify/cli/issues
+Installers:
+- InstallerSha256: 8B1F19AC6BC95776A379A9AD844937E74804CC14A886F5FE6E44AF61D8DA182F
+  Architecture: x64
+  InstallerUrl: https://github.com/ZNotify/cli/releases/download/0.1.1/znotify-x86_64-pc-windows-msvc.exe
+PackageVersion: 0.1.1
+License: MIT
+ManifestType: merged
+LicenseUrl: https://github.com/ZNotify/cli/blob/master/LICENSE
+PackageName: ZNotify Cli
+PackageUrl: https://github.com/ZNotify/cli
+
