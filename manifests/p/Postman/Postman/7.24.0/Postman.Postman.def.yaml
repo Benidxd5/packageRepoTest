@@ -1,0 +1,25 @@
+Moniker: postman
+ManifestType: merged
+MinimumOSVersion: 10.0.0.0
+PackageUrl: https://www.postman.com/
+Tags:
+- api
+- development
+- postman
+PackageIdentifier: Postman.Postman
+ManifestVersion: 1.1.0
+Installers:
+- InstallerSha256: 0B9791F637DCBBC2069DA97EEA4ABFB0946E6BFF5766533A0C0C56E401E067B0
+  InstallerUrl: https://dl.pstmn.io/download/version/7.24.0/win64
+  Architecture: x64
+Publisher: Postman
+PackageName: Postman
+License: © 2020 Postman, Inc. All rights reserved.
+InstallerSwitches:
+  SilentWithProgress: /S
+  Silent: /S
+PackageLocale: en-US
+ShortDescription: The Collaboration Platform for API Development
+InstallerType: exe
+PackageVersion: 7.24.0
+
