@@ -1,0 +1,15 @@
+PackageName: Zello
+ShortDescription: 'Zello is the world’s #1 ranked push-to-talk app.'
+PackageIdentifier: ZelloInc.Zello
+Installers:
+- InstallerUrl: https://my.zello.com/data/ZelloSetup.exe
+  Architecture: x86
+  InstallerType: nullsoft
+  InstallerSha256: 41F7F163D85A7F2E5ECB97BABE00F7DB6B53C7040C924DF27FD77DA434CD4C66
+License: Freeware
+PackageVersion: 2.6.0.0
+ManifestType: merged
+PackageLocale: en-US
+Publisher: Zello Inc
+ManifestVersion: 1.0.0
+
