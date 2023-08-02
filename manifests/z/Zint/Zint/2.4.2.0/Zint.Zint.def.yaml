@@ -1,0 +1,34 @@
+License: GPLv3
+PublisherUrl: https://sourceforge.net/projects/zint
+LicenseUrl: https://www.gnu.org/licenses/gpl-3.0.txt
+Copyright: Copyright (c) 2008-2021 Robin Stuart
+Installers:
+- InstallerUrl: https://sourceforge.net/projects/zint/files/zint/2.4.2/Setup_Zint_2.4.2.0.exe/download
+  InstallerLocale: en-US
+  Scope: machine
+  InstallerType: nullsoft
+  UpgradeBehavior: install
+  InstallerSha256: 4AFFDB3E07C1D2710FCBE97F08C76145106382B857997C6A6176B90052C4922A
+  Architecture: x86
+PackageIdentifier: Zint.Zint
+Publisher: Robin Stuart & BogDan Vatra
+Author: Git Lost, Daniel Gredler, Harald Oehlmann, Alexander Schoepe, Robin Stuart
+PackageUrl: https://sourceforge.net/projects/zint
+InstallModes:
+- interactive
+- silent
+PackageName: Zint
+ShortDescription: A barcode encoding library supporting over 50 symbologies including Code 128, Data Matrix, USPS OneCode, EAN-128, UPC/EAN, ITF, QR Code, Code 16k, PDF417, MicroPDF417, LOGMARS, Maxicode, GS1 DataBar, Aztec, Composite Symbols and more.
+ManifestVersion: 1.0.0
+Tags:
+- barcode
+- upc
+- qr
+- ean
+MinimumOSVersion: 10.0.0.0
+PackageLocale: en-US
+ManifestType: merged
+PackageVersion: 2.4.2.0
+PublisherSupportUrl: https://sourceforge.net/projects/zint/support
+Moniker: zint
+

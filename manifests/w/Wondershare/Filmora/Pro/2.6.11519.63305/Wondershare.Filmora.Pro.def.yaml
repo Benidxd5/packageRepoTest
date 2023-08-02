@@ -1,0 +1,76 @@
+CopyrightUrl: https://www.wondershare.com/company/terms_conditions.html
+ManifestVersion: 1.1.0
+Scope: machine
+ManifestType: merged
+Installers:
+- Architecture: x64
+  InstallerSha256: 081079DE23A801CD0AF4F79AAAB7A7944C3A566B5E407813DFC842B82072D876
+  InstallerUrl: https://download.wondershare.com/cbs_down/filmora_64bit_full4622.exe
+  ProductCode: '{A41F04DC-B702-4A35-884E-8B3D0DDACB37}'
+PrivacyUrl: https://www.wondershare.com/privacy.html
+ReleaseNotes: |-
+  Editing：
+  - New feature: Adjustment clip
+  New effects:
+  - Water Caustics effect
+  - Pencil Sketch effect
+  Some bugs fixed.
+Publisher: Wondershare
+ShortDescription: A powerful video editor with professional effects and keyframing.
+UpgradeBehavior: install
+PackageVersion: 2.6.11519.63305
+Tags:
+- clip
+- creative
+- creativity
+- edit
+- editor
+- film
+- movie
+- video
+- video-editing
+- video-editor
+MinimumOSVersion: 10.0.0.0
+InstallerType: inno
+PackageLocale: en-US
+PublisherSupportUrl: https://support.wondershare.com/
+PackageIdentifier: Wondershare.Filmora.Pro
+PublisherUrl: https://www.wondershare.com/
+Localization:
+- License: 专有软件
+  PublisherUrl: https://www.wondershare.com/
+  LicenseUrl: https://www.wondershare.com/company/end-user-license-agreement.html
+  Copyright: Intellectual property rights including copyright vest in this Software which are held under licence by Wondershare Technology Co. Ltd. All Rights Reserved.
+  CopyrightUrl: https://www.wondershare.com/company/terms_conditions.html
+  Publisher: Wondershare
+  Author: 万兴科技集团股份有限公司
+  PackageLocale: zh-CN
+  PackageName: Wondershare FilmoraPro
+  PrivacyUrl: https://www.wondershare.com/privacy.html
+  Tags:
+  - 创意
+  - 剪辑
+  - 影片
+  - 电影
+  - 视频
+  - 视频编辑
+  - 视频编辑器
+  - 编辑
+  - 编辑器
+  ShortDescription: 一款具有专业特效和关键帧的强大的视频编辑器
+  PublisherSupportUrl: https://support.wondershare.com/
+InstallerSwitches:
+  SilentWithProgress: /VERYSILENT
+License: Proprietary
+Author: Wondershare Technology Group Co.,Ltd.
+PackageName: Wondershare FilmoraPro
+FileExtensions:
+- wfppr
+- wfpproj
+- wfptitle
+Copyright: Intellectual property rights including copyright vest in this Software which are held under licence by Wondershare Technology Co. Ltd. All Rights Reserved.
+InstallModes:
+- interactive
+- silent
+LicenseUrl: https://www.wondershare.com/company/end-user-license-agreement.html
+
