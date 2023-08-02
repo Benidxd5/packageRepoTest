@@ -1,0 +1,52 @@
+MinimumOSVersion: 10.0.0.0
+ManifestVersion: 1.2.0
+ReleaseDate: 2022-11-08
+Copyright: Copyright (C)2021 Don HO <don.h@free.fr>.
+PublisherSupportUrl: https://notepad-plus-plus.org/online-help
+Author: Don Ho
+PackageName: Notepad++
+License: GPL-3.0-or-later
+PackageUrl: https://notepad-plus-plus.org
+LicenseUrl: https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/LICENSE
+ManifestType: merged
+Publisher: Notepad++ Team
+Tags:
+- development
+- editor
+- foss
+- notepad
+- open-source
+- text
+- text-editor
+ShortDescription: Notepad++ is a free source code editor that supports several languages.
+PackageLocale: en-US
+InstallerType: nullsoft
+Moniker: notepad++
+PackageIdentifier: Notepad++.Notepad++
+InstallModes:
+- interactive
+- silent
+Scope: machine
+Description: Notepad++ is a free (as in “free speech” and also as in “free beer”) source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GNU General Public License.
+PackageVersion: 8.4.7
+ReleaseNotesUrl: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/tag/v8.4.7
+Installers:
+- InstallerSha256: 515D2C71ECE7C4C7432794B9E1BB6FCF60FDAA2E499744C09AF113C65D6DBB68
+  Architecture: x64
+  AppsAndFeaturesEntries:
+  - DisplayName: Notepad++ (64-bit x64)
+  InstallerUrl: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.4.7/npp.8.4.7.Installer.x64.exe
+- InstallerSha256: FF623F0A7683124AAB9628270A5B093A5F89735C9BC5E82EC218AF1B288CEF5A
+  Architecture: x86
+  AppsAndFeaturesEntries:
+  - DisplayName: Notepad++ (32-bit x86)
+  InstallerUrl: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.4.7/npp.8.4.7.Installer.exe
+- InstallerSha256: 14D0470DF92EDDB7EFDE7CE182D20E8A8BEDA1339280FF306D9A1E67842D0DA0
+  Architecture: arm64
+  AppsAndFeaturesEntries:
+  - DisplayName: Notepad++ (ARM 64-bit)
+  InstallerUrl: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.4.7/npp.8.4.7.Installer.arm64.exe
+PublisherUrl: https://notepad-plus-plus.org
+CopyrightUrl: https://raw.githubusercontent.com/notepad-plus-plus/notepad-plus-plus/master/LICENSE
+UpgradeBehavior: install
+

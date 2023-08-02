@@ -1,0 +1,16 @@
+Installers:
+- InstallerUrl: https://zim-wiki.org/downloads/zim-desktop-wiki-0.74.3-setup-w64_x86.exe
+  Architecture: x64
+  ProductCode: 404fbece-3a0a-4f4f-b1f1-82ce46af9696
+  InstallerSha256: DC9465EA4AD8F194090FFB4A61605ADA80D6BBDCEE24F90C9E0F75D70C6DC51E
+  InstallerType: nullsoft
+ManifestVersion: 1.1.0
+ManifestType: merged
+PackageIdentifier: Zimwiki.Zim
+PackageName: Zim Desktop Wiki
+PackageVersion: 0.74.3
+Publisher: Jaap Karssenberg
+License: GPL-2.0-or-later
+ShortDescription: Zim is a graphical text editor designed to maintain a collection of locally stored wiki-pages, a personal wiki.
+PackageLocale: en-US
+
