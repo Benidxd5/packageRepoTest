@@ -1,0 +1,25 @@
+PackageIdentifier: Postman.Postman
+PackageLocale: en-US
+Tags:
+- api
+- development
+- postman
+PackageUrl: https://www.postman.com/
+PackageName: Postman
+ShortDescription: The Collaboration Platform for API Development
+PackageVersion: 7.24.0
+Publisher: Postman
+InstallerSwitches:
+  Silent: /S
+  SilentWithProgress: /S
+Moniker: postman
+Installers:
+- InstallerSha256: 0B9791F637DCBBC2069DA97EEA4ABFB0946E6BFF5766533A0C0C56E401E067B0
+  InstallerUrl: https://dl.pstmn.io/download/version/7.24.0/win64
+  Architecture: x64
+ManifestVersion: 1.1.0
+ManifestType: merged
+InstallerType: exe
+MinimumOSVersion: 10.0.0.0
+License: © 2020 Postman, Inc. All rights reserved.
+

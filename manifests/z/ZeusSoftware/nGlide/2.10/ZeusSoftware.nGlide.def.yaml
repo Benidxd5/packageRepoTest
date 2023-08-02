@@ -1,0 +1,32 @@
+Tags:
+- 3dfx
+- wrappper
+- compatibility
+PrivacyUrl: https://www.zeus-software.com/privacy
+Copyright: Copyright (c) 2021 Zeus Software
+PackageLocale: en-US
+PackageIdentifier: ZeusSoftware.nGlide
+PackageUrl: https://www.zeus-software.com/downloads/nglide
+ShortDescription: nGlide is a 3Dfx Voodoo Glide wrapper. It allows you to play games designed for 3Dfx Glide API without the need for having 3Dfx Voodoo graphics card.
+PackageName: nGlide
+Publisher: Zeus Software
+PackageVersion: 2.1
+PublisherUrl: https://www.zeus-software.com/
+Moniker: nglide
+Installers:
+- InstallerType: nullsoft
+  InstallerLocale: en-US
+  InstallerSha256: 3CFCD03A923386C36685A772D24797FB78762CFBE63FE5676756091CF27DA7A4
+  UpgradeBehavior: install
+  Scope: machine
+  InstallerUrl: https://www.zeus-software.com/files/nglide/nGlide210_setup.exe
+  Architecture: x86
+ManifestVersion: 1.0.0
+InstallModes:
+- interactive
+- silent
+ManifestType: merged
+MinimumOSVersion: 10.0.0.0
+License: Freeware
+PublisherSupportUrl: https://www.zeus-software.com/contacts
+

@@ -1,0 +1,38 @@
+Author: Rajdeep Malakar
+Copyright: Copyright (c) 2021 Zype, Inc.
+InstallerSwitches:
+  InstallLocation: APPDIR="<INSTALLPATH>"
+InstallerType: msi
+Installers:
+- AppsAndFeaturesEntries:
+  - ProductCode: '{693CE471-8A31-4120-885D-587AA609FAD8}'
+    UpgradeCode: '{6EA8B78C-45D2-4C32-96F9-47FC2DD1493C}'
+  Architecture: x64
+  InstallerSha256: 43E93FA7F881F43CA6C8D30EC9A27D73658D4F424746692D91D9EE50A00E1AB2
+  InstallerUrl: https://compass.zype.cf/download/setup-1.1.0.msi
+  ProductCode: '{693CE471-8A31-4120-885D-587AA609FAD8}'
+License: Freeware
+Localization:
+- Author: Rajdeep Malakar
+  Copyright: Copyright (c) 2021 Zype, Inc.
+  License: "\u514D\u8D39\u8F6F\u4EF6"
+  PackageLocale: zh-CN
+  PackageName: Compass
+  Publisher: Zype, Inc.
+  PublisherUrl: https://www.zype-lang.cf/
+  ShortDescription: "Zype \u7F16\u7A0B\u8BED\u8A00\u7684\u72EC\u7ACB Windows CLI"
+  Tags:
+  - zype
+ManifestType: merged
+ManifestVersion: 1.2.0
+PackageIdentifier: Zype.Compass
+PackageLocale: en-US
+PackageName: Compass
+PackageVersion: 1.1.0
+Publisher: Zype, Inc.
+PublisherUrl: https://www.zype-lang.cf/
+Scope: machine
+ShortDescription: A standalone Windows CLI for Zype Programming Language.
+Tags:
+- zype
+UpgradeBehavior: install
