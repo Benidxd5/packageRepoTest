@@ -1,0 +1,54 @@
+InstallerType: nullsoft
+InstallerSwitches:
+  Upgrade: --updated
+ReleaseDate: 2020-10-25
+PackageVersion: 0.5.3
+Copyright: Copyright © 2020 Zixuan Chen
+ReleaseNotesUrl: https://github.com/zxch3n/PomodoroLogger/releases/tag/v0.5.3
+Localization:
+- ShortDescription: 番茄日志——当计时器遇上番茄钟和看板
+  ReleaseNotesUrl: https://github.com/zxch3n/PomodoroLogger/releases/tag/v0.5.3
+  PublisherUrl: https://www.zxch3n.com/
+  PackageName: Pomodoro Logger
+  Publisher: Zixuan Chen
+  License: GPL-3.0
+  Author: Zixuan Chen
+  PublisherSupportUrl: https://github.com/zxch3n/PomodoroLogger/issues
+  Copyright: Copyright © 2020 Zixuan Chen
+  LicenseUrl: https://github.com/zxch3n/PomodoroLogger/blob/master/LICENSE
+  Tags:
+  - 时间管理
+  - 时间跟踪
+  - 时间追踪
+  - 番茄工作法
+  - 番茄日志
+  - 番茄钟
+  PackageUrl: https://github.com/zxch3n/PomodoroLogger
+  PackageLocale: zh-CN
+ManifestType: merged
+Scope: user
+PublisherUrl: https://www.zxch3n.com/
+PackageName: Pomodoro Logger
+Publisher: Zixuan Chen
+License: GPL-3.0
+ShortDescription: Pomodoro Logger -- When a time logger meets Pomodoro and Kanban board
+Author: Zixuan Chen
+ManifestVersion: 1.2.0
+PublisherSupportUrl: https://github.com/zxch3n/PomodoroLogger/issues
+LicenseUrl: https://github.com/zxch3n/PomodoroLogger/blob/master/LICENSE
+Installers:
+- ProductCode: d2e2deb6-202f-56b1-8c52-e63954dd5048
+  Architecture: x64
+  InstallerSha256: 23E58BAED98BF04422242F4733AD13087C8E47E801B2DDD364A51D51E719C518
+  InstallerUrl: https://github.com/zxch3n/PomodoroLogger/releases/download/v0.5.3/Pomodoro-Logger-Setup-0.5.3.exe
+PackageIdentifier: zxch3n.PomodoroLogger
+Tags:
+- pomodoro
+- pomodoro-technique
+- pomodoro-timer
+- time-management
+- time-tracker
+- time-tracking
+PackageUrl: https://github.com/zxch3n/PomodoroLogger
+PackageLocale: en-US
+

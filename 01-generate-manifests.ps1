@@ -1,3 +1,33 @@
+#eigene Pakete hinzufügen
+
+if(Test-Path .\packagesToAdd){
+    Get-ChildItem .\packagesToAdd -Recurse -Include '*.yaml' | % {
+
+        "Adding own package"
+        $_.FullName
+
+        $content = Get-Content -Path $_
+        $content = $content | ConvertFrom-Yaml
+
+        $sourcePath = $_.FullName
+
+        $destinationPath = ".\packages\own\" + $content["PackageIdentifier"] + "\" + $content["PackageVersion"] + "\"
+
+
+        if(-not (Test-Path $destinationPath)){
+            $null = New-Item -Path $destinationPath -Force -ItemType Directory
+        }
+
+ 
+        $destinationPath + ([System.IO.Path]::GetFileName("$_")) #+Dateiname
+
+        Move-Item -Path $sourcePath -Destination $destinationPath
+
+    }
+}else{
+    $null = New-Item -Path .\packagesToAdd -Force -ItemType Directory
+}
+
 
 Get-ChildItem .\packages -Recurse -Include '*.yaml' | % {
     "Processing File"

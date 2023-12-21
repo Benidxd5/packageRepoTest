@@ -1,0 +1,48 @@
+Author: WhatsApp Inc.
+Copyright: "2022 \xA9 WhatsApp LLC"
+CopyrightUrl: https://www.whatsapp.com/legal/terms-of-service
+Description: 'WhatsApp Messenger, or simply WhatsApp, is an American freeware, cross-platform
+  centralized messaging and voice-over-IP (VoIP) service owned by Facebook, Inc.
+
+  It allows users to send text messages and voice messages, make voice and video calls,
+  and share images, documents, user locations, and other content.'
+InstallModes:
+- silent
+InstallerSwitches:
+  Silent: --silent
+  SilentWithProgress: --silent
+InstallerType: exe
+Installers:
+- Architecture: x64
+  InstallerSha256: 704ED38B8F8CF20B8FB8D13F885121469193B72247ECE06D4C96858458A615E7
+  InstallerUrl: https://web.whatsapp.com/desktop/windows/release/x64/WhatsAppSetup.exe
+- Architecture: x86
+  InstallerSha256: 9BAF5D36BAE5A408043B34C8260050DEB27EF8D51BAC0A612952504D392E51A3
+  InstallerUrl: https://web.whatsapp.com/desktop/windows/release/ia32/WhatsAppSetup.exe
+License: Proprietary
+LicenseUrl: https://www.whatsapp.com/legal
+ManifestType: merged
+ManifestVersion: 1.4.0
+Moniker: whatsapp
+PackageIdentifier: WhatsApp.WhatsApp
+PackageLocale: en-US
+PackageName: WhatsApp
+PackageUrl: https://www.whatsapp.com
+PackageVersion: 2.2326.10
+Platform:
+- Windows.Desktop
+PrivacyUrl: https://www.whatsapp.com/legal
+Publisher: WhatsApp
+PublisherSupportUrl: https://faq.whatsapp.com
+PublisherUrl: https://www.whatsapp.com
+Scope: user
+ShortDescription: Simple. Secure. Reliable messaging. With WhatsApp, you'll get fast,
+  simple, secure messaging and calling for free*, available on phones all over the
+  world.
+Tags:
+- chat
+- chat-client
+- client
+- messenger
+- sms
+UpgradeBehavior: install

@@ -1,0 +1,74 @@
+Author: Simon Tatham
+Copyright: PuTTY is copyright 1997-2021 Simon Tatham.
+CopyrightUrl: https://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html
+FileExtensions:
+- pkk
+- ppk
+- rnd
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+InstallerSwitches:
+  InstallLocation: INSTALLDIR="<INSTALLPATH>"
+Installers:
+- Architecture: x64
+  ElevationRequirement: elevatesSelf
+  InstallerSha256: E64775374097F1B1C8FD4173F7D5BE4305B88CEC26A56D003113AFF2837AE08E
+  InstallerType: wix
+  InstallerUrl: https://the.earth.li/~sgtatham/putty/0.78/w64/putty-64bit-0.78-installer.msi
+  ProductCode: '{4EEF2644-700F-46F8-9655-915145248986}'
+- Architecture: x86
+  ElevationRequirement: elevatesSelf
+  InstallerSha256: 8B1EE5FCD40AC4122A62E405981DC6DFB26FB7BDBE23217DE0AA4B9659C492D5
+  InstallerType: wix
+  InstallerUrl: https://the.earth.li/~sgtatham/putty/0.78/w32/putty-0.78-installer.msi
+  ProductCode: '{FDB77018-8B16-456D-AAC9-0CFA01A36D92}'
+- Architecture: arm64
+  ElevationRequirement: elevatesSelf
+  InstallerSha256: 870099F68A40FAE62A30B1962C25BE7B27A87ADB4B7B25F2DC666C6FB6FB100D
+  InstallerType: wix
+  InstallerUrl: https://the.earth.li/~sgtatham/putty/0.78/wa64/putty-arm64-0.78-installer.msi
+  ProductCode: '{F043FAA1-9284-4E36-9226-D81254768B16}'
+License: MIT licence
+LicenseUrl: https://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html
+ManifestType: merged
+ManifestVersion: 1.2.0
+MinimumOSVersion: 10.0.0.0
+Moniker: putty
+PackageIdentifier: PuTTY.PuTTY
+PackageLocale: en-US
+PackageName: PuTTY
+PackageUrl: https://putty.org
+PackageVersion: 0.78.0.0
+Platform:
+- Windows.Desktop
+Publisher: Simon Tatham
+PublisherSupportUrl: https://www.chiark.greenend.org.uk/~sgtatham/putty/feedback.html
+PublisherUrl: https://www.chiark.greenend.org.uk
+ReleaseDate: 2022-10-29
+ReleaseNotes: "\u2022 Support for OpenSSH certificates, for both user authentication
+  keys and host keys. \u2022 New SSH proxy modes, for running a custom shell command
+  or subsystem on the proxy server instead of forwarding a port through it. \u2022
+  New plugin system to allow a helper program to provide responses in keyboard-interactive
+  authentication, intended to automate one-time password systems. \u2022 Support for
+  NTRU Prime post-quantum key exchange, \u2022 Support for AES-GCM (in the OpenSSH
+  style rather than RFC 5647). \u2022 Support for more forms of Diffie-Hellman key
+  exchange: new larger integer groups (such as group16 and group18), and support for
+  using those and ECDH with GSSAPI. \u2022 Bug fix: the 32-bit Windows build now runs
+  on Windows XP again. \u2022 Bug fix: server-controlled window title setting now
+  works again even if the character set is ISO 8859 (or a few other affected single-byte
+  character sets). \u2022 Bug fix: certain forms of OSC escape sequences (sent by
+  some real servers) could cause PuTTY to crash. \u2022 Bug fix: the -pwfile/-pw options
+  no longer affect local key passphrase prompts, and no longer suppress Plink's anti-spoofing
+  measures. \n"
+ReleaseNotesUrl: https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
+Scope: machine
+ShortDescription: A free implementation of SSH and Telnet, along with an xterm terminal
+  emulator.
+Tags:
+- cross-platform
+- foss
+- ssh
+- telnet
+UpgradeBehavior: uninstallPrevious

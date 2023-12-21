@@ -1,99 +1,69 @@
 import requests
-from requests.auth import HTTPBasicAuth
-import json
-import math
-
-# url_post = "http://10.10.10.138:1337/api/packages"
-# token = "bearer d547a841dc8b98d9234e94238d09aa4aad78b985d294d5d45feca6ebdb16d0dcaee0c3bd4e357e02998d5dd4e45090a02323dbb4ffb3ee083ac824e6db67792a9a9713454e3186e9ea18172ca3730e42dfdcc06c3a7b34fd1a40afc1f699a0d6619e1920ba20358d7281cf0b6984b6b76a9f01be1873ab71031c61a78855e11b"
-
-# # new_package = {
-# #     "name": "testname",
-# #     "identifier": "testid",
-# #     "description": "testdesc",
-# #     "versions": [16.4,20.2],
-# #     "path": "/b/joe"
-# # }
-
-# # payload = {
-# #     "data": new_package
-# # }
-
-# # post_response = (requests.post(url=url_post, json=payload, headers={"Authorization": token, "Content-Type": "application/json"}))
-# # post_response_json = post_response.json()
-# # print(post_response_json)
-
-# # url_post = "https://e8cf-92-63-213-202.ngrok-free.app/api/approved-packages"
-
-# # token = "bearer d547a841dc8b98d9234e94238d09aa4aad78b985d294d5d45feca6ebdb16d0dcaee0c3bd4e357e02998d5dd4e45090a02323dbb4ffb3ee083ac824e6db67792a9a9713454e3186e9ea18172ca3730e42dfdcc06c3a7b34fd1a40afc1f699a0d6619e1920ba20358d7281cf0b6984b6b76a9f01be1873ab71031c61a78855e11b"
+from datetime import datetime, timedelta
 
 
-# # # fetchResponse = requests.get(url=(url_post+'?filters[identifier][$eq]='+"7zip.7zip"), headers={"Authorization": token, "Content-Type": "application/json"})
-# # # fetchResponseJson = fetchResponse.json()
-# # # print(fetchResponseJson)
-# # # pkgID = fetchResponseJson["data"][0]["id"]
-# # # print(len (fetchResponseJson["data"]))
+url_approved = "http://10.10.10.152:1337/api/approved-packages?fields[0]=identifier&fields[1]=versions&pagination[pageSize]=1000&&pagination[page]=2"
+token = "bearer a89f39354845fdf47dd780ab9918c43ecd98046c958260de14551505ce9dc691f0a655288964447577310e84e3707f2e96fc16775a8d09bf888c641369dd2d831f36db417e18e825d3d29efdeb5ca68615bb925e7abb5e50d37d94eb2871a4fdbf6bb753dbca0289f13337565d895c988406aa1cb5f0e608446b9b87d050459c"
 
-# # updated_package = {
-# #     "name": "Postman",
-# #     "identifier": "Postman.Postman",
-# #     "description": "descr",
-# #     "versions": [1.3, 1.4],
-# #     "path": "https://"
-# # }
-# # payload = {
-# #     "data": updated_package
-# # }
-# # post_response = requests.post(url=(url_post), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
-# # # Print the response
-# # print(post_response)
-# # post_response_json = post_response.json()
-# # print(post_response_json)
+five_hours_ago = str(datetime.utcnow() - timedelta(hours=5,days=2))
+
+print(five_hours_ago)
+
+url_available ="http://10.10.10.152:1337/api/packages?fields[0]=updatedAt&pagination[pageSize]=100&filters[updatedAt][$lt]="+str(datetime.utcnow() - timedelta(hours=5, days=2))
 
 
-# # packageVersions = {}
-
-# # packageVersions["pid"] = {"1.0.0":"/pfad"}
-
-# # packageVersions["pid"]["2.0.0"] = "/pfad2"
-
-# # print(packageVersions)
-
-# progress = ["."] * 100
-
-# # progress[:4] = ["j"]*4
-
-# # print("".join(progress))
-# # print(len(progress))
-
-# # progress[:math.floor(1/3500*100)] = ["|"]*(math.floor(1/3500*100))
-
-# # for idx in range(3500):
-# #     progress[math.floor(idx/3500*100)] = "|"
-# #     print("".join(progress))
+# url_approved = "http://10.10.10.152:1337/api/approved-packages?filters[identifier][$eq]=Microsoft.VisualStudioCode"
 
 
-# delresp = requests.delete(url_post+"/913", headers={"Authorization": token})
-# print(delresp)
+fetchResponse = requests.get(url=(url_available), headers={"Authorization": token, "Content-Type": "application/json"})
+        
+fetchResponseJson = fetchResponse.json()
 
-def clearDB(con, cursor):
-    # Get a list of all table names in the database
-    cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-    tables = cursor.fetchall()
+print(fetchResponseJson)
 
-    # Disable foreign key constraints to speed up the deletion
-    cursor.execute('PRAGMA foreign_keys = OFF')
+data = fetchResponseJson["data"]
+oldcount = 0
+newcount = 0
+for pkg in data:
+    parsed_date = datetime.strptime(pkg["attributes"]["updatedAt"], '%Y-%m-%dT%H:%M:%S.%fZ')
+    time_difference = datetime.utcnow() - parsed_date
+    if time_difference > timedelta(days=2):
+        oldcount+=1
+    else: 
+        newcount+=1
 
-    # Clear all tables
-    for table in tables:
-        table_name = table[0]
-        if table_name != 'sqlite_sequence':  # Skip the sqlite_sequence table itself
-            cursor.execute(f'DELETE FROM {table_name};')
+print(oldcount, newcount)
+# print(fetchResponseJson)
 
-    # Reset the auto-increment counters
-    cursor.execute('DELETE FROM sqlite_sequence')
+# pageCount = fetchResponseJson["meta"]["pagination"]["pageCount"]
 
-    # Commit the changes
-    con.commit()
 
-    # Re-enable foreign key constraints
-    cursor.execute('PRAGMA foreign_keys = ON')
+
+
+# data = fetchResponseJson["data"]
+
+# paths = []
+
+# for old_pkg in data:
+#     print(old_pkg["attributes"]["identifier"])
+
+#     fetchResponse = requests.get(url=(url_available+old_pkg["attributes"]["identifier"]), headers={"Authorization": token, "Content-Type": "application/json"}) 
+    
+#     if(fetchResponse):
+
+#         fetchResponseJson = fetchResponse.json()
+
+#         if fetchResponseJson["data"]:
+#             updatedPackage = fetchResponseJson["data"][0]["attributes"]
+
+#         for version in old_pkg["attributes"]["versions"]:
+#             print(version)
+#             if version in updatedPackage["versions"]:
+#                 paths.append(updatedPackage["versions"][str(version)])
+
+
+
+# resp = requests.post("https://api.github.com/repos/hs2n/winget-pkgs/dispatches", json={"event_type": "pkgadd", "client_payload":{"pkgPaths":"test"}}, headers={"Authorization": "token " + "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"})
+# print(resp)
+# print(resp.json())
+

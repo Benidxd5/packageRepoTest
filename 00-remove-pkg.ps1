@@ -1,8 +1,8 @@
 param (
-    $url
+    $path
 )
 
-$parts = $url.Split("/")[0..($url.Split("/").Length-3)]
+$parts = $path.Split("/")[0..($path.Split("/").Length-3)]
 
 $folderPath = $parts -join "/"
 
@@ -19,7 +19,7 @@ if($numSubfolders -gt 1){
 
     #Delete specific version-folder
 
-    $parts = $url.Split("/")[0..($url.Split("/").Length-2)]
+    $parts = $path.Split("/")[0..($path.Split("/").Length-2)]
 
     $folderPath = $parts -join "/"
 
@@ -37,7 +37,7 @@ if($numSubfolders -gt 1){
     }
 
 
-    $parts = $url.Split("/")[0..($url.Split("/").Length-4)]
+    $parts = $path.Split("/")[0..($path.Split("/").Length-4)]
 
     $folderPath = $parts -join "/"
 

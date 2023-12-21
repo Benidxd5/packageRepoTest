@@ -1,0 +1,72 @@
+Author: Google Inc.
+Copyright: Copyright (C) Google Inc.
+CopyrightUrl: https://earth.google.com/intl/en-US/licensepro.html
+Description: Google Earth lets you fly anywhere on Earth to view satellite imagery,
+  maps, terrain, 3D buildings, from galaxies in outer space to the canyons of the
+  ocean.
+FileExtensions:
+- arbvp1
+- bak
+- eta
+- geprint
+- gpx
+- igb
+- kdx
+- klm
+- kml
+- kmz
+- kvw
+InstallModes:
+- interactive
+- silent
+InstallerSwitches:
+  Silent: OMAHA=1
+  SilentWithProgress: OMAHA=1
+Installers:
+- AppsAndFeaturesEntries:
+  - DisplayName: Google Earth Pro
+    InstallerType: msi
+    ProductCode: '{DE181B35-ACEF-4DB0-86D9-731D5767ABB1}'
+    Publisher: Google
+  Architecture: x64
+  InstallerSha256: 062FD1A9B963CE0A67D1B4DCD50CA4A13AF125AAE05FCB55C8026834F0E64F91
+  InstallerType: exe
+  InstallerUrl: https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe
+  ProductCode: '{F27DBA46-80E1-4858-9285-19198FFFBF3D}'
+- AppsAndFeaturesEntries:
+  - DisplayName: Google Earth Pro
+    InstallerType: msi
+    ProductCode: '{FB424A32-23DC-4B91-AF94-D46BDB4841EF}'
+    Publisher: Google
+  Architecture: x86
+  InstallerSha256: BFF197F329E46797A7E7FABDA3955ADFFC0E7275D093A6417CC8BF0EB3C1E8FF
+  InstallerType: exe
+  InstallerUrl: https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6.exe
+  ProductCode: '{FB424A32-23DC-4B91-AF94-D46BDB4841EF}'
+License: Freeware
+LicenseUrl: https://earth.google.com/intl/en-US/licensepro.html
+ManifestType: merged
+ManifestVersion: 1.4.0
+MinimumOSVersion: 10.0.0.0
+Moniker: googleearthpro
+PackageIdentifier: Google.EarthPro
+PackageLocale: en-US
+PackageName: Google Earth Pro
+PackageUrl: https://www.google.com/earth/
+PackageVersion: 7.3.6.9345
+PrivacyUrl: https://policies.google.com/privacy?hl=en
+Publisher: Google
+PublisherSupportUrl: https://support.google.com
+PublisherUrl: https://www.google.com
+Scope: machine
+ShortDescription: The world's most detailed globe. Create maps with advanced tools.
+Tags:
+- discover
+- earth
+- geo
+- geographic
+- globe
+- map
+- mapping
+- navigation
+UpgradeBehavior: install

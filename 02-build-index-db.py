@@ -4,10 +4,8 @@ import re
 import yaml
 
 import requests
-from requests.auth import HTTPBasicAuth
 import sqlite3
 from sqlite3 import Error
-from subprocess import check_output
 from urllib.parse import quote
 
 
@@ -94,7 +92,7 @@ def register_manifest(con, cursor, data, pathParts, manifest, manifestFilename):
     ##push to strapi
 
     # The API endpoint to communicate with
-    url_post = os.environ.get("API_URl")+"approved-packages"
+    url_post = os.environ.get("API_URL")+"approved-packages"
 
     print(url_post)
 

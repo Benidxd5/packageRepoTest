@@ -1,0 +1,98 @@
+Protocols:
+- ftp
+- http
+- https
+- mailto
+- tel
+ShortDescription: The browser built by Google
+Description: A more simple, secure, and faster web browser than ever, with Google’s smarts built-in.
+FileExtensions:
+- htm
+- html
+- pdf
+- shtml
+- svg
+- webp
+- xht
+- xhtml
+PackageVersion: 115.0.5790.171
+Copyright: Copyright 2023 Google LLC. All rights reserved.
+License: Freeware
+Localization:
+- ShortDescription: Nettleseren fra Google
+  Copyright: Copyright 2023 Google LLC. Med enerett.
+  LicenseUrl: https://www.google.com/intl/no/chrome/terms
+  PublisherUrl: https://www.google.com
+  PackageName: Google Chrome
+  Publisher: Google LLC
+  License: Gratis Programvare
+  PrivacyUrl: https://policies.google.com/privacy?hl=no
+  Author: Google LLC
+  PublisherSupportUrl: https://support.google.com/?hl=no
+  Description: Enklere, tryggere og raskere enn noensinne – med Googles smarte funksjoner.
+  Tags:
+  - chromium
+  - nettleseren
+  PackageUrl: https://www.google.com/intl/no/chrome
+  PackageLocale: nb-NO
+- ShortDescription: 由 Google 打造的浏览器
+  Copyright: 版权所有 2023 Google LLC. 保留所有权利。
+  LicenseUrl: https://www.google.com/intl/zh-CN/chrome/terms
+  PublisherUrl: https://www.google.com
+  PackageName: Google Chrome
+  Publisher: Google LLC
+  License: 免费软件
+  PrivacyUrl: https://policies.google.com/privacy?hl=zh-CN
+  Author: Google LLC
+  PublisherSupportUrl: https://support.google.com/?hl=zh-Hans
+  Description: 得益于 Google 智能工具，Chrome 现在更易用、更安全、更快速。
+  Tags:
+  - chromium
+  - 互联网
+  - 浏览器
+  - 网页
+  PackageUrl: https://www.google.com/intl/zh-CN/chrome
+  PackageLocale: zh-CN
+ManifestType: merged
+PublisherUrl: https://www.google.com
+UpgradeBehavior: install
+PackageName: Google Chrome
+Publisher: Google LLC
+PrivacyUrl: https://policies.google.com/privacy?hl=en
+ManifestVersion: 1.4.0
+Author: Google LLC
+InstallerType: msi
+PublisherSupportUrl: https://support.google.com/?hl=en
+LicenseUrl: https://www.google.com/intl/en_us/chrome/terms
+Installers:
+- InstallerUrl: https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi
+  ProductCode: '{C8E1BB7A-3D1D-3D71-84FF-146CA7F61BF9}'
+  Scope: user
+  InstallerSha256: 369AAFA82783493EA546AB0F6EB5243D1162CB216EFC5BA4428B9A86E11A15A7
+  Architecture: x86
+- InstallerUrl: https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi
+  ProductCode: '{C8E1BB7A-3D1D-3D71-84FF-146CA7F61BF9}'
+  Scope: machine
+  InstallerSha256: 369AAFA82783493EA546AB0F6EB5243D1162CB216EFC5BA4428B9A86E11A15A7
+  Architecture: x86
+- InstallerUrl: https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi
+  ProductCode: '{B64CEE67-E022-3D7C-8EB7-4D840C6C8AA9}'
+  Scope: user
+  InstallerSha256: D1DFEEA99CCE85A84C4627B64CC34BB6AFA04A02F3374C858E4DED01F01453AF
+  Architecture: x64
+- InstallerUrl: https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi
+  ProductCode: '{B64CEE67-E022-3D7C-8EB7-4D840C6C8AA9}'
+  Scope: machine
+  InstallerSha256: D1DFEEA99CCE85A84C4627B64CC34BB6AFA04A02F3374C858E4DED01F01453AF
+  Architecture: x64
+ReleaseDate: 2023-08-01
+PackageIdentifier: Google.Chrome
+Tags:
+- browser
+- chromium
+- internet
+- web
+- webpage
+PackageUrl: https://www.google.com/intl/en_us/chrome
+PackageLocale: en-US
+

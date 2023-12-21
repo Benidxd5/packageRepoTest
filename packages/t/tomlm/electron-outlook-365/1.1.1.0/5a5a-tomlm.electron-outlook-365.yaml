@@ -1,0 +1,29 @@
+Author: tomlm
+InstallerType: wix
+Installers:
+- Architecture: x64
+  InstallerSha256: 080BBBF35F808E85B6EF00CBA874CB40739841DCE45D53F13E7DF313FEFDBB0C
+  InstallerUrl: https://github.com/tomlm/electron-outlook/releases/download/1.1.1/Outlook.for.Office365.1.1.1.msi
+  ProductCode: '{9C4DB458-F0D6-4957-A4E5-8A12D7BEEEE0}'
+License: MIT
+LicenseUrl: https://github.com/tomlm/electron-outlook/blob/master/LICENSE
+ManifestType: merged
+ManifestVersion: 1.1.0
+MinimumOSVersion: 10.0.0.0
+PackageIdentifier: tomlm.electron-outlook-365
+PackageLocale: en-US
+PackageName: Outlook for Office365
+PackageUrl: https://github.com/tomlm/electron-outlook
+PackageVersion: 1.1.1.0
+Publisher: Tom Laird-McConnell
+Scope: user
+ShortDescription: Outlook Web Application as a dedicated application. This hosts mail.office365.com
+  and is suitable for using with enterprise work or school environments
+Tags:
+- electron
+- email
+- mail
+- microsoft
+- office
+- office365
+- outlook

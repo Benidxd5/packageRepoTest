@@ -12,6 +12,15 @@ $dirpath = $parts -join "/"
 
 $dirpath = "packages/" + $dirpath
 
+#removes any files in directory
+if(Test-Path $dirpath){
+    $files = Get-ChildItem $dirpath
+
+    foreach ($file in $files) {
+        Remove-Item $file.FullName -Force
+    }
+}
+
 $null = New-Item -Path $dirpath -Force -ItemType Directory
 
 $filePath = (Join-Path -Path $dirpath -ChildPath $fileName)

@@ -1,0 +1,44 @@
+Author: Google LLC
+Copyright: Copyright (c) Google, Inc.
+CopyrightUrl: https://workspace.google.com/terms/premier_terms.html
+Description: Mounts Google Drive(s) as a share drive and streams files as needed from
+  the cloud. Alternative to Google Backup and Sync.
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+InstallerLocale: en-US
+InstallerSwitches:
+  Silent: --silent --gsuite_shortcuts=false --skip_launch_new
+  SilentWithProgress: --silent --gsuite_shortcuts=false --skip_launch_new
+InstallerType: exe
+Installers:
+- Architecture: x64
+  InstallerSha256: 36B07520CA3587B25D1F1480897C22B1744A70523C1DA497AEEF16A917268B3F
+  InstallerUrl: https://dl.google.com/drive-file-stream/GoogleDrive.exe
+License: Proprietary
+LicenseUrl: https://workspace.google.com/terms/premier_terms.html
+ManifestType: merged
+ManifestVersion: 1.4.0
+MinimumOSVersion: 10.0.0.0
+Moniker: google-drive
+PackageIdentifier: Google.Drive
+PackageLocale: en-US
+PackageName: Google Drive
+PackageUrl: https://www.google.com/drive/download/
+PackageVersion: 78.0.1.0
+Platform:
+- Windows.Desktop
+PrivacyUrl: https://policies.google.com/privacy?hl=en
+Publisher: Google LLC
+PublisherSupportUrl: https://support.google.com/?hl=en
+PublisherUrl: https://www.google.com
+Scope: machine
+ShortDescription: Mounts Google Drive(s) as a share drive and streams files as needed
+  from the cloud. Alternative to Google Backup and Sync.
+Tags:
+- drive
+- filestream
+- google
+- sharedrive
+UpgradeBehavior: install

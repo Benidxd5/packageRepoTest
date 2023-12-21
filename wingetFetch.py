@@ -4,17 +4,21 @@ from sqlite3 import Error
 import os
 import math
 from urllib.parse import quote
+from datetime import datetime, timedelta
+
 
 db_path = ".tmp/source/Public/index.db"
 
 token = os.environ.get("API_TOKEN")
 
-url_post = os.environ.get("API_URl")+"packages"
+url_available = os.environ.get("API_URL")+"packages"
 
-# url_post = "http://localhost:1337/api/packages"
-# token = "bearer d547a841dc8b98d9234e94238d09aa4aad78b985d294d5d45feca6ebdb16d0dcaee0c3bd4e357e02998d5dd4e45090a02323dbb4ffb3ee083ac824e6db67792a9a9713454e3186e9ea18172ca3730e42dfdcc06c3a7b34fd1a40afc1f699a0d6619e1920ba20358d7281cf0b6984b6b76a9f01be1873ab71031c61a78855e11b"
+url_approved = os.environ.get("API_URL")+"approved-packages?fields[0]=identifier&fields[1]=versions&pagination[pageSize]=100"
 
-# token = "bearer 65f36576725143d11424c122a34d3884e5129dccb1abc126438191d2c3fafbe04568a1e58db072d0b205e6eec77360ab7d2b115796ea5e271ff75e81094747386afd5875e42bc806c611a751586b619e1f6c914247dc162fdd6d34c39c1d8af4bd3da0096dbcbfce9085ee0b93899af4e8aa839da4f59e4a8782aa4a5f8cdb31"
+git_token = os.environ.get("GITHUB_TOKEN")
+
+repo_dispatch_url = os.environ.get("REPOSITORY_API_URL")+"/dispatches"
+
 
 packageVersions = {}
 
@@ -59,37 +63,38 @@ def pushPackage(data):
 
     parsedIdentifier = quote(data["PackageIdentifier"])
     #fetch package to check if already inserted
-    fetchResponse = requests.get(url=(url_post+'?filters[identifier][$eq]='+parsedIdentifier), headers={"Authorization": token, "Content-Type": "application/json"})
-    if(not fetchResponse):
-        return
+    fetchResponse = requests.get(url=(url_available+'?filters[identifier][$eq]='+parsedIdentifier), headers={"Authorization": token, "Content-Type": "application/json"})
         
     fetchResponseJson = fetchResponse.json()
+
+    description = data["Description"] if "Description" in data else data["ShortDescription"] if "ShortDescription" in data else " "
+
     if(len(fetchResponseJson["data"])>0):
         pkgID = fetchResponseJson["data"][0]["id"]
         updated_package = {
             "name": data['PackageName'],
             "identifier": data["PackageIdentifier"],
-            "description": data["Description"] if "Description" in data else " ",
+            "description": description,
             "versions": packageVersions[data['PackageIdentifier']],
             "path": data["Path"]
         }
         payload = {
             "data": updated_package
         }
-        requests.put(url=(url_post+"/"+str(pkgID)), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
+        requests.put(url=(url_available+"/"+str(pkgID)), json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
 
     else:
         new_package = {
             "name": data['PackageName'],
             "identifier": data["PackageIdentifier"],
-            "description": data["Description"] if "Description" in data else " ",
+            "description": description,
             "versions": packageVersions[data['PackageIdentifier']],
             "path": data["Path"]
         }
         payload = {
             "data": new_package
         }
-        requests.post(url=url_post, json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
+        requests.post(url=url_available, json=payload, headers={"Authorization": token, "Content-Type": "application/json"})
 
 
 
@@ -116,15 +121,75 @@ progress[:math.floor(1/numPkgs*100)] = ["|"]*(math.floor(1/numPkgs*100))
 for idx in row:
     pkgData = createPackageDataObj(idx,cursor)
     pushPackage(pkgData)
-    #progress[math.floor(pkgNum/numPkgs*100)] = "|"
-    #print("".join(progress))
-    print(pkgNum)
+    print(str(pkgNum) + "/" + str(numPkgs))
     pkgNum+=1
 
 
 
 print("Fetched " +str(numPkgs)+ " packages/versions!")
 
+print("removing outdated packages")
 
+#filter entries, which haven't recieved an update for the last 5 hours
+url_outdated = url_available + "?fields[0]=updatedAt&pagination[pageSize]=100&filters[updatedAt][$lt]="+str(datetime.utcnow() - timedelta(hours=5)) 
+
+fetchResponse = requests.get(url=(url_outdated), headers={"Authorization": token, "Content-Type": "application/json"}) #get outdated packages
+
+fetchResponseJson = fetchResponse.json()
+
+data = fetchResponseJson["data"]
+
+for pkg in data:
+    pkgId = pkg["id"]
+    requests.delete(url=(url_available+"/"+str(pkgId)), headers={"Authorization": token, "Content-Type": "application/json"})
+
+print(str(len(data)) + " outdated packages removed")
+    
+
+
+print("Updating approved packages")
+#sync the paths with the recently pulled winget packages
+
+fetchResponse = requests.get(url=(url_approved), headers={"Authorization": token, "Content-Type": "application/json"})
+        
+fetchResponseJson = fetchResponse.json()
+
+pageCount = fetchResponseJson["meta"]["pagination"]["pageCount"]
+
+paths = []
+
+url_available += "?filters[identifier][$eq]="
+
+currPage = 1
+
+while currPage <= pageCount:   #multiple page support
+
+    data = fetchResponseJson["data"]
+
+    fetchResponse = requests.get(url=(url_approved+"&pagination[page]="+str(currPage)), headers={"Authorization": token, "Content-Type": "application/json"})
+    fetchResponseJson = fetchResponse.json()
+    currPage+=1
+
+    for old_pkg in data:
+        print("updating " + old_pkg["attributes"]["identifier"])
+
+        fetchResponse = requests.get(url=(url_available+old_pkg["attributes"]["identifier"]), headers={"Authorization": token, "Content-Type": "application/json"}) 
+        
+        if(fetchResponse):
+
+            fetchResponseJson = fetchResponse.json()
+
+            if fetchResponseJson["data"]:
+                updatedPackage = fetchResponseJson["data"][0]["attributes"]
+
+            for version in old_pkg["attributes"]["versions"]:
+                print(version)
+                if version in updatedPackage["versions"]:
+                    paths.append(updatedPackage["versions"][str(version)])
+
+#trigger the pkgadd github workflow, to update the approved packages
+if len(paths)>0:
+    response = requests.post(repo_dispatch_url, json={"event_type": "pkgadd", "client_payload":{"pkgPaths":','.join(map(str, paths))}}, headers={"Authorization": "token " + git_token})
+    print(response)
 
 

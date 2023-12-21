@@ -1,0 +1,32 @@
+name: test workflow
+
+
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      pkgPath:
+        description: 'Url of the package'
+        default: 'https://'
+        required: true
+        type: string
+
+  repository_dispatch:
+      types: [test]
+
+concurrency:
+  group: package-group
+
+jobs:
+  createDirs:
+    runs-on: windows-latest
+
+    steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: print file
+      run: |
+        echo "Repository URL: https://github.com/${{vars.REPOSITORY_API_URL}}"
+

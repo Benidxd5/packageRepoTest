@@ -1,0 +1,58 @@
+InstallerType: portable
+ShortDescription: A command-line Tunet (auth4/6.tsinghua.edu.cn, Tsinghua-IPv4) authentication tool.
+ReleaseDate: 2021-08-26
+PackageVersion: 2.2
+ReleaseNotesUrl: https://github.com/z4yx/GoAuthing/releases/tag/v2.2
+Localization:
+- ShortDescription: 命令行 Tunet (auth4/6.tsinghua.edu.cn, Tsinghua-IPv4) 认证工具。
+  ReleaseNotesUrl: https://github.com/z4yx/GoAuthing/releases/tag/v2.2
+  PublisherUrl: https://github.com/z4yx
+  PackageName: GoAuthing
+  Publisher: Yuxiang Zhang
+  License: GPL-3.0
+  Author: |-
+    Yuxiang Zhang <yuxiang.zhang@tuna.tsinghua.edu.cn>
+    Nogeek <ritou11@gmail.com>
+    ZenithalHourlyRate <i@zenithal.me>
+    Jiajie Chen <c@jia.je>
+    KomeijiOcean <oceans2000@126.com>
+    Sharzy L <me@sharzy.in>
+  PublisherSupportUrl: https://github.com/z4yx/GoAuthing/issues
+  LicenseUrl: https://github.com/z4yx/GoAuthing/blob/master/LICENSE
+  Tags:
+  - tunet
+  - 清华大学
+  PackageUrl: https://github.com/z4yx/GoAuthing
+  PackageLocale: zh-CN
+Commands:
+- auth-thu
+ManifestType: merged
+PublisherUrl: https://github.com/z4yx
+Moniker: auth-thu
+PackageName: GoAuthing
+Publisher: Yuxiang Zhang
+License: GPL-3.0
+Author: |-
+  Yuxiang Zhang <yuxiang.zhang@tuna.tsinghua.edu.cn>
+  Nogeek <ritou11@gmail.com>
+  ZenithalHourlyRate <i@zenithal.me>
+  Jiajie Chen <c@jia.je>
+  KomeijiOcean <oceans2000@126.com>
+  Sharzy L <me@sharzy.in>
+ManifestVersion: 1.2.0
+PublisherSupportUrl: https://github.com/z4yx/GoAuthing/issues
+Installers:
+- Architecture: x64
+  InstallerSha256: 2AF1131DB3D6BDE92693037252999373171385A06268C0871E2FC48043B6BFF7
+  InstallerUrl: https://github.com/z4yx/GoAuthing/releases/download/v2.2/auth-thu.win64.exe
+LicenseUrl: https://github.com/z4yx/GoAuthing/blob/master/LICENSE
+ReleaseNotes: |-
+  Add riscv64
+  Fix cmdline args not working when no config file found
+PackageIdentifier: z4yx.GoAuthing
+Tags:
+- tsinghua-university
+- tunet
+PackageUrl: https://github.com/z4yx/GoAuthing
+PackageLocale: en-US
+

@@ -1,21 +1,15 @@
-# This is a basic workflow that is manually triggered
 
 name: Manual workflow
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
+
 on:
   workflow_dispatch:
     # Inputs the workflow accepts.
     inputs:
       pkgPath:
-        # Friendly description to be shown in the UI instead of 'name'
         description: 'Url of the package'
-        # Default value if no value is explicitly provided
         default: 'https://'
-        # Input has to be provided for the workflow to run
         required: true
-        # The data type of the input
         type: string
 
   repository_dispatch:
@@ -24,19 +18,11 @@ on:
 concurrency:
   group: package-group
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "greet"
   createDirs:
-    # The type of runner that the job will run on
     runs-on: windows-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      if: ${{ github.event_name == 'workflow_dispatch' }}
-      run: echo "Hello ${{ inputs.pkgPath }}"
 
     - name: Checkout Repository
       uses: actions/checkout@v2
@@ -76,11 +62,11 @@ jobs:
           API_URL: ${{ secrets.API_URL }}
       if: ${{ github.event_name == 'repository_dispatch' && github.event.action == 'pkgrem' }}
       run: |
-        $urlArray = "${{ github.event.client_payload.pkgPaths }}".Split(",")
+        $pathArray = "${{ github.event.client_payload.pkgPaths }}".Split(",")
         $identifierArray = "${{ github.event.client_payload.pkgIdentifiers }}".Split(",")
-        foreach ($pkgPath in $urlArray) {
-          $url="$pkgPath"
-          ./00-remove-pkg.ps1 -url "$url"
+        foreach ($pkgPath in $pathArray) {
+          $path="$pkgPath"
+          ./00-remove-pkg.ps1 -path "$path"
         }
         foreach ($pkgId in $identifierArray){
           python ./01-delete-from-api.py "$pkgId"

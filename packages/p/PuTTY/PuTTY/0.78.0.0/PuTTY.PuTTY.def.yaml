@@ -1,0 +1,61 @@
+Author: Simon Tatham
+LicenseUrl: https://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+InstallerSwitches:
+  InstallLocation: INSTALLDIR="<INSTALLPATH>"
+PackageName: PuTTY
+Copyright: PuTTY is copyright 1997-2021 Simon Tatham.
+PackageVersion: 0.78.0.0
+ShortDescription: A free implementation of SSH and Telnet, along with an xterm terminal emulator.
+Platform:
+- Windows.Desktop
+PublisherUrl: https://www.chiark.greenend.org.uk
+CopyrightUrl: https://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html
+PackageIdentifier: PuTTY.PuTTY
+ReleaseNotes: |
+  • Support for OpenSSH certificates, for both user authentication keys and host keys. • New SSH proxy modes, for running a custom shell command or subsystem on the proxy server instead of forwarding a port through it. • New plugin system to allow a helper program to provide responses in keyboard-interactive authentication, intended to automate one-time password systems. • Support for NTRU Prime post-quantum key exchange, • Support for AES-GCM (in the OpenSSH style rather than RFC 5647). • Support for more forms of Diffie-Hellman key exchange: new larger integer groups (such as group16 and group18), and support for using those and ECDH with GSSAPI. • Bug fix: the 32-bit Windows build now runs on Windows XP again. • Bug fix: server-controlled window title setting now works again even if the character set is ISO 8859 (or a few other affected single-byte character sets). • Bug fix: certain forms of OSC escape sequences (sent by some real servers) could cause PuTTY to crash. • Bug fix: the -pwfile/-pw options no longer affect local key passphrase prompts, and no longer suppress Plink's anti-spoofing measures. 
+PackageLocale: en-US
+FileExtensions:
+- pkk
+- ppk
+- rnd
+ReleaseDate: 2022-10-29
+License: MIT licence
+Publisher: Simon Tatham
+Tags:
+- cross-platform
+- foss
+- ssh
+- telnet
+PackageUrl: https://putty.org
+Scope: machine
+PublisherSupportUrl: https://www.chiark.greenend.org.uk/~sgtatham/putty/feedback.html
+ManifestVersion: 1.2.0
+ManifestType: merged
+ReleaseNotesUrl: https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
+MinimumOSVersion: 10.0.0.0
+Installers:
+- InstallerType: wix
+  InstallerUrl: https://the.earth.li/~sgtatham/putty/0.78/w64/putty-64bit-0.78-installer.msi
+  ElevationRequirement: elevatesSelf
+  ProductCode: '{4EEF2644-700F-46F8-9655-915145248986}'
+  InstallerSha256: E64775374097F1B1C8FD4173F7D5BE4305B88CEC26A56D003113AFF2837AE08E
+  Architecture: x64
+- InstallerType: wix
+  InstallerUrl: https://the.earth.li/~sgtatham/putty/0.78/w32/putty-0.78-installer.msi
+  ElevationRequirement: elevatesSelf
+  ProductCode: '{FDB77018-8B16-456D-AAC9-0CFA01A36D92}'
+  InstallerSha256: 8B1EE5FCD40AC4122A62E405981DC6DFB26FB7BDBE23217DE0AA4B9659C492D5
+  Architecture: x86
+- InstallerType: wix
+  InstallerUrl: https://the.earth.li/~sgtatham/putty/0.78/wa64/putty-arm64-0.78-installer.msi
+  ElevationRequirement: elevatesSelf
+  ProductCode: '{F043FAA1-9284-4E36-9226-D81254768B16}'
+  InstallerSha256: 870099F68A40FAE62A30B1962C25BE7B27A87ADB4B7B25F2DC666C6FB6FB100D
+  Architecture: arm64
+UpgradeBehavior: uninstallPrevious
+Moniker: putty
+

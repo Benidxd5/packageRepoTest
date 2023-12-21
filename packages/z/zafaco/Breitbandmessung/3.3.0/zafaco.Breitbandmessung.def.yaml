@@ -1,0 +1,73 @@
+InstallerType: nullsoft
+InstallerSwitches:
+  Upgrade: --updated
+Description: The Broadband Measurement desktop app allows you to determine the actual data transfer rate of your Internet access and compare it with the contractually agreed data transfer rate.
+ReleaseDate: 2022-07-26
+PackageVersion: 3.3.0
+Documentations:
+- DocumentLabel: FAQ
+  DocumentUrl: https://breitbandmessung.de/fragen-und-antworten
+Localization:
+- ShortDescription: Testen Sie schnell und einfach die Geschwindigkeit Ihres Internetzugangs.
+  Description: Die Breitbandmessung Desktop-App ermöglicht es Ihnen, die tatsächliche Datenübertragungsrate Ihres Internetzugangs zu ermitteln und mit der vertraglich vereinbarten Datenübertragungsrate zu vergleichen.
+  Documentations:
+  - DocumentLabel: Fragen und Antworten
+    DocumentUrl: https://breitbandmessung.de/fragen-und-antworten
+  PublisherUrl: https://www.zafaco.de/
+  PackageName: Breitbandmessung
+  Publisher: zafaco GmbH
+  License: Proprietäre
+  PrivacyUrl: https://breitbandmessung.de/datenschutz
+  Author: zafaco GmbH
+  Copyright: Copyright © 2022 zafaco GmbH
+  LicenseUrl: https://breitbandmessung.de/nutzungsbedingungen
+  PackageUrl: https://breitbandmessung.de/
+  PackageLocale: de-DE
+- ShortDescription: 轻松快速地测试您的网速。
+  Documentations:
+  - DocumentLabel: 常见问题
+    DocumentUrl: https://breitbandmessung.de/fragen-und-antworten
+  LicenseUrl: https://breitbandmessung.de/nutzungsbedingungen
+  PublisherUrl: https://www.zafaco.de/
+  PackageName: Breitbandmessung
+  Publisher: zafaco GmbH
+  License: 专有软件
+  PrivacyUrl: https://breitbandmessung.de/datenschutz
+  Author: zafaco GmbH
+  Copyright: Copyright © 2022 zafaco GmbH
+  Description: 宽带测量桌面应用允许您确定您的实际网速，并将其与合同约定的网速相比较。
+  Tags:
+  - 网络
+  - 网速
+  PackageUrl: https://breitbandmessung.de/
+  PackageLocale: zh-CN
+ManifestType: merged
+Scope: machine
+PublisherUrl: https://www.zafaco.de/
+UpgradeBehavior: install
+PackageName: Breitbandmessung
+PrivacyUrl: https://breitbandmessung.de/datenschutz
+License: Proprietary
+ShortDescription: Quickly and easily test the speed of your Internet access.
+Author: zafaco GmbH
+ManifestVersion: 1.2.0
+Copyright: Copyright © 2022 zafaco GmbH
+LicenseUrl: https://breitbandmessung.de/nutzungsbedingungen
+Installers:
+- ProductCode: 14607473-30db-509f-94f0-bb7c085c619e
+  Architecture: x86
+  InstallerSha256: D562785285C70F285665310248EB7A85D9B7851E0CD5C290D43319ABA27A9C34
+  InstallerUrl: https://download.breitbandmessung.de/bbm/Breitbandmessung-3.3.0-win.exe
+- ProductCode: 14607473-30db-509f-94f0-bb7c085c619e
+  Architecture: x64
+  InstallerSha256: D562785285C70F285665310248EB7A85D9B7851E0CD5C290D43319ABA27A9C34
+  InstallerUrl: https://download.breitbandmessung.de/bbm/Breitbandmessung-3.3.0-win.exe
+Publisher: zafaco GmbH
+PackageIdentifier: zafaco.Breitbandmessung
+Tags:
+- network
+- speed
+- speedtest
+PackageUrl: https://breitbandmessung.de/
+PackageLocale: en-US
+

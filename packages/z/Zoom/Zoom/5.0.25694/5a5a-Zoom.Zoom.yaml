@@ -1,0 +1,48 @@
+Author: Zoom Video Communications, Inc.
+Copyright: (c) 2021 Zoom Video Communications, Inc.
+CopyrightUrl: https://zoom.us/terms
+Description: Zoom is a cloud-based video communications app that allows you to set
+  up virtual video and audio conferencing, webinars, live chats, screen-sharing, and
+  other collaborative capabilities.
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+Installers:
+- Architecture: x86
+  InstallerLocale: en-US
+  InstallerSha256: BD00112FCBC924F998D5C1A61715784914350B420CDD809356665F472226396D
+  InstallerType: msi
+  InstallerUrl: https://cdn.zoom.us/prod/5.0.25694.0524/ZoomInstallerFull.msi
+  ProductCode: '{E5CD5A3D-EB3C-4DFB-B4B9-0A5B32E8E377}'
+  Scope: machine
+  UpgradeBehavior: install
+License: Proprietary Software / Freemium
+LicenseUrl: https://zoom.us/terms
+ManifestType: merged
+ManifestVersion: 1.0.0
+MinimumOSVersion: 10.0.0.0
+Moniker: zoom
+PackageIdentifier: Zoom.Zoom
+PackageLocale: en-US
+PackageName: Zoom
+PackageUrl: https://zoom.us/meetings
+PackageVersion: 5.0.25694
+PrivacyUrl: https://zoom.us/privacy
+Publisher: Zoom
+PublisherSupportUrl: https://support.zoom.us/hc/en-us
+PublisherUrl: https://zoom.us
+ShortDescription: Enterprise video conferencing with real-time messaging and content
+  sharing
+Tags:
+- webinar
+- webcam
+- meeting
+- videocall
+- conferencing
+- chat
+- screenshare
+- screen-share
+- screensharing
+- screen-sharing
+- communication

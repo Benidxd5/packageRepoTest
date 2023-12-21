@@ -1,0 +1,151 @@
+Author: Zoom Video Communications, Inc.
+LicenseUrl: https://explore.zoom.us/en/terms
+PackageName: Zoom
+Copyright: Copyright ©2012-2023 Zoom Video Communications, Inc. All rights reserved.
+PrivacyUrl: https://explore.zoom.us/en/privacy
+Localization:
+- ShortDescription: 畅享愉快的会议体验
+  PurchaseUrl: https://zoom.us/pricing
+  Copyright: 版权所有©2012-2023 Zoom Video Communications, Inc. 保留所有权利。
+  LicenseUrl: https://explore.zoom.us/zh-cn/terms
+  PublisherUrl: https://zoom.us
+  PackageName: Zoom
+  Publisher: Zoom
+  License: 专有软件
+  PrivacyUrl: https://explore.zoom.us/zh-cn/privacy
+  Author: Zoom Video Communications, Inc.
+  PublisherSupportUrl: https://support.zoom.us
+  Description: Zoom 安全可靠的视频平台可满足您的所有通信需求，包括会议、聊天、电话、网络研讨会和在线活动。
+  Tags:
+  - 会议
+  - 协作
+  - 协同
+  - 开会
+  - 研讨会
+  - 视频会议
+  - 聊天
+  - 语音会议
+  PackageUrl: https://zoom.us
+  PackageLocale: zh-CN
+ReleaseDate: 2023-07-24
+ShortDescription: Team Chat, Phone, Video & More
+PackageVersion: 5.15.5.19404
+PublisherUrl: https://zoom.us
+PackageIdentifier: Zoom.Zoom
+Description: Zoom's secure, reliable video platform powers all of your communication needs, including meetings, chat, phone, webinars, and online events.
+Protocols:
+- zoom
+- zoommtg
+InstallerLocale: en-US
+Documentations:
+- DocumentLabel: Learning Center
+  DocumentUrl: https://learning.zoom.us/learn
+PackageLocale: en-US
+FileExtensions:
+- zoommtg
+- zoomphonecall
+PurchaseUrl: https://zoom.us/pricing
+License: Proprietary
+Publisher: Zoom
+Tags:
+- chat
+- collaborate
+- collaboration
+- conference
+- conferencing
+- meeting
+- video-conferencing
+- voice-conferencing
+- webinar
+PackageUrl: https://zoom.us
+PublisherSupportUrl: https://support.zoom.us
+ManifestVersion: 1.4.0
+ManifestType: merged
+Installers:
+- InstallerType: exe
+  InstallerUrl: https://cdn.zoom.us/prod/5.15.5.19404/ZoomInstallerFull.exe
+  InstallerSha256: AA6754BC83326207385B77E7951126F8DB0BB2743601C4BEAF026047C3512568
+  InstallerSwitches:
+    Silent: /silent
+    SilentWithProgress: /silent
+  Scope: user
+  InstallModes:
+  - interactive
+  - silent
+  AppsAndFeaturesEntries:
+  - ProductCode: ZoomUMX
+    Publisher: Zoom Video Communications, Inc.
+    DisplayVersion: 5.15.5 (19404)
+    DisplayName: Zoom(32bit)
+  ProductCode: ZoomUMX
+  Architecture: x86
+- InstallerType: exe
+  InstallerUrl: https://cdn.zoom.us/prod/5.15.5.19404/x64/ZoomInstallerFull.exe
+  InstallerSha256: 43A73D23A963AAA0521A93F6865B1E1D834D726A757D1DEE149787043BF70A58
+  InstallerSwitches:
+    Silent: /silent
+    SilentWithProgress: /silent
+  Scope: user
+  InstallModes:
+  - interactive
+  - silent
+  AppsAndFeaturesEntries:
+  - ProductCode: ZoomUMX
+    Publisher: Zoom Video Communications, Inc.
+    DisplayVersion: 5.15.5 (19404)
+  ProductCode: ZoomUMX
+  Architecture: x64
+- InstallerType: exe
+  InstallerUrl: https://cdn.zoom.us/prod/5.15.5.19404/arm64/ZoomInstallerFull.exe
+  InstallerSha256: 743291B0AE5DD1FE0F0A3D85F57493DEEE3772ADA821C1A736F47358B17CE0DC
+  InstallerSwitches:
+    Silent: /silent
+    SilentWithProgress: /silent
+  Scope: user
+  InstallModes:
+  - interactive
+  - silent
+  AppsAndFeaturesEntries:
+  - ProductCode: ZoomUMX
+    Publisher: Zoom Video Communications, Inc.
+    DisplayVersion: 5.15.5 (19404)
+  ProductCode: ZoomUMX
+  Architecture: arm64
+- InstallerType: msi
+  InstallerUrl: https://cdn.zoom.us/prod/5.15.5.19404/ZoomInstallerFull.msi
+  InstallerSha256: C42404DD84F28564351FBB232FBF2B0CDC372200228DEE0DA942AB9C534020E6
+  Scope: machine
+  AppsAndFeaturesEntries:
+  - ProductCode: '{70FDC24A-EBFF-4589-8DF3-FC9C0352E441}'
+    UpgradeCode: '{C819B794-A45C-4F27-9860-0C86492A52CC}'
+    DisplayVersion: 5.15.5 (19404)
+    DisplayName: Zoom(32bit)
+  InstallerLocale: en-US
+  ProductCode: '{4FA404BF-CC0C-4FCF-B695-85E555AD464C}'
+  Architecture: x86
+- InstallerType: msi
+  InstallerUrl: https://cdn.zoom.us/prod/5.15.5.19404/x64/ZoomInstallerFull.msi
+  InstallerSha256: F226FEAAEBFA95DAB41C61C5BC43D0D419B693E2011DB231CEC8FB521FB52DD1
+  Scope: machine
+  AppsAndFeaturesEntries:
+  - ProductCode: '{DCC5BCB7-3A87-4855-9E49-106AC71BD34C}'
+    UpgradeCode: '{C819B794-A45C-4F27-9860-0C86492A52CC}'
+    DisplayVersion: 5.15.5 (19404)
+    DisplayName: Zoom(64bit)
+  InstallerLocale: en-US
+  ProductCode: '{CBCEFA59-8DE2-4FA4-8596-FC41BCC14D50}'
+  Architecture: x64
+- InstallerType: msi
+  InstallerUrl: https://cdn.zoom.us/prod/5.15.5.19404/arm64/ZoomInstallerFull.msi
+  InstallerSha256: 330B377EF4D212D482569853D9D63FD3D5FC6C6F280C243AF66797B035813D02
+  Scope: machine
+  AppsAndFeaturesEntries:
+  - ProductCode: '{10C988DF-4A9B-44CE-A96A-FBFB3216BDB2}'
+    UpgradeCode: '{C819B794-A45C-4F27-9860-0C86492A52CC}'
+    DisplayVersion: 5.15.5 (19404)
+    DisplayName: Zoom(ARM64)
+  InstallerLocale: en-US
+  ProductCode: '{2A4C84E4-0276-44DD-A39A-1B33D419CB40}'
+  Architecture: arm64
+UpgradeBehavior: install
+

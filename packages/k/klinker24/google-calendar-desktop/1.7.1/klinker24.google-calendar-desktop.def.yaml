@@ -1,0 +1,36 @@
+Scope: user
+LicenseUrl: https://github.com/klinker24/google-calendar-desktop/blob/master/LICENSE
+Author: Luke Klinker
+InstallModes:
+- silent
+PackageName: Google Calendar
+Copyright: Copyright (c) 2020 Luke Klinker
+InstallerType: nullsoft
+ShortDescription: A simple Electron app to display Google Calendar
+PackageVersion: 1.7.1
+PublisherUrl: https://luke.klinker.xyz
+PackageIdentifier: klinker24.google-calendar-desktop
+InstallerLocale: en-US
+PackageLocale: en-US
+FileExtensions:
+- csv
+- ics
+ReleaseDate: 2020-02-05
+License: Apache-2.0
+Publisher: Luke Klinker
+Tags:
+- calendar
+- electron
+- google
+PackageUrl: https://github.com/klinker24/google-calendar-desktop
+PublisherSupportUrl: https://github.com/klinker24/google-calendar-desktop/issues
+ManifestVersion: 1.4.0
+ManifestType: merged
+ReleaseNotesUrl: https://github.com/klinker24/google-calendar-desktop/releases/tag/v1.7.1
+Installers:
+- Architecture: x64
+  InstallerSha256: 84D4542CC99D08BF8485990BEE7D24AFC87D4B95EE89611DB65D2C44CFDBF155
+  InstallerUrl: https://github.com/klinker24/google-calendar-desktop/releases/download/v1.7.1/calendar-1.7.1.exe
+UpgradeBehavior: install
+Moniker: googlecalendar
+

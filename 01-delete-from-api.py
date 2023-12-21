@@ -3,7 +3,7 @@ import requests
 import sys
 
 # url = "https://af4b-92-63-213-202.ngrok-free.app/api/approved-packages"
-url = os.environ.get("API_URl")+"approved-packages"
+url = os.environ.get("API_URL")+"approved-packages"
 token = os.environ.get("API_TOKEN")
 
 identifier = sys.argv[1]
