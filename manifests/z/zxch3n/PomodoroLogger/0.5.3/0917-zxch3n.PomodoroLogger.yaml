@@ -52,3 +52,58 @@ Tags:
 - time-management
 - time-tracker
 - time-tracking
+
+Author: Zixuan Chen
+Copyright: "Copyright \xA9 2020 Zixuan Chen"
+InstallerSwitches:
+  Upgrade: --updated
+InstallerType: nullsoft
+Installers:
+- Architecture: x64
+  InstallerSha256: 23E58BAED98BF04422242F4733AD13087C8E47E801B2DDD364A51D51E719C518
+  InstallerUrl: https://github.com/zxch3n/PomodoroLogger/releases/download/v0.5.3/Pomodoro-Logger-Setup-0.5.3.exe
+  ProductCode: d2e2deb6-202f-56b1-8c52-e63954dd5048
+License: GPL-3.0
+LicenseUrl: https://github.com/zxch3n/PomodoroLogger/blob/master/LICENSE
+Localization:
+- Author: Zixuan Chen
+  Copyright: "Copyright \xA9 2020 Zixuan Chen"
+  License: GPL-3.0
+  LicenseUrl: https://github.com/zxch3n/PomodoroLogger/blob/master/LICENSE
+  PackageLocale: zh-CN
+  PackageName: Pomodoro Logger
+  PackageUrl: https://github.com/zxch3n/PomodoroLogger
+  Publisher: Zixuan Chen
+  PublisherSupportUrl: https://github.com/zxch3n/PomodoroLogger/issues
+  PublisherUrl: https://www.zxch3n.com/
+  ReleaseNotesUrl: https://github.com/zxch3n/PomodoroLogger/releases/tag/v0.5.3
+  ShortDescription: "\u756A\u8304\u65E5\u5FD7\u2014\u2014\u5F53\u8BA1\u65F6\u5668\u9047\u4E0A\u756A\u8304\u949F\u548C\u770B\u677F"
+  Tags:
+  - "\u65F6\u95F4\u7BA1\u7406"
+  - "\u65F6\u95F4\u8DDF\u8E2A"
+  - "\u65F6\u95F4\u8FFD\u8E2A"
+  - "\u756A\u8304\u5DE5\u4F5C\u6CD5"
+  - "\u756A\u8304\u65E5\u5FD7"
+  - "\u756A\u8304\u949F"
+ManifestType: merged
+ManifestVersion: 1.2.0
+PackageIdentifier: zxch3n.PomodoroLogger
+PackageLocale: en-US
+PackageName: Pomodoro Logger
+PackageUrl: https://github.com/zxch3n/PomodoroLogger
+PackageVersion: 0.5.3
+Publisher: Zixuan Chen
+PublisherSupportUrl: https://github.com/zxch3n/PomodoroLogger/issues
+PublisherUrl: https://www.zxch3n.com/
+ReleaseDate: 2020-10-25
+ReleaseNotesUrl: https://github.com/zxch3n/PomodoroLogger/releases/tag/v0.5.3
+Scope: user
+ShortDescription: Pomodoro Logger -- When a time logger meets Pomodoro and Kanban
+  board
+Tags:
+- pomodoro
+- pomodoro-technique
+- pomodoro-timer
+- time-management
+- time-tracker
+- time-tracking
