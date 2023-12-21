@@ -1,0 +1,13 @@
+# Created using wingetcreate 1.5.2.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.5.0.schema.json
+
+PackageIdentifier: HS2N.HS2NZOOMPKG
+PackageVersion: 5.15.0
+PackageLocale: en-US
+Publisher: HS2N
+PackageName: Hs2nZoomPackage
+License: MIT-LIZENZ
+Copyright: © Zoom Video Communications, Inc. All rights reserved.
+ShortDescription: Online Meeting Platform
+ManifestType: defaultLocale
+ManifestVersion: 1.5.0

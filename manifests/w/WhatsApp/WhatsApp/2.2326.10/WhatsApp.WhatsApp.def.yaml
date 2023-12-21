@@ -1,0 +1,45 @@
+Moniker: whatsapp
+InstallerType: exe
+Tags:
+- chat
+- chat-client
+- client
+- messenger
+- sms
+PackageLocale: en-US
+LicenseUrl: https://www.whatsapp.com/legal
+Author: WhatsApp Inc.
+PrivacyUrl: https://www.whatsapp.com/legal
+PublisherUrl: https://www.whatsapp.com
+UpgradeBehavior: install
+ManifestType: merged
+PackageUrl: https://www.whatsapp.com
+ShortDescription: Simple. Secure. Reliable messaging. With WhatsApp, you'll get fast, simple, secure messaging and calling for free*, available on phones all over the world.
+PublisherSupportUrl: https://faq.whatsapp.com
+Publisher: WhatsApp
+Copyright: 2022 © WhatsApp LLC
+Description: |-
+  WhatsApp Messenger, or simply WhatsApp, is an American freeware, cross-platform centralized messaging and voice-over-IP (VoIP) service owned by Facebook, Inc.
+  It allows users to send text messages and voice messages, make voice and video calls, and share images, documents, user locations, and other content.
+CopyrightUrl: https://www.whatsapp.com/legal/terms-of-service
+PackageName: WhatsApp
+Installers:
+- Architecture: x64
+  InstallerUrl: https://web.whatsapp.com/desktop/windows/release/x64/WhatsAppSetup.exe
+  InstallerSha256: 704ED38B8F8CF20B8FB8D13F885121469193B72247ECE06D4C96858458A615E7
+- Architecture: x86
+  InstallerUrl: https://web.whatsapp.com/desktop/windows/release/ia32/WhatsAppSetup.exe
+  InstallerSha256: 9BAF5D36BAE5A408043B34C8260050DEB27EF8D51BAC0A612952504D392E51A3
+PackageIdentifier: WhatsApp.WhatsApp
+ManifestVersion: 1.4.0
+Scope: user
+Platform:
+- Windows.Desktop
+InstallerSwitches:
+  SilentWithProgress: --silent
+  Silent: --silent
+License: Proprietary
+InstallModes:
+- silent
+PackageVersion: 2.2326.10
+

@@ -1,0 +1,20 @@
+License: MIT-LIZENZ
+PackageLocale: en-US
+ManifestVersion: 1.5.0
+PackageVersion: 5.15.0
+InstallerSwitches:
+  SilentWithProgress: /silent
+  Silent: -s
+PackageIdentifier: HS2N.HS2NZOOMPKG
+DefaultLocale: en-US
+PackageName: Hs2nZoomPackage
+Installers:
+- Architecture: x86
+  InstallerUrl: https://zoom.us/client/latest/ZoomInstallerFull.exe
+  InstallerSha256: 62CCE6B0656E53C8D9FB3579A5649E26DA384096BB3C8C9E35B3931872A0DAAA
+InstallerType: exe
+ShortDescription: Online Meeting Platform
+Copyright: © Zoom Video Communications, Inc. All rights reserved.
+Publisher: HS2N
+ManifestType: merged
+

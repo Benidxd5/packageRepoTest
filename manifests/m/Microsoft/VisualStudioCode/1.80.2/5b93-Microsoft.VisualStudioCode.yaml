@@ -1,0 +1,49 @@
+Commands:
+- code
+InstallerSwitches:
+  Custom: /mergetasks=!runcode
+InstallerType: inno
+Installers:
+- Architecture: arm64
+  InstallerSha256: c42bf335df1d0506cec9b5a1d08490a51c653c837394371a687cd9c67f0813a0
+  InstallerUrl: https://az764295.vo.msecnd.net/stable/2ccd690cbff1569e4a83d7c43d45101f817401dc/VSCodeSetup-arm64-1.80.2.exe
+  Scope: machine
+- Architecture: arm64
+  InstallerSha256: 742fac69f6483d8bf73e28b4b15ba53cf71816ec0ed924a2bbdc82e51614087b
+  InstallerUrl: https://az764295.vo.msecnd.net/stable/2ccd690cbff1569e4a83d7c43d45101f817401dc/VSCodeUserSetup-arm64-1.80.2.exe
+  Scope: user
+- Architecture: x64
+  InstallerSha256: 422ac1f2c5bd8ec3e40eee77a536d4f9cad3544eaefe52bf5151f25aac2f6eab
+  InstallerUrl: https://az764295.vo.msecnd.net/stable/2ccd690cbff1569e4a83d7c43d45101f817401dc/VSCodeSetup-x64-1.80.2.exe
+  Scope: machine
+- Architecture: x64
+  InstallerSha256: 48f8afd79936dfbaefe49a7bd07ee365786e9c81037a6ae6e97c92265f646881
+  InstallerUrl: https://az764295.vo.msecnd.net/stable/2ccd690cbff1569e4a83d7c43d45101f817401dc/VSCodeUserSetup-x64-1.80.2.exe
+  Scope: user
+- Architecture: x86
+  InstallerSha256: beec623dcccfa779032768a439d2332912bdc0ffe9ac01947cc441f17905045e
+  InstallerUrl: https://az764295.vo.msecnd.net/stable/2ccd690cbff1569e4a83d7c43d45101f817401dc/VSCodeSetup-ia32-1.80.2.exe
+  Scope: machine
+- Architecture: x86
+  InstallerSha256: 4b18e05775e88dddc50ffae6613b8d62b4f914b8e69464f378c639b1470470db
+  InstallerUrl: https://az764295.vo.msecnd.net/stable/2ccd690cbff1569e4a83d7c43d45101f817401dc/VSCodeUserSetup-ia32-1.80.2.exe
+  Scope: user
+License: Microsoft Software License
+LicenseUrl: https://code.visualstudio.com/license
+ManifestType: merged
+ManifestVersion: 1.4.0
+Moniker: vscode
+PackageIdentifier: Microsoft.VisualStudioCode
+PackageLocale: en-US
+PackageName: Microsoft Visual Studio Code
+PackageUrl: https://code.visualstudio.com
+PackageVersion: 1.80.2
+PrivacyUrl: https://privacy.microsoft.com/
+Publisher: Microsoft Corporation
+PublisherUrl: https://www.microsoft.com/
+ShortDescription: Microsoft Visual Studio Code is a code editor redefined and optimized
+  for building and debugging modern web and cloud applications. Microsoft Visual Studio
+  Code is free and available on your favorite platform - Linux, macOS, and Windows.
+Tags:
+- developer-tools
+- editor

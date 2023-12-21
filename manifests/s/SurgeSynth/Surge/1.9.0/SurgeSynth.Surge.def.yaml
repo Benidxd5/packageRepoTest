@@ -1,0 +1,22 @@
+License: GNU General Public License, Version 3
+PackageLocale: en-US
+ManifestVersion: 1.5.0
+PublisherUrl: https://surge-synth-team.org
+ReleaseDate: 2021-04-21
+PackageIdentifier: SurgeSynth.Surge
+PackageName: SST Surge
+Installers:
+- Architecture: x86
+  InstallerUrl: https://github.com/surge-synthesizer/releases/releases/download/1.9.0/Surge-1.9.0-Setup-x86.exe
+  InstallerSha256: 8615428A12B3E46293D70D563B471B767D817136B4FB9EC01779B9D33399E6FD
+- Architecture: x64
+  InstallerUrl: https://github.com/surge-synthesizer/releases/releases/download/1.9.0/Surge-1.9.0-Setup.exe
+  InstallerSha256: 932AACA830C39784684C2DF86C1294DDA9347CBF2EB1D231502AC5DA6000A620
+PackageVersion: 1.9.0
+Publisher: Surge Synth Team
+InstallerType: inno
+ReleaseNotesUrl: https://github.com/surge-synthesizer/releases/releases/tag/1.9.0
+ShortDescription: Surge is a free and open-source hybrid synthesizer.
+PackageUrl: https://github.com/surge-synthesizer/releases
+ManifestType: merged
+

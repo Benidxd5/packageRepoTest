@@ -1,0 +1,58 @@
+PublisherSupportUrl: https://github.com/z4yx/GoAuthing/issues
+License: GPL-3.0
+PackageLocale: en-US
+Tags:
+- tsinghua-university
+- tunet
+Author: |-
+  Yuxiang Zhang <yuxiang.zhang@tuna.tsinghua.edu.cn>
+  Nogeek <ritou11@gmail.com>
+  ZenithalHourlyRate <i@zenithal.me>
+  Jiajie Chen <c@jia.je>
+  KomeijiOcean <oceans2000@126.com>
+  Sharzy L <me@sharzy.in>
+PackageVersion: 2.2
+ReleaseDate: 2021-08-26
+Localization:
+- PublisherSupportUrl: https://github.com/z4yx/GoAuthing/issues
+  License: GPL-3.0
+  PackageLocale: zh-CN
+  Tags:
+  - tunet
+  - 清华大学
+  Author: |-
+    Yuxiang Zhang <yuxiang.zhang@tuna.tsinghua.edu.cn>
+    Nogeek <ritou11@gmail.com>
+    ZenithalHourlyRate <i@zenithal.me>
+    Jiajie Chen <c@jia.je>
+    KomeijiOcean <oceans2000@126.com>
+    Sharzy L <me@sharzy.in>
+  PublisherUrl: https://github.com/z4yx
+  PackageName: GoAuthing
+  LicenseUrl: https://github.com/z4yx/GoAuthing/blob/master/LICENSE
+  ShortDescription: 命令行 Tunet (auth4/6.tsinghua.edu.cn, Tsinghua-IPv4) 认证工具。
+  ReleaseNotesUrl: https://github.com/z4yx/GoAuthing/releases/tag/v2.2
+  Publisher: Yuxiang Zhang
+  PackageUrl: https://github.com/z4yx/GoAuthing
+PackageIdentifier: z4yx.GoAuthing
+PackageName: GoAuthing
+ReleaseNotes: |-
+  Add riscv64
+  Fix cmdline args not working when no config file found
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/z4yx/GoAuthing/releases/download/v2.2/auth-thu.win64.exe
+  InstallerSha256: 2AF1131DB3D6BDE92693037252999373171385A06268C0871E2FC48043B6BFF7
+Moniker: auth-thu
+Publisher: Yuxiang Zhang
+LicenseUrl: https://github.com/z4yx/GoAuthing/blob/master/LICENSE
+InstallerType: portable
+Commands:
+- auth-thu
+ReleaseNotesUrl: https://github.com/z4yx/GoAuthing/releases/tag/v2.2
+ManifestVersion: 1.2.0
+PublisherUrl: https://github.com/z4yx
+ShortDescription: A command-line Tunet (auth4/6.tsinghua.edu.cn, Tsinghua-IPv4) authentication tool.
+PackageUrl: https://github.com/z4yx/GoAuthing
+ManifestType: merged
+

@@ -1,0 +1,34 @@
+PublisherSupportUrl: https://support.google.com/webdesigner#topic=3249465
+License: Proprietary
+PackageLocale: en-US
+Tags:
+- google
+- web
+- web-designer
+- website-maker
+- web-bulider
+- free
+Author: Google
+PackageVersion: 9.0.8.0
+PrivacyUrl: https://policies.google.com/privacy
+PackageIdentifier: Google.WebDesigner
+Publisher: Google LLC.
+PackageName: Google Web Designer
+Installers:
+- Architecture: x64
+  InstallerSha256: 6F0F31C4EA4741A62D39B072D3090E75F7B124C52D311DFF14553BC68900D770
+  InstallerUrl: https://dl.google.com/tag/s/appguid%3D%7B811767F4-C586-4673-A41F-E9D767497222%7D%26iid%3D%7BE80D9CCB-47BD-39D0-C34E-16A11E019212%7D%26lang%3Den%26browser%3D4%26usagestats%3D0%26appname%3DGoogle%2520Web%2520Designer%26needsadmin%3DTrue/webdesigner/win/shell/googlewebdesigner_win.exe
+  InstallerType: exe
+  InstallerSwitches:
+    SilentWithProgress: /silent /install
+    Silent: /silent /install
+Moniker: google-web-designer
+Description: Google Web Designer gives you the power to create beautiful, engaging HTML5 content. Use animation and interactive elements to bring your creative vision to life, and enjoy seamless integration with other Google products, like Google Drive, Display & Video 360, and Google Ads.
+LicenseUrl: https://policies.google.com/terms
+ManifestVersion: 1.1.0
+PublisherUrl: https://withgoogle.com
+Copyright: https://policies.google.com/terms
+ShortDescription: Create engaging, interactive HTML5-based designs and motion graphics that can run on any device.
+PackageUrl: https://webdesigner.withgoogle.com/
+ManifestType: merged
+

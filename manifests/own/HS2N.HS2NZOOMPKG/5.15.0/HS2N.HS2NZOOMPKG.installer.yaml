@@ -1,0 +1,15 @@
+# Created using wingetcreate 1.5.2.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.5.0.schema.json
+
+PackageIdentifier: HS2N.HS2NZOOMPKG
+PackageVersion: 5.15.0
+InstallerType: exe
+InstallerSwitches:
+  Silent: -s
+  SilentWithProgress: /silent
+Installers:
+- InstallerUrl: https://zoom.us/client/latest/ZoomInstallerFull.exe
+  Architecture: x86
+  InstallerSha256: 62CCE6B0656E53C8D9FB3579A5649E26DA384096BB3C8C9E35B3931872A0DAAA
+ManifestType: installer
+ManifestVersion: 1.5.0

@@ -1,0 +1,71 @@
+Moniker: googleearthpro
+Tags:
+- discover
+- earth
+- geo
+- geographic
+- globe
+- map
+- mapping
+- navigation
+PackageLocale: en-US
+LicenseUrl: https://earth.google.com/intl/en-US/licensepro.html
+FileExtensions:
+- arbvp1
+- bak
+- eta
+- geprint
+- gpx
+- igb
+- kdx
+- klm
+- kml
+- kmz
+- kvw
+Author: Google Inc.
+PrivacyUrl: https://policies.google.com/privacy?hl=en
+PublisherUrl: https://www.google.com
+UpgradeBehavior: install
+ManifestType: merged
+PackageUrl: https://www.google.com/earth/
+ShortDescription: The world's most detailed globe. Create maps with advanced tools.
+PublisherSupportUrl: https://support.google.com
+Publisher: Google
+Copyright: Copyright (C) Google Inc.
+MinimumOSVersion: 10.0.0.0
+Description: Google Earth lets you fly anywhere on Earth to view satellite imagery, maps, terrain, 3D buildings, from galaxies in outer space to the canyons of the ocean.
+CopyrightUrl: https://earth.google.com/intl/en-US/licensepro.html
+PackageName: Google Earth Pro
+Installers:
+- Architecture: x64
+  InstallerSha256: 062FD1A9B963CE0A67D1B4DCD50CA4A13AF125AAE05FCB55C8026834F0E64F91
+  InstallerUrl: https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe
+  ProductCode: '{F27DBA46-80E1-4858-9285-19198FFFBF3D}'
+  InstallerType: exe
+  AppsAndFeaturesEntries:
+  - ProductCode: '{DE181B35-ACEF-4DB0-86D9-731D5767ABB1}'
+    Publisher: Google
+    DisplayName: Google Earth Pro
+    InstallerType: msi
+- Architecture: x86
+  InstallerSha256: BFF197F329E46797A7E7FABDA3955ADFFC0E7275D093A6417CC8BF0EB3C1E8FF
+  InstallerUrl: https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6.exe
+  ProductCode: '{FB424A32-23DC-4B91-AF94-D46BDB4841EF}'
+  InstallerType: exe
+  AppsAndFeaturesEntries:
+  - ProductCode: '{FB424A32-23DC-4B91-AF94-D46BDB4841EF}'
+    Publisher: Google
+    DisplayName: Google Earth Pro
+    InstallerType: msi
+PackageIdentifier: Google.EarthPro
+ManifestVersion: 1.4.0
+Scope: machine
+InstallerSwitches:
+  SilentWithProgress: OMAHA=1
+  Silent: OMAHA=1
+License: Freeware
+InstallModes:
+- interactive
+- silent
+PackageVersion: 7.3.6.9345
+

@@ -1,0 +1,67 @@
+Author: 'Yuxiang Zhang <yuxiang.zhang@tuna.tsinghua.edu.cn>
+
+  Nogeek <ritou11@gmail.com>
+
+  ZenithalHourlyRate <i@zenithal.me>
+
+  Jiajie Chen <c@jia.je>
+
+  KomeijiOcean <oceans2000@126.com>
+
+  Sharzy L <me@sharzy.in>'
+Commands:
+- auth-thu
+InstallerType: portable
+Installers:
+- Architecture: x64
+  InstallerSha256: 2AF1131DB3D6BDE92693037252999373171385A06268C0871E2FC48043B6BFF7
+  InstallerUrl: https://github.com/z4yx/GoAuthing/releases/download/v2.2/auth-thu.win64.exe
+License: GPL-3.0
+LicenseUrl: https://github.com/z4yx/GoAuthing/blob/master/LICENSE
+Localization:
+- Author: 'Yuxiang Zhang <yuxiang.zhang@tuna.tsinghua.edu.cn>
+
+    Nogeek <ritou11@gmail.com>
+
+    ZenithalHourlyRate <i@zenithal.me>
+
+    Jiajie Chen <c@jia.je>
+
+    KomeijiOcean <oceans2000@126.com>
+
+    Sharzy L <me@sharzy.in>'
+  License: GPL-3.0
+  LicenseUrl: https://github.com/z4yx/GoAuthing/blob/master/LICENSE
+  PackageLocale: zh-CN
+  PackageName: GoAuthing
+  PackageUrl: https://github.com/z4yx/GoAuthing
+  Publisher: Yuxiang Zhang
+  PublisherSupportUrl: https://github.com/z4yx/GoAuthing/issues
+  PublisherUrl: https://github.com/z4yx
+  ReleaseNotesUrl: https://github.com/z4yx/GoAuthing/releases/tag/v2.2
+  ShortDescription: "\u547D\u4EE4\u884C Tunet (auth4/6.tsinghua.edu.cn, Tsinghua-IPv4)
+    \u8BA4\u8BC1\u5DE5\u5177\u3002"
+  Tags:
+  - tunet
+  - "\u6E05\u534E\u5927\u5B66"
+ManifestType: merged
+ManifestVersion: 1.2.0
+Moniker: auth-thu
+PackageIdentifier: z4yx.GoAuthing
+PackageLocale: en-US
+PackageName: GoAuthing
+PackageUrl: https://github.com/z4yx/GoAuthing
+PackageVersion: 2.2
+Publisher: Yuxiang Zhang
+PublisherSupportUrl: https://github.com/z4yx/GoAuthing/issues
+PublisherUrl: https://github.com/z4yx
+ReleaseDate: 2021-08-26
+ReleaseNotes: 'Add riscv64
+
+  Fix cmdline args not working when no config file found'
+ReleaseNotesUrl: https://github.com/z4yx/GoAuthing/releases/tag/v2.2
+ShortDescription: A command-line Tunet (auth4/6.tsinghua.edu.cn, Tsinghua-IPv4) authentication
+  tool.
+Tags:
+- tsinghua-university
+- tunet

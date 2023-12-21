@@ -1,0 +1,31 @@
+License: GNU General Public License
+PackageLocale: en-US
+Tags:
+- ftp
+- ftps
+- s3
+- scp
+- sftp
+- webdav
+- winscp
+Author: Martin Prikryl
+PackageVersion: 5.18.5-
+InstallerSwitches:
+  Custom: /ALLUSERS
+PackageIdentifier: WinSCP.WinSCP.RC
+Scope: machine
+MinimumOSVersion: 10.0.0.0
+PackageName: WinSCP RC
+Installers:
+- Architecture: x86
+  InstallerUrl: https://sourceforge.net/projects/winscp/files/WinSCP/5.18.5%20RC/WinSCP-5.18.5.RC-Setup.exe/download
+  InstallerSha256: 8FCF444F90C62B60337822B77A1806B5CAE37E697A64C4ABFB0951D6392DBD52
+Moniker: winscprc
+Publisher: Martin Prikryl
+LicenseUrl: https://winscp.net/eng/docs/license
+InstallerType: inno
+ManifestVersion: 1.1.0
+ShortDescription: WinSCP is an open source free SFTP client, FTP client, WebDAV client, S3 client and SCP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
+PackageUrl: https://winscp.net
+ManifestType: merged
+

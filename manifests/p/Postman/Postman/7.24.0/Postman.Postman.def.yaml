@@ -1,0 +1,25 @@
+License: © 2020 Postman, Inc. All rights reserved.
+PackageLocale: en-US
+Tags:
+- api
+- development
+- postman
+PackageVersion: 7.24.0
+InstallerSwitches:
+  SilentWithProgress: /S
+  Silent: /S
+PackageIdentifier: Postman.Postman
+MinimumOSVersion: 10.0.0.0
+PackageName: Postman
+Installers:
+- Architecture: x64
+  InstallerUrl: https://dl.pstmn.io/download/version/7.24.0/win64
+  InstallerSha256: 0B9791F637DCBBC2069DA97EEA4ABFB0946E6BFF5766533A0C0C56E401E067B0
+Moniker: postman
+Publisher: Postman
+InstallerType: exe
+ManifestVersion: 1.1.0
+ShortDescription: The Collaboration Platform for API Development
+PackageUrl: https://www.postman.com/
+ManifestType: merged
+
