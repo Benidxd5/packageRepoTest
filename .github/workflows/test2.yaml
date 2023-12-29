@@ -15,4 +15,4 @@ jobs:
     steps:
     - name: print Msg
       run: |
-        echo "The message is: ${{ github.event.inputs.messageToPrint }}"
+        echeo "The message is: ${{ github.event.inputs.messageToPrint }}"
